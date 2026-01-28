@@ -191,12 +191,12 @@ const themes = [
 ];
 
 const services = [
-  { icon: '🤖', title: 'AI/ML Solutions', subtitle: 'Intelligent Automation', link: 'services/ai-ml' },
-  { icon: '🔒', title: 'Cyber Security', subtitle: 'Advanced Protection', link: 'services/cyber-security' },
-  { icon: '👨‍💻', title: 'Dedicated Developers', subtitle: 'Expert Teams', link: 'services/dedicated-developers' },
-  { icon: '📱', title: 'Mobile Apps', subtitle: 'iOS & Android', link: 'services/mobile-apps' },
-  { icon: '🌐', title: 'Website Development', subtitle: 'Modern Web Solutions', link: 'services/website-development' },
-  { icon: '⚙️', title: 'Custom Software', subtitle: 'Tailored Solutions', link: 'services/custom-software' },
+  { icon: '🤖', title: 'AI/ML Solutions', subtitle: 'Intelligent Automation', link: '/services/ai-ml' },
+  { icon: '🔒', title: 'Cyber Security', subtitle: 'Advanced Protection', link: '/services/cyber-security' },
+  { icon: '👨‍💻', title: 'Dedicated Developers', subtitle: 'Expert Teams', link: '/services/dedicated-developers' },
+  { icon: '📱', title: 'Mobile Apps', subtitle: 'iOS & Android', link: '/services/mobile-apps' },
+  { icon: '🌐', title: 'Website Development', subtitle: 'Modern Web Solutions', link: '/services/website-development' },
+  { icon: '⚙️', title: 'Custom Software', subtitle: 'Tailored Solutions', link: '/services/custom-software' },
 ];
 
 const scrollY = ref(0);
