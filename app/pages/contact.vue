@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-b from-base-100 via-base-200 to-base-100 pt-32 pb-24">
+  <div class="min-h-screen bg-gradient-to-b from-base-100 via-base-200 to-base-100 pt-32 pb-24 pt-32">
     <!-- Background Pattern -->
     <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
     

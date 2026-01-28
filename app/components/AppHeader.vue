@@ -51,13 +51,13 @@
             class="dropdown-content menu bg-base-100 dark:bg-base-200 rounded-2xl z-[100] w-72 p-3 shadow-2xl border border-base-content/10 mt-2 backdrop-blur-xl"
           >
             <li v-for="service in services" :key="service.title">
-              <a class="flex items-center gap-3 hover:bg-primary/10 rounded-xl p-3 group transition-all">
+              <NuxtLink :to="service.link" class="flex items-center gap-3 hover:bg-primary/10 rounded-xl p-3 group transition-all">
                 <span class="text-2xl group-hover:scale-110 transition-transform">{{ service.icon }}</span>
                 <div>
                   <div class="font-semibold text-base-content">{{ service.title }}</div>
                   <div class="text-xs opacity-60">{{ service.subtitle }}</div>
                 </div>
-              </a>
+              </NuxtLink>
             </li>
           </ul>
         </div>
@@ -160,10 +160,10 @@
                 <summary class="rounded-xl hover:bg-primary/10">Services</summary>
                 <ul class="p-2 bg-base-200/50 rounded-xl mt-2">
                   <li v-for="service in services" :key="service.title">
-                    <a class="flex items-center gap-2 hover:bg-primary/10 rounded-lg text-sm">
+                    <NuxtLink :to="service.link" class="flex items-center gap-2 hover:bg-primary/10 rounded-lg text-sm">
                       <span class="text-lg">{{ service.icon }}</span>
                       <span>{{ service.title }}</span>
-                    </a>
+                    </NuxtLink>
                   </li>
                 </ul>
               </details>
@@ -191,12 +191,12 @@ const themes = [
 ];
 
 const services = [
-  { icon: '🤖', title: 'AI/ML Solutions', subtitle: 'Intelligent Automation' },
-  { icon: '🔒', title: 'Cyber Security', subtitle: 'Advanced Protection' },
-  { icon: '👨‍💻', title: 'Dedicated Developers', subtitle: 'Expert Teams' },
-  { icon: '📱', title: 'Mobile Apps', subtitle: 'iOS & Android' },
-  { icon: '🌐', title: 'Website Development', subtitle: 'Modern Web Solutions' },
-  { icon: '⚙️', title: 'Custom Software', subtitle: 'Tailored Solutions' },
+  { icon: '🤖', title: 'AI/ML Solutions', subtitle: 'Intelligent Automation', link: 'services/ai-ml' },
+  { icon: '🔒', title: 'Cyber Security', subtitle: 'Advanced Protection', link: 'services/cyber-security' },
+  { icon: '👨‍💻', title: 'Dedicated Developers', subtitle: 'Expert Teams', link: 'services/dedicated-developers' },
+  { icon: '📱', title: 'Mobile Apps', subtitle: 'iOS & Android', link: 'services/mobile-apps' },
+  { icon: '🌐', title: 'Website Development', subtitle: 'Modern Web Solutions', link: 'services/website-development' },
+  { icon: '⚙️', title: 'Custom Software', subtitle: 'Tailored Solutions', link: 'services/custom-software' },
 ];
 
 const scrollY = ref(0);

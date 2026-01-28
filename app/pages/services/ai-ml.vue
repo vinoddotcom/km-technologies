@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-base-100 pt-20">
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-base-100 via-base-200 to-base-100 pt-32 pb-24 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-base-100 via-base-200 to-base-100 pb-24 overflow-hidden">
       <!-- Sophisticated Background -->
       <div class="absolute inset-0 opacity-5">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.3),transparent_50%),radial-gradient(circle_at_80%_80%,rgba(168,85,247,0.3),transparent_50%)]"></div>
