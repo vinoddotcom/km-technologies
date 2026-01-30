@@ -2,7 +2,7 @@
   <div 
     :class="[
       'fixed left-0 right-0 z-50 transition-all duration-500 px-4 sm:px-6',
-      scrollDirection === 'down' && scrollY > 100 ? '-top-32' : 'top-4'
+      scrollDirection === 'down' && scrollY > 100 ? '-top-32' : 'top-0'
     ]"
   >
     <div 
@@ -20,7 +20,7 @@
             KM
           </span>
           <span class="text-base-content opacity-90 group-hover:opacity-100 transition-opacity">
-            Global Tech
+            Software's
           </span>
         </div>
       </NuxtLink>
@@ -227,7 +227,7 @@ const selectTheme = (theme: string) => {
 
 onMounted(() => {
   if (import.meta.client) {
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    // window.addEventListener('scroll', handleScroll, { passive: true });
     
     // Load saved theme
     const savedTheme = localStorage.getItem('theme');

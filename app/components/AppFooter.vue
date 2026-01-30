@@ -12,7 +12,7 @@
               KM
             </span>
             <span class="text-base-content">
-              Global Tech
+              Software's
             </span>
           </div>
           <p class="text-base-content/70 text-sm leading-relaxed">
