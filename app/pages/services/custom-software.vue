@@ -557,10 +557,10 @@
 
 <script setup lang="ts">
 useHead({
-  title: 'Custom Software Development | Mission-Critical Systems — KM Software\'s',
+  title: "Custom Software Development | Mission-Critical Systems — KM Software's",
   meta: [
     { name: 'description', content: 'Custom software development for fintech, healthcare & marketplaces. 8–20× performance gains. Transparent pricing, paid discovery, full IP assignment. Request a proposal today.' },
-    { property: 'og:title', content: 'Custom Software Development | KM Software\'s' },
+    { property: 'og:title', content: "Custom Software Development | KM Software's" },
     { property: 'og:description', content: 'Mission-critical systems built faster, secure, scalable. Transparent pricing from ₹8L.' }
   ]
 })

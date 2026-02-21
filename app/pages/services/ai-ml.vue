@@ -497,7 +497,7 @@
 <script setup lang="ts">
 // SEO
 useHead({
-  title: 'AI & Machine Learning Solutions | KM Global Tech',
+  title: "AI & Machine Learning Solutions | KM Software's",
   meta: [
     { name: 'description', content: 'Transform your business with enterprise-grade AI and machine learning solutions. From predictive analytics to intelligent automation.' }
   ]

@@ -7,13 +7,8 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
         <!-- Company Info -->
         <div class="space-y-6">
-          <div class="text-2xl font-black">
-            <span class="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-              KM
-            </span>
-            <span class="text-base-content">
-              Software's
-            </span>
+          <div class="flex items-center">
+            <img src="/logo.png" alt="KM Software's" class="h-10 w-auto object-contain" />
           </div>
           <p class="text-base-content/70 text-sm leading-relaxed">
             Delivering cutting-edge IT solutions that transform businesses and drive innovation forward.
@@ -145,8 +140,8 @@
               </svg>
               <div>
                 <p class="text-base-content/70 text-sm">Email</p>
-                <a href="mailto:info@kmglobaltech.com" class="text-primary hover:underline text-sm font-medium">
-                  info@kmglobaltech.com
+                <a href="mailto:info@kmsoftware.com" class="text-primary hover:underline text-sm font-medium">
+                  info@kmsoftware.com
                 </a>
               </div>
             </li>
@@ -218,7 +213,7 @@
       <!-- Bottom Bar -->
       <div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-base-content/10">
         <p class="text-base-content/60 text-sm text-center md:text-left">
-          © {{ currentYear }} KM Global Tech. All rights reserved.
+          © {{ currentYear }} KM Software's. All rights reserved.
         </p>
         <div class="flex items-center gap-6">
           <a href="#" class="text-base-content/60 hover:text-primary text-sm transition-colors duration-300">

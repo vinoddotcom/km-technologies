@@ -32,9 +32,9 @@
 <script setup lang="ts">
 // SEO Meta
 useSeoMeta({
-  title: 'KM Global Tech - Scalable Digital Solutions for Your Business',
+  title: "KM Software's - Scalable Digital Solutions for Your Business",
   description: 'Web, Mobile & Software Development Services Tailored for Growth. 10+ years experience, 100+ projects delivered. Get a free consultation today.',
-  ogTitle: 'KM Global Tech - Scalable Digital Solutions',
+  ogTitle: "KM Software's - Scalable Digital Solutions",
   ogDescription: 'Transform your business with our expert IT solutions. Web development, mobile apps, AI/ML, cyber security, and more.',
   ogType: 'website',
 })

@@ -184,8 +184,8 @@
                 </div>
                 <div>
                   <h3 class="font-bold text-lg mb-1">Email</h3>
-                  <a href="mailto:info@kmglobaltech.com" class="text-primary hover:underline font-medium">
-                    info@kmglobaltech.com
+                  <a href="mailto:info@kmsoftware.com" class="text-primary hover:underline font-medium">
+                    info@kmsoftware.com
                   </a>
                   <p class="text-sm text-base-content/60 mt-1">We'll respond within 24 hours</p>
                 </div>

@@ -577,7 +577,7 @@
 
 <script setup lang="ts">
 useHead({
-  title: 'Mobile App Development Services | iOS & Android Apps - KM Global Tech',
+  title: "Mobile App Development Services | iOS & Android Apps - KM Software's",
   meta: [
     {
       name: 'description',
@@ -585,7 +585,7 @@ useHead({
     },
     {
       property: 'og:title',
-      content: 'Mobile App Development Services | iOS & Android Apps - KM Global Tech'
+      content: "Mobile App Development Services | iOS & Android Apps - KM Software's"
     },
     {
       property: 'og:description',

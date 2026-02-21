@@ -412,7 +412,7 @@
 
 <script setup lang="ts">
 useHead({
-  title: 'Cyber Security Services | KM Global Tech',
+  title: "Cyber Security Services | KM Software's",
   meta: [
     { name: 'description', content: 'Enterprise-grade cybersecurity solutions. Protect your business with penetration testing, compliance, 24/7 monitoring, and threat intelligence.' }
   ]

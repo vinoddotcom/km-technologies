@@ -7,7 +7,7 @@
           <span class="text-sm font-semibold text-secondary">Why Us</span>
         </div>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black">
-          Why Choose <span class="text-primary">KM Global Tech</span>?
+          Why Choose <span class="text-primary">KM Software's</span>?
         </h2>
         <p class="text-lg text-base-content/60 font-light">
           We deliver excellence through experience, innovation, and dedication

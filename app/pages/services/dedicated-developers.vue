@@ -575,7 +575,7 @@
 
 <script setup lang="ts">
 useHead({
-  title: 'Dedicated Developers | Staff Augmentation Services - KM Global Tech',
+  title: "Dedicated Developers | Staff Augmentation Services - KM Software's",
   meta: [
     {
       name: 'description',
@@ -583,7 +583,7 @@ useHead({
     },
     {
       property: 'og:title',
-      content: 'Dedicated Developers | Staff Augmentation Services - KM Global Tech'
+      content: "Dedicated Developers | Staff Augmentation Services - KM Software's"
     },
     {
       property: 'og:description',

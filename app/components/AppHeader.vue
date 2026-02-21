@@ -14,15 +14,8 @@
       ]"
     >
       <!-- Logo -->
-      <NuxtLink to="/" class="flex items-center gap-2 group relative z-10">
-        <div class="text-xl sm:text-2xl font-black tracking-tight">
-          <span class="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent group-hover:scale-110 inline-block transition-transform duration-300">
-            KM
-          </span>
-          <span class="text-base-content opacity-90 group-hover:opacity-100 transition-opacity">
-            Software's
-          </span>
-        </div>
+      <NuxtLink to="/" class="flex items-center gap-2 group relative z-10 transition-transform hover:scale-105">
+        <img src="/logo.png" alt="KM Software's" class="h-8 sm:h-10 w-auto object-contain" />
       </NuxtLink>
       
       <!-- Desktop Navigation -->
