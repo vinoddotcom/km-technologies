@@ -1,4 +1,55 @@
 @import "tailwindcss";
-@plugin "daisyui" {
-  themes: all;
+
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "km-theme";
+  default: true; /* set as default */
+  prefersdark: false; /* set as default dark mode */
+  color-scheme: light; /* color of browser-provided UI */
+  
+  /* Background colors */
+  --color-base-100: #ffffff;
+  --color-base-200: #f8fafc;
+  --color-base-300: #f1f5f9;
+  --color-base-content: #1e293b;
+  
+  /* Brand Colors Extracted from public/logo.png */
+  --color-primary: #006CB7; /* Deep Blue from logo */
+  --color-primary-content: #ffffff;
+  
+  --color-secondary: #A5A5A5; /* Silver/Grey from 'M' */
+  --color-secondary-content: #1e293b;
+  
+  --color-accent: #4D4D4D; /* Dark charcoal from 'KM' */
+  --color-accent-content: #ffffff;
+  
+  /* Additional UI semantic colors */
+  --color-neutral: #334155;
+  --color-neutral-content: #ffffff;
+  
+  --color-info: #3b82f6;
+  --color-info-content: #ffffff;
+  
+  --color-success: #10b981;
+  --color-success-content: #ffffff;
+  
+  --color-warning: #f59e0b;
+  --color-warning-content: #ffffff;
+  
+  --color-error: #ef4444;
+  --color-error-content: #ffffff;
+  
+  /* UI Shape settings */
+  --radius-selector: 0.5rem;
+  --radius-field: 0.375rem;
+  --radius-box: 0.5rem;
+  /* base sizes */
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  /* border size */
+  --border: 1px;
+  /* effects */
+  --depth: 1;
+  --noise: 0;
 }
