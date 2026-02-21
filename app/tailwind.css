@@ -17,13 +17,13 @@
   --color-base-content: #1f2937; /* Dark gray text */
   
   /* Brand Colors Extracted from User Request */
-  --color-primary: #0a3591; /* Deep Blue from user */
+  --color-primary: #1673c5; /* New Primary Blue */
   --color-primary-content: #ffffff;
   
-  --color-secondary: #1d4ed8; /* Blue shade for secondary */
+  --color-secondary: #0c4a85; /* Darker blue shade for secondary */
   --color-secondary-content: #ffffff;
   
-  --color-accent: #3b82f6; /* Lighter blue shade for tertiary/accent */
+  --color-accent: #4fa0e5; /* Lighter blue shade for tertiary/accent */
   --color-accent-content: #ffffff;
   
   /* Additional UI semantic colors */
