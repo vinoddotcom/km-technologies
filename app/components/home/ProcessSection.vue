@@ -3,8 +3,8 @@
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
       <div class="text-center mb-16 space-y-4 max-w-3xl mx-auto">
-        <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-info/10 border border-info/20">
-          <span class="text-sm font-semibold text-info">How We Work</span>
+        <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary/10 border border-primary/20">
+          <span class="text-sm font-semibold text-primary">How We Work</span>
         </div>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black">
           Our Development <span class="text-primary">Process</span>

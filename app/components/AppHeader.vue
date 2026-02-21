@@ -77,37 +77,6 @@
       
       <!-- Right Side Actions -->
       <div class="flex items-center gap-2">
-        <!-- Theme Toggle -->
-        <div class="dropdown dropdown-end">
-          <div 
-            tabindex="0" 
-            role="button" 
-            class="btn btn-ghost btn-sm btn-circle hover:bg-primary/10 group"
-          >
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              class="h-5 w-5 group-hover:rotate-180 transition-transform duration-500" 
-              fill="none" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-            </svg>
-          </div>
-          <ul 
-            tabindex="0" 
-            class="dropdown-content menu bg-base-100 dark:bg-base-200 backdrop-blur-xl rounded-2xl z-[100] w-56 p-3 shadow-2xl border border-base-content/10 max-h-96 overflow-y-auto"
-          >
-            <li v-for="theme in themes" :key="theme">
-              <a 
-                @click="selectTheme(theme)" 
-                class="rounded-xl hover:bg-primary/10 transition-all capitalize"
-              >
-                {{ theme }}
-              </a>
-            </li>
-          </ul>
-        </div>
 
         <!-- CTA Button -->
         <a 
@@ -175,13 +144,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
 
-const themes = [
-  "light", "dark", "cupcake", "bumblebee", "emerald", "corporate",
-  "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden",
-  "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black",
-  "luxury", "dracula", "cmyk", "autumn", "business", "acid", "lemonade",
-  "night", "coffee", "winter", "dim", "nord", "sunset"
-];
 
 const services = [
   { icon: '🤖', title: 'AI/ML Solutions', subtitle: 'Intelligent Automation', link: '/services/ai-ml' },
@@ -220,13 +182,9 @@ const selectTheme = (theme: string) => {
 
 onMounted(() => {
   if (import.meta.client) {
-    // window.addEventListener('scroll', handleScroll, { passive: true });
-    
-    // Load saved theme
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      document.documentElement.setAttribute("data-theme", savedTheme);
-    }
+    // Force km-theme exclusively
+    localStorage.removeItem('theme');
+    document.documentElement.setAttribute("data-theme", "km-theme");
   }
 });
 

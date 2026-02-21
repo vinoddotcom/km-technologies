@@ -260,7 +260,7 @@
 
         <div class="grid lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto mb-16">
           <!-- Fixed Price -->
-          <div class="card bg-gradient-to-br from-purple-50/80 to-purple-100/40 dark:from-purple-950/20 dark:to-purple-900/10 backdrop-blur-sm border border-purple-200/50 dark:border-purple-800/30 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
+          <div class="card bg-gradient-to-br from-secondary/10 to-secondary/5 backdrop-blur-sm border border-secondary/30 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
             <div class="card-body p-8">
               <div class="mb-6">
                 <h3 class="text-2xl font-bold text-base-content mb-1">Fixed Price</h3>
@@ -308,7 +308,7 @@
           </div>
 
           <!-- Time & Materials (Popular) -->
-          <div class="relative card bg-gradient-to-br from-blue-50 to-blue-100/60 dark:from-blue-950/30 dark:to-blue-900/20 backdrop-blur-sm border-2 border-primary shadow-2xl hover:shadow-[0_25px_80px_rgba(59,130,246,0.3)] transition-all duration-500 hover:-translate-y-3 lg:scale-105 group">
+          <div class="relative card bg-gradient-to-br from-primary/10 to-primary/5 backdrop-blur-sm border-2 border-primary shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-3 lg:scale-105 group">
             <div class="absolute -top-4 left-1/2 -translate-x-1/2">
               <div class="badge badge-primary badge-lg px-6 py-3 shadow-xl font-bold border-2 border-primary-content/20">
                 MOST POPULAR
@@ -377,7 +377,7 @@
           </div>
 
           <!-- Dedicated Team -->
-          <div class="card bg-gradient-to-br from-emerald-50/80 to-emerald-100/40 dark:from-emerald-950/20 dark:to-emerald-900/10 backdrop-blur-sm border border-emerald-200/50 dark:border-emerald-800/30 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
+          <div class="card bg-gradient-to-br from-success/10 to-success/5 backdrop-blur-sm border border-success/30 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
             <div class="card-body p-8">
               <div class="mb-6">
                 <h3 class="text-2xl font-bold text-base-content mb-1">Dedicated Team</h3>
@@ -543,7 +543,7 @@
               </p>
               
               <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
-                <NuxtLink to="/contact" class="btn btn-lg bg-white text-secondary hover:bg-gray-100 hover:scale-110 border-none shadow-2xl px-10 transition-all min-w-[240px] group">
+                <NuxtLink to="/contact" class="btn btn-lg bg-white text-secondary hover:bg-base-200 hover:scale-110 border-none shadow-2xl px-10 transition-all min-w-[240px] group">
                   <span class="text-lg font-bold">Start Your Project</span>
                   <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>

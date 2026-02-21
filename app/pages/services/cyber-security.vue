@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-base-100">
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-red-950/30 via-base-100 to-blue-950/30 pt-32 pb-24 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-error/10 via-base-100 to-info/10 pt-32 pb-24 overflow-hidden">
       <!-- Animated Background -->
       <div class="absolute inset-0">
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(239,68,68,0.15),transparent_50%),radial-gradient(ellipse_at_bottom_left,rgba(59,130,246,0.15),transparent_50%)] animate-pulse" style="animation-duration: 8s;"></div>
@@ -31,7 +31,7 @@
               
               <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 leading-[1.05] tracking-tight">
                 <span class="block mb-2">Protect Your Assets</span>
-                <span class="block bg-gradient-to-r from-error via-orange-500 to-warning bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient_3s_linear_infinite]">
+                <span class="block bg-gradient-to-r from-error via-warning to-error bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient_3s_linear_infinite]">
                   From Digital Threats
                 </span>
               </h1>
@@ -49,7 +49,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                   </svg>
                 </span>
-                <div class="absolute inset-0 bg-gradient-to-r from-error to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-error to-warning opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </NuxtLink>
               
               <button class="btn btn-outline btn-error btn-lg px-8 group hover:scale-105 transition-all">
@@ -340,7 +340,7 @@
 
     <!-- CTA Section -->
     <section class="py-24 sm:py-32 relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-error via-orange-600 to-warning"></div>
+      <div class="absolute inset-0 bg-gradient-to-br from-error via-warning to-error"></div>
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.1),transparent_50%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.1),transparent_50%)]"></div>
       <!-- Floating shapes -->
       <div class="absolute top-10 right-10 w-32 h-32 sm:w-64 sm:h-64 bg-white/5 rounded-full blur-3xl animate-pulse" style="animation-duration: 4s;"></div>
@@ -366,7 +366,7 @@
               </p>
               
               <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-                <NuxtLink to="/contact" class="btn btn-lg bg-white text-error hover:bg-gray-100 hover:scale-110 border-none shadow-2xl hover:shadow-[0_20px_60px_rgba(255,255,255,0.4)] px-12 py-4 transition-all min-w-[260px] group/btn">
+                <NuxtLink to="/contact" class="btn btn-lg bg-white text-error hover:bg-base-200 hover:scale-110 border-none shadow-2xl hover:shadow-error/30 px-12 py-4 transition-all min-w-[260px] group/btn">
                   <span class="text-lg font-bold">Get Free Assessment</span>
                   <svg class="w-6 h-6 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>

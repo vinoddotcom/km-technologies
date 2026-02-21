@@ -3,8 +3,8 @@
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
       <div class="text-center mb-16 space-y-4 max-w-3xl mx-auto">
-        <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-secondary/10 border border-secondary/20">
-          <span class="text-sm font-semibold text-secondary">Why Us</span>
+        <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary/10 border border-primary/20">
+          <span class="text-sm font-semibold text-primary">Why Us</span>
         </div>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black">
           Why Choose <span class="text-primary">KM Software's</span>?
@@ -51,14 +51,14 @@ const iconBgColors = [
   'bg-primary/10',
   'bg-secondary/10',
   'bg-accent/10',
-  'bg-success/10',
+  'bg-primary/10',
 ]
 
 const iconColors = [
   'text-primary',
   'text-secondary',
   'text-accent',
-  'text-success',
+  'text-primary',
 ]
 
 const features = ref([

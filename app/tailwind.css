@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
-@plugin "daisyui";
+@plugin "daisyui" {
+  themes: all;
+}
 
 @plugin "daisyui/theme" {
   name: "km-theme";
@@ -9,35 +11,35 @@
   color-scheme: light; /* color of browser-provided UI */
   
   /* Background colors */
-  --color-base-100: #ffffff;
-  --color-base-200: #f8fafc;
-  --color-base-300: #f1f5f9;
-  --color-base-content: #1e293b;
+  --color-base-100: #ffffff; /* White */
+  --color-base-200: #f3f4f6; /* Light gray */
+  --color-base-300: #e5e7eb; /* Slightly darker gray */
+  --color-base-content: #1f2937; /* Dark gray text */
   
-  /* Brand Colors Extracted from public/logo.png */
-  --color-primary: #006CB7; /* Deep Blue from logo */
+  /* Brand Colors Extracted from User Request */
+  --color-primary: #0a3591; /* Deep Blue from user */
   --color-primary-content: #ffffff;
   
-  --color-secondary: #A5A5A5; /* Silver/Grey from 'M' */
-  --color-secondary-content: #1e293b;
+  --color-secondary: #1d4ed8; /* Blue shade for secondary */
+  --color-secondary-content: #ffffff;
   
-  --color-accent: #4D4D4D; /* Dark charcoal from 'KM' */
+  --color-accent: #3b82f6; /* Lighter blue shade for tertiary/accent */
   --color-accent-content: #ffffff;
   
   /* Additional UI semantic colors */
-  --color-neutral: #334155;
+  --color-neutral: #374151; /* Neutral dark */
   --color-neutral-content: #ffffff;
   
-  --color-info: #3b82f6;
+  --color-info: #0ea5e9; /* Cyan/blue */
   --color-info-content: #ffffff;
   
-  --color-success: #10b981;
+  --color-success: #16a34a; /* Green shade */
   --color-success-content: #ffffff;
   
-  --color-warning: #f59e0b;
+  --color-warning: #ca8a04; /* Yellow shade */
   --color-warning-content: #ffffff;
   
-  --color-error: #ef4444;
+  --color-error: #dc2626; /* Red shade */
   --color-error-content: #ffffff;
   
   /* UI Shape settings */

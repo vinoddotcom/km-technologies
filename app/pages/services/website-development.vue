@@ -190,9 +190,9 @@
         <div class="grid lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto mb-16">
           <div v-for="(model, index) in pricingModels" :key="index"
             :class="['card backdrop-blur-sm border shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group',
-              model.popular ? 'bg-gradient-to-br from-blue-50 to-blue-100/60 dark:from-blue-950/30 dark:to-blue-900/20 border-2 border-primary lg:scale-105' : 
-              index === 0 ? 'bg-gradient-to-br from-orange-50/80 to-orange-100/40 dark:from-orange-950/20 dark:to-orange-900/10 border-orange-200/50 dark:border-orange-800/30' :
-              'bg-gradient-to-br from-emerald-50/80 to-emerald-100/40 dark:from-emerald-950/20 dark:to-emerald-900/10 border-emerald-200/50 dark:border-emerald-800/30']">
+              model.popular ? 'bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-primary lg:scale-105' : 
+              index === 0 ? 'bg-gradient-to-br from-warning/10 to-warning/5 border-warning/30' :
+              'bg-gradient-to-br from-success/10 to-success/5 border-success/30']">
             <div v-if="model.popular" class="absolute -top-4 left-1/2 -translate-x-1/2">
               <div class="badge badge-primary badge-lg px-6 py-3 shadow-xl font-bold border-2 border-primary-content/20">
                 MOST POPULAR
@@ -304,7 +304,7 @@
                 Let's create a powerful web presence that drives your business forward
               </p>
               
-              <NuxtLink to="/contact" class="btn btn-lg bg-white text-accent hover:bg-gray-100 hover:scale-110 border-none shadow-2xl px-10 transition-all min-w-[240px] group">
+              <NuxtLink to="/contact" class="btn btn-lg bg-white text-accent hover:bg-base-200 hover:scale-110 border-none shadow-2xl px-10 transition-all min-w-[240px] group">
                 <span class="text-lg font-bold">Start Your Project</span>
                 <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
