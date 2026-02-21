@@ -55,40 +55,40 @@
           <h3 class="font-bold text-base-content/90 mb-6 text-lg">Services</h3>
           <ul class="space-y-3">
             <li>
-              <a href="#" class="text-base-content/70 hover:text-primary text-sm transition-colors duration-300 flex items-center gap-2 group">
+              <NuxtLink to="/services/ai-ml" class="text-base-content/70 hover:text-primary text-sm transition-colors duration-300 flex items-center gap-2 group">
                 <span class="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 AI/ML Solutions
-              </a>
+              </NuxtLink>
             </li>
             <li>
-              <a href="#" class="text-base-content/70 hover:text-primary text-sm transition-colors duration-300 flex items-center gap-2 group">
+              <NuxtLink to="/services/cyber-security" class="text-base-content/70 hover:text-primary text-sm transition-colors duration-300 flex items-center gap-2 group">
                 <span class="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 Cyber Security
-              </a>
+              </NuxtLink>
             </li>
             <li>
-              <a href="#" class="text-base-content/70 hover:text-primary text-sm transition-colors duration-300 flex items-center gap-2 group">
+              <NuxtLink to="/services/dedicated-developers" class="text-base-content/70 hover:text-primary text-sm transition-colors duration-300 flex items-center gap-2 group">
                 <span class="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 Dedicated Developers
-              </a>
+              </NuxtLink>
             </li>
             <li>
-              <a href="#" class="text-base-content/70 hover:text-primary text-sm transition-colors duration-300 flex items-center gap-2 group">
+              <NuxtLink to="/services/mobile-apps" class="text-base-content/70 hover:text-primary text-sm transition-colors duration-300 flex items-center gap-2 group">
                 <span class="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 Mobile Apps
-              </a>
+              </NuxtLink>
             </li>
             <li>
-              <a href="#" class="text-base-content/70 hover:text-primary text-sm transition-colors duration-300 flex items-center gap-2 group">
+              <NuxtLink to="/services/website-development" class="text-base-content/70 hover:text-primary text-sm transition-colors duration-300 flex items-center gap-2 group">
                 <span class="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 Website Development
-              </a>
+              </NuxtLink>
             </li>
             <li>
-              <a href="#" class="text-base-content/70 hover:text-primary text-sm transition-colors duration-300 flex items-center gap-2 group">
+              <NuxtLink to="/services/custom-software" class="text-base-content/70 hover:text-primary text-sm transition-colors duration-300 flex items-center gap-2 group">
                 <span class="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 Custom Software
-              </a>
+              </NuxtLink>
             </li>
           </ul>
         </div>
@@ -98,34 +98,34 @@
           <h3 class="font-bold text-base-content/90 mb-6 text-lg">Company</h3>
           <ul class="space-y-3">
             <li>
-              <a href="#" class="text-base-content/70 hover:text-primary text-sm transition-colors duration-300 flex items-center gap-2 group">
+              <NuxtLink to="/about" class="text-base-content/70 hover:text-primary text-sm transition-colors duration-300 flex items-center gap-2 group">
                 <span class="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 About Us
-              </a>
+              </NuxtLink>
             </li>
             <li>
-              <a href="#" class="text-base-content/70 hover:text-primary text-sm transition-colors duration-300 flex items-center gap-2 group">
+              <NuxtLink to="/careers" class="text-base-content/70 hover:text-primary text-sm transition-colors duration-300 flex items-center gap-2 group">
                 <span class="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 Careers
-              </a>
+              </NuxtLink>
             </li>
             <li>
-              <a href="#" class="text-base-content/70 hover:text-primary text-sm transition-colors duration-300 flex items-center gap-2 group">
+              <NuxtLink to="/portfolio" class="text-base-content/70 hover:text-primary text-sm transition-colors duration-300 flex items-center gap-2 group">
                 <span class="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 Portfolio
-              </a>
+              </NuxtLink>
             </li>
             <li>
-              <a href="#" class="text-base-content/70 hover:text-primary text-sm transition-colors duration-300 flex items-center gap-2 group">
+              <NuxtLink to="/case-studies" class="text-base-content/70 hover:text-primary text-sm transition-colors duration-300 flex items-center gap-2 group">
                 <span class="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 Case Studies
-              </a>
+              </NuxtLink>
             </li>
             <li>
-              <a href="#" class="text-base-content/70 hover:text-primary text-sm transition-colors duration-300 flex items-center gap-2 group">
+              <NuxtLink to="/blog" class="text-base-content/70 hover:text-primary text-sm transition-colors duration-300 flex items-center gap-2 group">
                 <span class="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 Blog
-              </a>
+              </NuxtLink>
             </li>
           </ul>
         </div>
@@ -216,15 +216,15 @@
           © {{ currentYear }} KM Software's. All rights reserved.
         </p>
         <div class="flex items-center gap-6">
-          <a href="#" class="text-base-content/60 hover:text-primary text-sm transition-colors duration-300">
+          <NuxtLink to="/privacy-policy" class="text-base-content/60 hover:text-primary text-sm transition-colors duration-300">
             Privacy Policy
-          </a>
-          <a href="#" class="text-base-content/60 hover:text-primary text-sm transition-colors duration-300">
+          </NuxtLink>
+          <NuxtLink to="/terms-of-service" class="text-base-content/60 hover:text-primary text-sm transition-colors duration-300">
             Terms of Service
-          </a>
-          <a href="#" class="text-base-content/60 hover:text-primary text-sm transition-colors duration-300">
+          </NuxtLink>
+          <NuxtLink to="/cookie-policy" class="text-base-content/60 hover:text-primary text-sm transition-colors duration-300">
             Cookie Policy
-          </a>
+          </NuxtLink>
         </div>
       </div>
     </div>
