@@ -82,33 +82,26 @@ useHead({
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <!-- Text Content -->
           <div class="max-w-2xl">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
-              <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-              </svg>
-              <span class="text-sm font-semibold text-primary">Proven Case Studies</span>
-            </div>
-
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-base-content leading-tight mb-6">
-              Software that moves people and profit — <span class="text-base-content/50 block mt-2">validated by results.</span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-base-content leading-tight mb-4">
+              Our Work Speaks for Itself
             </h1>
-            <p class="text-xl text-base-content/70 mb-10 leading-relaxed max-w-xl">
-              Selected projects across fintech, healthcare, marketplaces and enterprise IT. Each case shows the business problem, architecture, measurable outcome and the delivery model.
+            <h2 class="text-xl sm:text-2xl font-bold text-base-content/80 mb-6 drop-shadow-sm">
+              Delivering Smart, Scalable & Secure Digital Solutions Worldwide
+            </h2>
+            <p class="text-lg text-base-content/70 mb-10 leading-relaxed max-w-xl">
+              KM Software’s delivers world-class IT services and software development for clients across the USA, UK, Europe, and beyond.
+              <span class="block mt-4">Secure, scalable solutions built by expert developers — delivered on time and at the right cost.</span>
             </p>
             <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
               <button @click="openContact" class="btn btn-primary btn-lg px-8 shadow-lg hover:shadow-xl hover:scale-105 transition-all group">
-                <span>Request Project Brief</span>
+                <span>Start Your Project</span>
                 <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                 </svg>
               </button>
               <a href="#projects" class="btn btn-outline btn-lg px-8 border-base-content/20 hover:bg-base-200">
-                See ROI examples
+                View Featured Work
               </a>
-            </div>
-            <div class="mt-8 flex items-center gap-3 text-sm text-base-content/60 font-medium pb-8 lg:pb-0">
-              <svg class="w-4 h-4 text-success shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-              <span>We sign an NDA before any non-public discussion • You own the IP • SOC2 & HIPAA readiness</span>
             </div>
           </div>
           
@@ -250,50 +243,42 @@ useHead({
             @keydown.enter="openProject(project)"
             aria-label="View project details"
           >
-            <!-- Card Image Area (placeholder for now) -->
-            <div class="aspect-[16/9] bg-base-200 relative overflow-hidden flex items-center justify-center p-6">
-              <div class="absolute inset-0 bg-gradient-to-t from-base-100 to-transparent z-10 opacity-60"></div>
-              
-              <!-- Abstract Data/Architecture Graphic instead of missing image -->
-              <div class="w-full h-full relative z-0 flex items-center justify-center translate-y-4 group-hover:-translate-y-2 transition-transform duration-700 ease-in-out opacity-40 group-hover:opacity-80">
-                <div class="absolute inset-0 border border-base-content/10 bg-base-100/50 backdrop-blur-sm rounded-xl shadow-sm"></div>
-                <div class="w-3/4 h-1/2 border-t border-b border-primary/20 flex flex-col justify-around py-2 relative z-10">
-                  <div class="h-1 bg-primary/20 w-1/3 rounded-full"></div>
-                  <div class="h-1 bg-success/20 w-3/4 rounded-full"></div>
-                  <div class="h-1 bg-warning/20 w-1/2 rounded-full"></div>
-                </div>
-              </div>
+            <!-- Card Image Area Using Service -->
+            <div class="aspect-[4/3] bg-base-200 relative overflow-hidden flex items-center justify-center">
+              <img :src="`https://placehold.co/600x450/e2e8f0/475569?text=${project.title.replace(/ /g, '+')}`" :alt="project.title" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
               
               <!-- Tags floating on top -->
               <div class="absolute top-4 left-4 z-20 flex gap-2">
-                <span class="badge badge-sm border-base-content/10 bg-base-100/80 backdrop-blur text-base-content shadow-sm">{{ project.industry }}</span>
-                <span class="badge badge-sm border-base-content/10 bg-base-100/80 backdrop-blur text-base-content font-medium opacity-80 shadow-sm">{{ project.budget_band }}</span>
+                <span class="badge badge-sm border-none bg-primary/90 text-primary-content backdrop-blur shadow-sm">{{ project.industry }}</span>
               </div>
             </div>
 
             <!-- Card Content -->
             <div class="p-6 flex flex-col flex-grow">
-              <h3 class="text-xl font-semibold text-base-content mb-2 group-hover:text-primary transition-colors">
+              <h3 class="text-xl font-bold text-base-content mb-3 group-hover:text-primary transition-colors line-clamp-2 min-h-[56px]">
                 {{ project.title }}
               </h3>
               
-              <div class="mb-4 inline-flex items-center gap-2 text-sm font-medium text-success bg-success/10 px-3 py-1 rounded-md w-fit">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
-                {{ project.outcome }}
-              </div>
-              
-              <p class="text-base-content/70 text-sm mb-6 line-clamp-2 flex-grow">
+              <p class="text-base-content/70 text-sm mb-6 line-clamp-2 flex-grow min-h-[40px]">
                 {{ project.summary }}
               </p>
               
               <!-- Tech Stack Badges -->
-              <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-base-200">
-                <span v-for="tech in project.tech_stack.slice(0,4)" :key="tech" class="text-xs font-mono text-base-content/60 bg-base-200 px-2 py-1 rounded">
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span v-for="tech in project.tech_stack.slice(0,3)" :key="tech" class="text-xs font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-md">
                   {{ tech }}
                 </span>
-                <span v-if="project.tech_stack.length > 4" class="text-xs font-mono text-base-content/60 bg-base-200 px-2 py-1 rounded">
-                  +{{ project.tech_stack.length - 4 }}
+                <span v-if="project.tech_stack.length > 3" class="text-xs font-semibold text-base-content/60 bg-base-200 px-2.5 py-1 rounded-md">
+                  +{{ project.tech_stack.length - 3 }}
                 </span>
+              </div>
+
+              <!-- View Details Button -->
+              <div class="mt-auto pt-4 border-t border-base-200">
+                <button class="btn btn-primary w-full gap-2 shadow-sm group-hover:shadow-md transition-all">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                  View Details
+                </button>
               </div>
             </div>
           </article>

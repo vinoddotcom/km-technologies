@@ -1,8 +1,5 @@
 <template>
   <div class="min-h-screen bg-gradient-to-b from-base-100 via-base-200 to-base-100 pt-32 pb-24 pt-32">
-    <!-- Background Pattern -->
-    <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
-    
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <!-- Header Section -->
       <div class="text-center mb-16">
@@ -10,22 +7,20 @@
           <span class="text-xs font-bold tracking-wider uppercase text-primary">Get in Touch</span>
         </div>
         
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 tracking-tight">
-          <span class="bg-gradient-to-r from-base-content via-primary to-base-content bg-clip-text text-transparent">
-            Let's Chat, Reach Out to Us
-          </span>
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 tracking-tight text-base-content">
+          Let’s discuss your project and turn your ideas into reality.
         </h1>
         
-        <p class="text-lg sm:text-xl text-base-content/70 max-w-2xl mx-auto leading-relaxed">
-          Have questions or feedback? We're here to help. Send us a message, and we'll respond within 24 hours
+        <p class="text-xl sm:text-2xl text-base-content max-w-3xl mx-auto leading-relaxed font-medium">
+          From concept to completion, we deliver innovative and scalable digital solutions tailored to your business goals.
         </p>
       </div>
 
       <!-- Main Content Grid -->
       <div class="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
         <!-- Contact Form -->
-        <div class="order-2 lg:order-1">
-          <div class="bg-base-100 rounded-3xl p-8 lg:p-10 shadow-2xl border border-base-content/10">
+        <div class="order-2 lg:order-1 flex flex-col h-full">
+          <div class="bg-base-100 rounded-3xl p-8 lg:p-10 shadow-2xl border border-base-content/10 flex-grow flex flex-col h-full">
             <form @submit.prevent="handleSubmit" class="space-y-6">
               <!-- Name Fields -->
               <div class="grid sm:grid-cols-2 gap-4">
@@ -170,10 +165,11 @@
           </div>
         </div>
 
-        <!-- Contact Info & Image -->
-        <div class="order-1 lg:order-2 space-y-6">
-          <!-- Contact Cards -->
-          <div class="space-y-4">
+        <!-- Contact Info & Box -->
+        <div class="order-1 lg:order-2 flex flex-col h-full">
+          <div class="bg-base-100 rounded-3xl p-8 lg:p-10 shadow-2xl border border-base-content/10 flex-grow flex flex-col justify-between h-full space-y-8">
+            <!-- Contact Cards -->
+            <div class="space-y-4">
             <!-- Email Card -->
             <div class="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-6 border border-primary/20 hover:scale-[1.02] transition-all group">
               <div class="flex items-start gap-4">
@@ -229,9 +225,9 @@
           </div>
 
           <!-- Social Links -->
-          <div class="bg-base-100 rounded-2xl p-6 shadow-xl border border-base-content/10">
-            <h3 class="font-bold text-lg mb-4">Connect With Us</h3>
-            <div class="flex gap-3">
+          <div class="pt-6 border-t border-base-content/10">
+            <h3 class="font-bold text-xl mb-4">Connect With Us</h3>
+            <div class="flex flex-wrap gap-4">
               <a href="https://twitter.com/kmsoftware" target="_blank" class="btn btn-circle btn-outline hover:btn-primary transition-all">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
@@ -247,6 +243,73 @@
                   <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
                 </svg>
               </a>
+              <a href="https://wa.me/1234567890" target="_blank" class="btn btn-circle btn-outline hover:bg-[#25D366] hover:text-white hover:border-[#25D366] transition-all">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.015-1.04 2.475s1.064 2.871 1.212 3.07c.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.052 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- FAQ Section -->
+      <div class="max-w-4xl mx-auto mt-32">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-black mb-4 tracking-tight">Frequently Asked Questions</h2>
+          <p class="text-xl text-base-content/70">Find quick answers to common queries about our process and services.</p>
+        </div>
+        <div class="space-y-4">
+          <!-- FAQ 1 -->
+          <div class="collapse collapse-plus bg-base-100 border border-base-content/10 shadow-sm rounded-2xl group">
+            <input type="radio" name="faq-accordion" checked /> 
+            <div class="collapse-title text-xl font-semibold group-hover:text-primary transition-colors">
+              How long does it take to build a custom software solution?
+            </div>
+            <div class="collapse-content"> 
+              <p class="text-base-content/80 leading-relaxed pt-2 border-t border-base-content/5 mt-2">
+                The timeline varies depending on the complexity of the project. A standard web application might take 2-3 months, while a large-scale enterprise solution can take 6 months or more. We provide a detailed timeline during the proposal phase.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="collapse collapse-plus bg-base-100 border border-base-content/10 shadow-sm rounded-2xl group">
+            <input type="radio" name="faq-accordion" /> 
+            <div class="collapse-title text-xl font-semibold group-hover:text-primary transition-colors">
+              Do you provide ongoing support after launch?
+            </div>
+            <div class="collapse-content"> 
+              <p class="text-base-content/80 leading-relaxed pt-2 border-t border-base-content/5 mt-2">
+                Yes! We offer optional post-launch support and maintenance packages. We ensure your application stays secure, up-to-date, and smoothly handles scaling as your business grows.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="collapse collapse-plus bg-base-100 border border-base-content/10 shadow-sm rounded-2xl group">
+            <input type="radio" name="faq-accordion" /> 
+            <div class="collapse-title text-xl font-semibold group-hover:text-primary transition-colors">
+              What kind of businesses do you work with?
+            </div>
+            <div class="collapse-content"> 
+              <p class="text-base-content/80 leading-relaxed pt-2 border-t border-base-content/5 mt-2">
+                We work with businesses of all sizes—from early-stage startups to established enterprises. Our team adapts our scalable solutions to match your specific industry needs and operational goals.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="collapse collapse-plus bg-base-100 border border-base-content/10 shadow-sm rounded-2xl group">
+            <input type="radio" name="faq-accordion" /> 
+            <div class="collapse-title text-xl font-semibold group-hover:text-primary transition-colors">
+              How do we get started?
+            </div>
+            <div class="collapse-content"> 
+              <p class="text-base-content/80 leading-relaxed pt-2 border-t border-base-content/5 mt-2">
+                Simply fill out the contact form above with your initial ideas or project requirements. Our team will reach out within 24 hours to schedule a free discovery call to discuss your objectives in detail.
+              </p>
             </div>
           </div>
         </div>
