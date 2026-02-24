@@ -11,7 +11,7 @@
           Let’s discuss your project and turn your <span class="block mt-2 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">ideas into reality.</span>
         </h1>
         
-        <p class="text-xl sm:text-2xl text-base-content max-w-3xl mx-auto leading-relaxed font-medium">
+        <p class="text-lg sm:text-xl md:text-2xl text-base-content/70 max-w-3xl mx-auto leading-relaxed font-light">
           From concept to completion, we deliver innovative and scalable digital solutions tailored to your business goals.
         </p>
       </div>
