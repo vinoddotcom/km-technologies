@@ -7,8 +7,8 @@
           <span class="text-xs font-bold tracking-wider uppercase text-primary">Get in Touch</span>
         </div>
         
-        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 tracking-tight text-base-content">
-          Let’s discuss your project and turn your ideas into reality.
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 tracking-tight text-base-content">
+          Let’s discuss your project and turn your <span class="block mt-2 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">ideas into reality.</span>
         </h1>
         
         <p class="text-xl sm:text-2xl text-base-content max-w-3xl mx-auto leading-relaxed font-medium">
@@ -167,12 +167,12 @@
 
         <!-- Contact Info & Box -->
         <div class="order-1 lg:order-2 flex flex-col h-full">
-          <div class="bg-base-100 rounded-3xl p-8 lg:p-10 shadow-2xl border border-base-content/10 flex-grow flex flex-col justify-between h-full space-y-8">
+          <div class="bg-base-100 rounded-3xl p-8 lg:p-10 shadow-2xl border border-base-content/10 ">
             <!-- Contact Cards -->
             <div class="space-y-4">
             <!-- Email Card -->
             <div class="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-6 border border-primary/20 hover:scale-[1.02] transition-all group">
-              <div class="flex items-start gap-4">
+              <div class="flex items-center gap-4">
                 <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
@@ -190,7 +190,7 @@
 
             <!-- Phone Card -->
             <div class="bg-gradient-to-br from-secondary/10 to-secondary/5 rounded-2xl p-6 border border-secondary/20 hover:scale-[1.02] transition-all group">
-              <div class="flex items-start gap-4">
+              <div class="flex items-center gap-4">
                 <div class="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
@@ -208,7 +208,7 @@
 
             <!-- Office Card -->
             <div class="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-6 border border-accent/20 hover:scale-[1.02] transition-all group">
-              <div class="flex items-start gap-4">
+              <div class="flex items-center gap-4">
                 <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
@@ -265,11 +265,11 @@
           <div class="collapse collapse-plus bg-base-100 border border-base-content/10 shadow-sm rounded-2xl group">
             <input type="radio" name="faq-accordion" checked /> 
             <div class="collapse-title text-xl font-semibold group-hover:text-primary transition-colors">
-              How long does it take to build a custom software solution?
+              How long does a typical project take?
             </div>
             <div class="collapse-content"> 
               <p class="text-base-content/80 leading-relaxed pt-2 border-t border-base-content/5 mt-2">
-                The timeline varies depending on the complexity of the project. A standard web application might take 2-3 months, while a large-scale enterprise solution can take 6 months or more. We provide a detailed timeline during the proposal phase.
+              Project timelines vary based on complexity. A simple website might take 4-6 weeks, while complex enterprise solutions can take 3-6 months. We provide detailed timelines during discovery.
               </p>
             </div>
           </div>
@@ -278,11 +278,11 @@
           <div class="collapse collapse-plus bg-base-100 border border-base-content/10 shadow-sm rounded-2xl group">
             <input type="radio" name="faq-accordion" /> 
             <div class="collapse-title text-xl font-semibold group-hover:text-primary transition-colors">
-              Do you provide ongoing support after launch?
+             Do you sign NDAs?
             </div>
             <div class="collapse-content"> 
               <p class="text-base-content/80 leading-relaxed pt-2 border-t border-base-content/5 mt-2">
-                Yes! We offer optional post-launch support and maintenance packages. We ensure your application stays secure, up-to-date, and smoothly handles scaling as your business grows.
+              Absolutely. We take confidentiality seriously and are happy to sign NDAs before discussing your project. We maintain ISO 27001 certification for information security.
               </p>
             </div>
           </div>
@@ -304,11 +304,11 @@
           <div class="collapse collapse-plus bg-base-100 border border-base-content/10 shadow-sm rounded-2xl group">
             <input type="radio" name="faq-accordion" /> 
             <div class="collapse-title text-xl font-semibold group-hover:text-primary transition-colors">
-              How do we get started?
+            What happens after project launch?
             </div>
             <div class="collapse-content"> 
               <p class="text-base-content/80 leading-relaxed pt-2 border-t border-base-content/5 mt-2">
-                Simply fill out the contact form above with your initial ideas or project requirements. Our team will reach out within 24 hours to schedule a free discovery call to discuss your objectives in detail.
+            We provide ongoing support and maintenance packages. Our team monitors performance, fixes bugs, and implements updates to keep your solution running smoothly.
               </p>
             </div>
           </div>
