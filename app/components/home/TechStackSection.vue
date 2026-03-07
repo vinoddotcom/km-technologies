@@ -21,9 +21,14 @@
           :key="category.name"
           class="space-y-4"
         >
-          <h3 class="text-lg font-bold text-base-content/80 text-center">
-            {{ category.name }}
-          </h3>
+          <!-- Issue 4: Category heading with accent bar -->
+          <div class="flex items-center justify-center gap-3 mb-4">
+            <div class="h-px flex-1 max-w-20 bg-base-content/10 rounded"></div>
+            <h3 class="text-sm font-bold text-primary uppercase tracking-widest">
+              {{ category.name }}
+            </h3>
+            <div class="h-px flex-1 max-w-20 bg-base-content/10 rounded"></div>
+          </div>
           
           <!-- Marquee Container -->
           <div class="relative overflow-hidden">
@@ -34,13 +39,18 @@
             <!-- Scrolling content -->
             <div class="flex animate-marquee hover:[animation-play-state:paused]">
               <div class="flex gap-4 pr-4">
+                <!-- Issue 4: Improved pill — vertical layout, bigger icon, hover lift + shadow -->
                 <div 
                   v-for="(tech, index) in [...category.technologies, ...category.technologies]" 
                   :key="`${category.name}-${tech.name}-${index}`"
-                  class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-base-100 border border-base-content/10 hover:border-primary/30 hover:bg-base-100/80 transition-all duration-300 whitespace-nowrap group"
+                  class="flex flex-col items-center gap-2 px-5 py-4 rounded-2xl bg-base-100
+                         border border-base-content/8 hover:border-primary/40
+                         hover:shadow-md hover:shadow-primary/10
+                         transition-all duration-300 whitespace-nowrap group
+                         hover:-translate-y-1"
                 >
-                  <span class="text-lg">{{ tech.icon }}</span>
-                  <span class="text-sm font-medium text-base-content/80 group-hover:text-primary transition-colors">
+                  <span class="text-2xl group-hover:scale-110 transition-transform duration-300">{{ tech.icon }}</span>
+                  <span class="text-xs font-semibold text-base-content/75 group-hover:text-primary transition-colors">
                     {{ tech.name }}
                   </span>
                 </div>

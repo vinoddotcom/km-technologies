@@ -39,7 +39,7 @@
                 >
                   {{ step.title }}
                 </h3>
-                <p class="text-xs text-base-content/60 mt-1 max-w-[120px]">
+                <p class="text-xs font-medium text-base-content/60 mt-2 max-w-[150px] mx-auto leading-snug">
                   {{ step.shortDesc }}
                 </p>
               </div>
@@ -82,14 +82,32 @@
         </div>
 
         <!-- Selected Step Description (Desktop) -->
-        <div class="hidden lg:block mt-12">
-          <div class="card bg-base-200/50 border border-primary/20 max-w-2xl mx-auto">
-            <div class="card-body p-6 text-center">
-              <div class="flex items-center justify-center gap-3 mb-2">
-                <span class="badge badge-primary">Step {{ activeStep + 1 }}</span>
-                <h3 class="text-xl font-bold text-primary">{{ processSteps[activeStep]?.title }}</h3>
+        <div class="hidden lg:block mt-16">
+          <div 
+            :key="activeStep" 
+            class="card bg-gradient-to-br from-base-100 to-base-200 shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-base-content/10 max-w-3xl mx-auto transform transition-all duration-500 hover:shadow-primary/20 hover:border-primary/30 animate-[fadeIn_0.4s_ease-out]"
+          >
+            <div class="card-body p-8 sm:p-10 text-center relative overflow-hidden group">
+              <!-- Animated background gradient -->
+              <div class="absolute inset-0 bg-gradient-to-r from-primary/5 via-secondary/5 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              
+              <div class="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8">
+                <div class="flex-shrink-0 w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center border border-primary/20 shadow-inner transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                  <span class="text-4xl">{{ processSteps[activeStep]?.icon }}</span>
+                </div>
+                
+                <div class="text-center sm:text-left flex-1 max-w-xl">
+                  <div class="flex items-center justify-center sm:justify-start gap-3 mb-2">
+                    <span class="badge badge-primary badge-sm font-bold tracking-widest uppercase">Step {{ activeStep + 1 }}</span>
+                    <h3 class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                      {{ processSteps[activeStep]?.title }}
+                    </h3>
+                  </div>
+                  <p class="text-lg text-base-content/70 leading-relaxed font-light mt-3">
+                    {{ processSteps[activeStep]?.description }}
+                  </p>
+                </div>
               </div>
-              <p class="text-base-content/70">{{ processSteps[activeStep]?.description }}</p>
             </div>
           </div>
         </div>
@@ -112,7 +130,8 @@ const processSteps = ref<ProcessStep[]>([
   {
     icon: "📋",
     title: "Requirement Analysis",
-    shortDesc: "Understanding needs",
+    // Issue 5: 'Understanding needs' → 'In-depth requirement analysis'
+    shortDesc: "In-depth requirement analysis",
     description: "We begin by thoroughly understanding your business goals, target audience, and project requirements through detailed discussions and research."
   },
   {
@@ -124,7 +143,8 @@ const processSteps = ref<ProcessStep[]>([
   {
     icon: "💻",
     title: "Development",
-    shortDesc: "Building solution",
+    // Issue 5: 'Building solution' → 'Agile development execution'
+    shortDesc: "Agile development execution",
     description: "Using agile methodologies, our developers build robust, scalable solutions with clean code and best practices."
   },
   {
@@ -142,7 +162,8 @@ const processSteps = ref<ProcessStep[]>([
   {
     icon: "🛠️",
     title: "Support & Maintenance",
-    shortDesc: "Ongoing care",
+    // Issue 5: 'Ongoing care' → 'Sustained value creation'
+    shortDesc: "Sustained value creation",
     description: "Our team provides continuous support, regular updates, and maintenance to keep your solution running smoothly."
   },
 ])

@@ -13,7 +13,7 @@
           <ul>
             <li><NuxtLink to="/">Home</NuxtLink></li>
             <li><NuxtLink to="/#services">Services</NuxtLink></li>
-            <li>AI/ML Solutions</li>
+            <li>AI & ML</li>
           </ul>
         </div>
         
@@ -25,24 +25,26 @@
                 <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z"/>
                 </svg>
-                <span class="text-sm font-semibold text-primary">AI/ML Solutions</span>
+                <span class="text-sm font-semibold text-primary">AI & Machine Learning Solutions</span>
               </div>
-              
-              <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 leading-[1.1] tracking-tight">
-                Transform Data Into
-                <span class="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent mt-2">
-                  Intelligent Actions
+              <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-black mb-5 leading-tight tracking-tight text-base-content">
+                Transform Your Business with
+                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-accent via-primary to-secondary mt-1">
+                  Intelligent Automation
                 </span>
               </h1>
               
-              <p class="text-xl text-base-content/70 leading-relaxed">
-                Harness the power of artificial intelligence and machine learning to automate processes, predict outcomes, and unlock unprecedented business value.
+              <p class="text-base sm:text-lg text-base-content/80 leading-relaxed max-w-lg mb-4">
+                Artificial Intelligence is no longer the future — it's the present. Businesses using AI today are gaining a competitive edge through automation, smarter insights, and faster decision-making.
+              </p>
+              <p class="text-base sm:text-lg text-base-content/70 leading-relaxed max-w-lg">
+                At KM Software's, we build practical AI and Machine Learning solutions that help you automate processes, uncover insights, and create intelligent digital experiences. From chatbots to predictive analytics, we turn data into real business value.
               </p>
             </div>
             
             <div class="flex flex-col sm:flex-row gap-4">
               <NuxtLink to="/contact" class="btn btn-primary btn-lg px-8 shadow-lg hover:shadow-xl hover:scale-105 transition-all group">
-                <span>Start Your AI Journey</span>
+                <span>Book a Free AI Consultation</span>
                 <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                 </svg>
@@ -161,15 +163,49 @@
       </div>
     </section>
 
+    <!-- Why AI Matters -->
+    <section class="py-20 bg-base-200">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+          <!-- Section Header -->
+          <div class="text-center mb-12">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">
+              Why AI Matters
+            </h2>
+            <p class="text-lg text-base-content/70 max-w-2xl mx-auto">
+              AI helps businesses stay ahead by transforming operations, improving customer experiences, and unlocking growth opportunities.
+            </p>
+          </div>
+          
+          <!-- Benefits Grid -->
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+            <div v-for="(matter, index) in whyAiMatters" :key="matter" class="flex items-start gap-4 p-5 rounded-2xl bg-base-100 border border-base-content/5 hover:border-primary/20 hover:shadow-md transition-all">
+              <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+              </div>
+              <span class="font-semibold text-base-content/85 pt-2">{{ matter }}</span>
+            </div>
+          </div>
+          
+          <!-- Tagline -->
+          <div class="text-center">
+            <p class="inline-block text-base text-primary font-bold italic px-6 py-3 rounded-full bg-primary/5 border border-primary/10">
+              We help you adopt AI strategically — not just technically.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Services Overview -->
-    <section class="py-24 bg-base-100">
+    <section class="py-24 bg-base-200">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
-            Comprehensive AI/ML Services
+            Our AI & ML Services
           </h2>
           <p class="text-xl text-base-content/70 max-w-3xl mx-auto">
-            End-to-end artificial intelligence solutions tailored to your business needs
+            We deliver intelligent solutions tailored to your business needs
           </p>
         </div>
 
@@ -206,68 +242,21 @@
       </div>
     </section>
 
-    <!-- Technology Stack -->
+    <!-- Industries We Serve -->
     <section class="py-24 bg-gradient-to-b from-base-200 to-base-100">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-          <div class="text-center mb-16">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
-              Powered By Industry-Leading Technology
-            </h2>
-            <p class="text-xl text-base-content/70 max-w-3xl mx-auto">
-              We leverage cutting-edge frameworks and tools to deliver robust, scalable AI solutions
-            </p>
-          </div>
-
-          <div class="grid md:grid-cols-2 gap-8">
-            <!-- AI/ML Frameworks Card -->
-            <div class="bg-base-100 rounded-3xl p-10 border border-base-content/10 hover:border-primary/30 hover:shadow-2xl transition-all group">
-              <div class="flex items-center gap-4 mb-8">
-                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                  <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z"/>
-                    <path d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z"/>
-                    <path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="text-2xl font-black">AI/ML Frameworks</h3>
-                  <p class="text-sm text-base-content/60">Core Technologies</p>
-                </div>
-              </div>
-              <div class="grid grid-cols-3 gap-4">
-                <div v-for="tech in mlFrameworks" :key="tech.name" 
-                  class="flex flex-col items-center p-4 bg-base-200 rounded-xl hover:bg-base-300 transition-colors group/item">
-                  <div class="text-3xl font-bold text-primary mb-2 group-hover/item:scale-110 transition-transform">
-                    {{ tech.icon }}
-                  </div>
-                  <div class="text-xs font-semibold text-center">{{ tech.name }}</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Cloud Platforms Card -->
-            <div class="bg-base-100 rounded-3xl p-10 border border-base-content/10 hover:border-secondary/30 hover:shadow-2xl transition-all group">
-              <div class="flex items-center gap-4 mb-8">
-                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-secondary/20 to-accent/20 flex items-center justify-center">
-                  <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M5.5 16a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 16h-8z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="text-2xl font-black">Cloud AI Platforms</h3>
-                  <p class="text-sm text-base-content/60">Enterprise Infrastructure</p>
-                </div>
-              </div>
-              <div class="grid grid-cols-3 gap-4">
-                <div v-for="cloud in cloudPlatforms" :key="cloud.name" 
-                  class="flex flex-col items-center p-4 bg-base-200 rounded-xl hover:bg-base-300 transition-colors group/item">
-                  <div class="text-3xl font-bold text-secondary mb-2 group-hover/item:scale-110 transition-transform">
-                    {{ cloud.icon }}
-                  </div>
-                  <div class="text-xs font-semibold text-center">{{ cloud.name }}</div>
-                </div>
-              </div>
+        <div class="max-w-5xl mx-auto text-center">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
+            Industries We Serve
+          </h2>
+          <p class="text-xl text-base-content/70 max-w-3xl mx-auto mb-12">
+            We deliver AI solutions for businesses across all major sectors
+          </p>
+          
+          <div class="flex flex-wrap justify-center gap-4">
+            <div v-for="industry in industries" :key="industry"
+              class="px-8 py-5 rounded-2xl bg-base-100 border border-base-content/10 shadow-sm hover:shadow-lg hover:border-primary/30 hover:-translate-y-1 transition-all font-bold text-lg text-base-content/80 group cursor-default">
+              <span class="group-hover:text-primary transition-colors">{{ industry }}</span>
             </div>
           </div>
         </div>
@@ -280,7 +269,7 @@
         <div class="max-w-7xl mx-auto">
           <div class="text-center mb-16">
             <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
-              Our Proven Development Process
+              Our AI Development Process
             </h2>
             <p class="text-xl text-base-content/70 max-w-3xl mx-auto">
               From concept to deployment, we follow a structured approach to ensure project success
@@ -307,37 +296,28 @@
       </div>
     </section>
 
-    <!-- Use Cases -->
+    <!-- Why Choose KM Software's -->
     <section class="py-24 bg-base-200">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-          <div class="text-center mb-16">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
-              Real-World Applications
-            </h2>
-            <p class="text-xl text-base-content/70 max-w-3xl mx-auto">
-              See how businesses across industries leverage our AI/ML solutions
-            </p>
-          </div>
-
-          <div class="grid md:grid-cols-2 gap-8">
-            <div v-for="useCase in useCases" :key="useCase.title" 
-              class="bg-base-100 rounded-2xl p-8 hover:shadow-xl transition-all group">
-              <div class="flex items-start gap-6">
-                <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                  <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" v-html="useCase.iconPath"></path>
-                  </svg>
-                </div>
-                <div class="flex-1">
-                  <h3 class="text-xl font-bold mb-3">{{ useCase.title }}</h3>
-                  <p class="text-base-content/70 mb-4">{{ useCase.description }}</p>
-                  <div class="flex flex-wrap gap-2">
-                    <span v-for="tag in useCase.tags" :key="tag" 
-                      class="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">
-                      {{ tag }}
-                    </span>
+        <div class="max-w-5xl mx-auto">
+          <div class="bg-gradient-to-br from-primary/5 via-base-100 to-secondary/5 rounded-3xl p-10 md:p-16 border border-base-content/10 shadow-xl">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 class="text-3xl sm:text-4xl font-black mb-6 leading-tight">
+                  Why Choose
+                  <span class="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mt-2">KM Software's?</span>
+                </h2>
+                <p class="text-lg text-base-content/70 italic font-semibold">
+                  We don't just build AI — we make it work for your business.
+                </p>
+              </div>
+              
+              <div class="space-y-4">
+                <div v-for="reason in whyChooseUs" :key="reason" class="flex items-center gap-4 p-4 rounded-xl bg-base-100 shadow-sm border border-base-content/5 hover:border-primary/20 transition-all">
+                  <div class="w-8 h-8 rounded-full bg-success/20 text-success flex items-center justify-center flex-shrink-0">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                   </div>
+                  <span class="font-bold text-lg text-base-content/90">{{ reason }}</span>
                 </div>
               </div>
             </div>
@@ -430,18 +410,18 @@
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
                 </svg>
-                <span class="text-sm font-semibold">Let's Talk</span>
+                <span class="text-sm font-semibold">Let's Build Intelligent Solutions</span>
               </div>
               
               <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight">
-                Ready to Build Something
+                Ready to unlock the
                 <span class="block bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent mt-2">
-                  Extraordinary?
+                  power of AI?
                 </span>
               </h2>
               
               <p class="text-xl opacity-90 mb-12 max-w-2xl mx-auto leading-relaxed">
-                Transform your vision into reality with AI-powered solutions. Let's discuss how we can accelerate your digital transformation journey.
+                Partner with KM Software's to automate workflows, gain smarter insights, and build future-ready digital experiences.
               </p>
               
               <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -449,7 +429,7 @@
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                   </svg>
-                  <span>Schedule a Call</span>
+                  <span>Book a Free AI Consultation Today</span>
                   <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                   </svg>
@@ -499,101 +479,72 @@
 useHead({
   title: "AI & Machine Learning Solutions | KM Software's",
   meta: [
-    { name: 'description', content: 'Transform your business with enterprise-grade AI and machine learning solutions. From predictive analytics to intelligent automation.' }
+    { name: 'description', content: 'Transform your business with intelligent automation. KM Software\'s builds practical AI and Machine Learning solutions — from chatbots to predictive analytics.' }
   ]
 });
 
+const whyAiMatters = ref([
+  'Automate repetitive tasks',
+  'Reduce operational costs',
+  'Predict customer behavior',
+  'Improve decision-making',
+  'Personalize user experiences',
+  'Detect risks and anomalies'
+]);
+
 const services = ref([
   {
-    title: 'Machine Learning Models',
-    description: 'Custom ML models for classification, regression, clustering, and predictive analytics tailored to your specific business requirements.',
-    technologies: ['TensorFlow', 'PyTorch', 'Scikit-learn'],
+    title: 'Custom AI Solutions',
+    description: 'Tailor-made AI systems designed for your business workflows.',
+    technologies: ['AI automation', 'Recommendation engines', 'Decision dashboards', 'Intelligent workflows'],
     iconPath: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z'
   },
   {
-    title: 'Natural Language Processing',
-    description: 'Advanced NLP solutions including sentiment analysis, text classification, chatbots, and language understanding systems.',
-    technologies: ['BERT', 'GPT', 'spaCy'],
+    title: 'AI Chatbots & Assistants',
+    description: 'Automate conversations with smart, human-like AI.',
+    technologies: ['WhatsApp bots', '24/7 support', 'Lead qualification', 'Multilingual'],
     iconPath: 'M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z'
   },
   {
-    title: 'Computer Vision',
-    description: 'Image recognition, object detection, facial recognition, and visual quality inspection powered by deep learning.',
-    technologies: ['OpenCV', 'YOLO', 'CNN'],
-    iconPath: 'M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z'
-  },
-  {
     title: 'Predictive Analytics',
-    description: 'Forecast trends, predict customer behavior, and make data-driven decisions with advanced statistical modeling.',
-    technologies: ['Prophet', 'ARIMA', 'XGBoost'],
+    description: 'Turn your data into actionable insights. Make proactive, data-driven decisions.',
+    technologies: ['Sales forecasting', 'Churn prediction', 'Demand forecasting', 'Behavioral analytics'],
     iconPath: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z'
   },
   {
-    title: 'Intelligent Automation',
-    description: 'Automate complex business processes with AI-powered systems that learn, adapt, and improve over time.',
-    technologies: ['RPA', 'AutoML', 'Workflow'],
-    iconPath: 'M13 10V3L4 14h7v7l9-11h-7z'
+    title: 'Natural Language Processing (NLP)',
+    description: 'Understand and process text or voice using AI.',
+    technologies: ['Sentiment analysis', 'Resume screening', 'Voice assistants', 'Document automation'],
+    iconPath: 'M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129'
   },
   {
-    title: 'Recommendation Systems',
-    description: 'Personalized product and content recommendations to boost engagement, sales, and customer satisfaction.',
-    technologies: ['Collaborative', 'Content-based', 'Hybrid'],
-    iconPath: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z'
+    title: 'Computer Vision',
+    description: 'AI that understands images and video.',
+    technologies: ['Face recognition', 'Object detection', 'CCTV analytics', 'Image classification'],
+    iconPath: 'M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z'
   }
 ]);
 
-const mlFrameworks = ref([
-  { name: 'TensorFlow', icon: 'TF' },
-  { name: 'PyTorch', icon: 'PT' },
-  { name: 'Scikit-learn', icon: 'SK' },
-  { name: 'Keras', icon: 'KR' },
-  { name: 'Pandas', icon: 'PD' },
-  { name: 'NumPy', icon: 'NP' }
-]);
-
-const cloudPlatforms = ref([
-  { name: 'AWS ML', icon: 'AWS' },
-  { name: 'Azure AI', icon: 'AZ' },
-  { name: 'Google AI', icon: 'GCP' },
-  { name: 'HuggingFace', icon: 'HF' },
-  { name: 'OpenAI', icon: 'OAI' },
-  { name: 'Databricks', icon: 'DB' }
+const industries = ref([
+  'Healthcare', 'FinTech', 'E-commerce', 'HR Tech',
+  'Manufacturing', 'Logistics', 'Education', 'Retail'
 ]);
 
 const processSteps = ref([
-  { title: 'Discovery & Planning', timeline: 'Week 1-2', description: 'Understanding your business objectives, defining scope, and creating a comprehensive project roadmap.' },
-  { title: 'Data Preparation', timeline: 'Week 3-4', description: 'Collecting, cleaning, and structuring data for optimal model training and validation.' },
-  { title: 'Model Development', timeline: 'Week 5-8', description: 'Building and training AI/ML models using state-of-the-art algorithms and techniques.' },
-  { title: 'Testing & Validation', timeline: 'Week 9-10', description: 'Rigorous testing to ensure accuracy, reliability, and production-readiness.' },
-  { title: 'Deployment', timeline: 'Week 11-12', description: 'Seamless integration into your infrastructure with comprehensive documentation.' },
-  { title: 'Ongoing Support', timeline: 'Continuous', description: 'Monitoring, maintenance, and optimization to ensure peak performance.' }
+  { title: 'Discovery & Problem Definition', timeline: 'Step 1', description: 'We understand your business challenges and identify high-impact AI opportunities.' },
+  { title: 'Data Analysis', timeline: 'Step 2', description: 'Data collection, cleaning, and feasibility assessment.' },
+  { title: 'Model Design', timeline: 'Step 3', description: 'Choosing the right algorithms and AI architecture.' },
+  { title: 'Development & Training', timeline: 'Step 4', description: 'Building and training AI models using real-world datasets.' },
+  { title: 'Deployment & Integration', timeline: 'Step 5', description: 'Seamless integration into your apps, CRM, or workflows.' },
+  { title: 'Monitoring & Optimization', timeline: 'Step 6', description: 'Continuous performance monitoring and improvements.' }
 ]);
 
-const useCases = ref([
-  {
-    title: 'Healthcare Diagnostics',
-    description: 'AI-powered medical image analysis for early disease detection, reducing diagnostic time by 60% and improving accuracy.',
-    tags: ['Computer Vision', 'Deep Learning', 'Medical AI'],
-    iconPath: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z'
-  },
-  {
-    title: 'Financial Fraud Detection',
-    description: 'Real-time anomaly detection preventing fraudulent transactions with 99% accuracy across millions of daily transactions.',
-    tags: ['Anomaly Detection', 'Real-time ML', 'FinTech'],
-    iconPath: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
-  },
-  {
-    title: 'E-commerce Personalization',
-    description: 'Dynamic product recommendations increasing conversion rates by 35% through intelligent customer behavior analysis.',
-    tags: ['Recommendation Systems', 'Personalization', 'Retail AI'],
-    iconPath: 'M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z'
-  },
-  {
-    title: 'Manufacturing Quality Control',
-    description: 'Automated visual inspection detecting defects with 98% accuracy, reducing waste and improving production efficiency.',
-    tags: ['Computer Vision', 'Quality Assurance', 'Industrial AI'],
-    iconPath: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4'
-  }
+const whyChooseUs = ref([
+  'Business-focused AI approach',
+  'Custom-built solutions',
+  'Scalable & secure systems',
+  'End-to-end development',
+  'Long-term support'
 ]);
 
 // FAQ Section Configuration - Fully Dynamic

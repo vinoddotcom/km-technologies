@@ -26,9 +26,12 @@
           </span>
         </h1>
 
-        <!-- Subheading -->
-        <p class="text-lg sm:text-xl md:text-2xl text-base-content/70 max-w-3xl mx-auto leading-relaxed font-light">
+        <!-- Subheading — Issue 1: Increased opacity and font size for better visibility -->
+        <p class="text-xl sm:text-2xl md:text-2xl text-base-content/90 max-w-3xl mx-auto leading-relaxed font-medium">
           {{ subheading }}
+        </p>
+        <p class="text-base sm:text-lg text-base-content/80 max-w-2xl mx-auto leading-relaxed">
+          {{ subheadingLine2 }}
         </p>
 
         <!-- CTA Buttons -->
@@ -55,24 +58,35 @@
           </NuxtLink>
         </div>
 
-        <!-- Stats -->
-        <div class="pt-12">
+        <!-- Stats — Issue 2: Count-up animation on scroll -->
+        <div class="pt-12" ref="statsSection">
           <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div 
-              v-for="stat in stats" 
+              v-for="(stat, index) in stats" 
               :key="stat.label"
-              class="text-center p-4 rounded-2xl bg-base-200/50 backdrop-blur-sm border border-base-content/5 hover:border-primary/20 hover:bg-base-200/80 transition-all duration-300"
+              class="text-center p-5 rounded-2xl bg-base-200/50 backdrop-blur-sm border border-base-content/5 hover:border-primary/20 hover:bg-base-200/80 transition-all duration-300"
             >
-              <div class="text-3xl sm:text-4xl font-black text-primary">{{ stat.value }}</div>
-              <div class="text-sm text-base-content/60 mt-1">{{ stat.label }}</div>
+              <!-- Animated counter value -->
+              <div class="text-3xl sm:text-4xl font-black text-primary">
+                {{ displayValues[index] }}{{ stat.suffix }}
+              </div>
+              <!-- Issue 2: Bigger subtext label size -->
+              <div class="text-base font-medium text-base-content/75 mt-1.5">{{ stat.label }}</div>
             </div>
           </div>
         </div>
 
-        <!-- Trust Text -->
-        <p class="text-sm text-base-content/50 pt-4">
-          {{ trustText }}
-        </p>
+        <!-- Trust Strip — Issue 2: Highlighted with bold checkmarks and primary color -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 pt-2">
+          <span 
+            v-for="trust in trustItems" 
+            :key="trust"
+            class="inline-flex items-center gap-2 text-base font-semibold text-base-content/85"
+          >
+            <span class="text-success font-black text-lg">✓</span>
+            {{ trust }}
+          </span>
+        </div>
       </div>
     </div>
 
@@ -82,18 +96,78 @@
 </template>
 
 <script setup lang="ts">
+// Issue 1: Updated subheading content with better text for improved visibility
 const badge = "Trusted by 50+ Businesses Worldwide"
 const headingLine1 = "We Build Scalable Digital"
 const headingLine2 = "Solutions for Your Business"
-const subheading = "Web, Mobile & Software Development Services Tailored for Growth. Transform your ideas into powerful digital products with our expert team."
+// Issue 1: Two-line subheading — first line is the key proposition, second is the supporting line
+const subheading = "Web, Mobile & Software Development Services Tailored for Scalable Growth."
+const subheadingLine2 = "Transform your ideas into powerful digital products with our expert engineering team."
 const ctaPrimary = "Get Free Consultation"
 const ctaSecondary = "View Our Work"
-const trustText = "✓ No upfront costs  ✓ Free project consultation  ✓ 24/7 dedicated support"
 
-const stats = ref([
-  { value: "10+", label: "Years Experience" },
-  { value: "100+", label: "Projects Delivered" },
-  { value: "50+", label: "Happy Clients" },
-  { value: "99%", label: "Client Satisfaction" },
-])
+// Issue 2: Trust items as array for v-for rendering with highlight
+const trustItems = ["Free Consultation", "Flexible Pricing", "24/7 Dedicated Support"]
+
+interface Stat {
+  target: number
+  suffix: string
+  label: string
+}
+
+const stats: Stat[] = [
+  { target: 10, suffix: "+", label: "Years Experience" },
+  { target: 100, suffix: "+", label: "Projects Delivered" },
+  { target: 50, suffix: "+", label: "Happy Clients" },
+  { target: 99, suffix: "%", label: "Client Satisfaction" },
+]
+
+// Issue 2: Count-up animation — starts at 0, counts up to target value when section enters viewport
+const displayValues = ref<number[]>(stats.map(() => 0))
+const statsSection = ref<HTMLElement | null>(null)
+const hasAnimated = ref(false)
+
+function animateCountUp() {
+  if (hasAnimated.value) return
+  hasAnimated.value = true
+
+  stats.forEach((stat, index) => {
+    const duration = 1800 // ms
+    const steps = 60
+    const increment = stat.target / steps
+    let current = 0
+    let step = 0
+
+    const interval = setInterval(() => {
+      step++
+      // Ease-out: slower at the end
+      current = Math.round(stat.target * (1 - Math.pow(1 - step / steps, 3)))
+      displayValues.value[index] = current
+
+      if (step >= steps) {
+        displayValues.value[index] = stat.target
+        clearInterval(interval)
+      }
+    }, duration / steps)
+  })
+}
+
+onMounted(() => {
+  // Use IntersectionObserver so animation fires when stat section scrolls into view
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCountUp()
+          observer.disconnect()
+        }
+      })
+    },
+    { threshold: 0.3 }
+  )
+
+  if (statsSection.value) {
+    observer.observe(statsSection.value)
+  }
+})
 </script>

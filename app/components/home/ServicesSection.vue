@@ -1,5 +1,5 @@
 <template>
-  <section id="services" class="py-10 sm:py-15 bg-gradient-to-b from-base-100 to-base-200">
+  <section id="services" class="py-10 sm:py-20 bg-gradient-to-b from-base-100 to-base-200">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
       <div class="text-center mb-16 space-y-4 max-w-3xl mx-auto">
@@ -20,21 +20,33 @@
           v-for="service in services" 
           :key="service.title"
           :to="service.link"
-          class="group card bg-base-100 border border-base-content/5 hover:border-primary/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-md cursor-pointer"
+          class="group relative card bg-base-100 border border-base-content/8 overflow-hidden
+                 hover:border-primary/40 transition-all duration-500 hover:-translate-y-3 
+                 hover:shadow-xl hover:shadow-primary/15 cursor-pointer"
         >
-          <div class="card-body p-6">
-            <!-- Icon -->
-            <div class="text-4xl mb-3 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
-              {{ service.emoji }}
+          <!-- Issue 3: Shining hover effect — animated gradient sweep on the card -->
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500
+                      bg-gradient-to-br from-primary/5 via-transparent to-accent/5 pointer-events-none"></div>
+          <!-- Shine sweep — moves from left to right on hover -->
+          <div class="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out
+                      bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none"></div>
+
+          <div class="card-body p-6 relative z-10">
+            <!-- Icon with animated background -->
+            <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-4
+                        bg-primary/10 group-hover:bg-primary/20 transition-all duration-500">
+              <span class="text-3xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 inline-block">
+                {{ service.emoji }}
+              </span>
             </div>
             
             <!-- Title -->
-            <h3 class="text-lg font-bold text-base-content group-hover:text-primary transition-colors">
+            <h3 class="text-lg font-bold text-base-content group-hover:text-primary transition-colors duration-300">
               {{ service.title }}
             </h3>
             
             <!-- Description -->
-            <p class="text-base-content/60 text-sm leading-relaxed flex-grow">
+            <p class="text-base-content/65 text-sm leading-relaxed flex-grow mt-1">
               {{ service.description }}
             </p>
 
@@ -52,11 +64,14 @@
               </li>
             </ul>
             
-            <!-- Read More -->
-            <div class="mt-4 pt-4 border-t border-base-content/5">
-              <span class="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:gap-2 transition-all">
+            <!-- Issue 3: Read More button — highlights more on hover with background fill -->
+            <div class="mt-5 pt-4 border-t border-base-content/8">
+              <span class="inline-flex items-center gap-2 text-sm font-bold text-primary
+                           px-3 py-1.5 rounded-lg
+                           group-hover:bg-primary group-hover:text-primary-content
+                           transition-all duration-300">
                 Read More
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
               </span>
@@ -77,6 +92,8 @@ interface Service {
   link: string;
 }
 
+// Issue 3: "Dedicated Teams" renamed to "Dedicated Developers" as per client request
+// Issue 9: Services in correct order: Website Dev → App Dev → Custom Software → Dedicated Developers → AI/ML → Cyber Security → Cloud & DevOps → IT Consulting
 const services = ref<Service[]>([
   {
     emoji: "🌐",
@@ -86,23 +103,19 @@ const services = ref<Service[]>([
       "Responsive & mobile-friendly",
       "Modern UI/UX design",
       "React / Vue / Next.js",
-      "SEO-friendly development",
-      "High performance & security"
     ],
     link: "/services/website-development"
   },
   {
     emoji: "📱",
-    title: "Mobile App Development",
+    title: "App Development",
     description: "Native and cross-platform mobile applications for iOS and Android",
     features: [
       "Android & iOS apps",
       "Flutter & React Native",
-      "Native app development",
-      "App Store support",
-      "Scalable architecture"
+      "Scalable architecture",
     ],
-    link: "/services/mobile-apps"
+    link: "/services/app-development"
   },
   {
     emoji: "💻",
@@ -112,34 +125,29 @@ const services = ref<Service[]>([
       "Business-specific solutions",
       "Scalable architecture",
       "API integrations",
-      "Secure & reliable",
-      "Ongoing maintenance"
     ],
     link: "/services/custom-software"
   },
   {
     emoji: "👨‍💻",
-    title: "Dedicated Teams",
+    // Issue 3: Changed from "Dedicated Teams" to "Dedicated Developers"
+    title: "Dedicated Developers",
     description: "Hire dedicated developers and teams for your projects",
     features: [
       "Full-time developers",
       "Flexible hiring models",
-      "Scalable team size",
       "Multiple tech stacks",
-      "Continuous support"
     ],
     link: "/services/dedicated-developers"
   },
   {
     emoji: "🤖",
-    title: "AI / Machine Learning",
+    title: "AI & ML",
     description: "Intelligent solutions powered by artificial intelligence and ML",
     features: [
       "Predictive analytics",
       "Chatbots & automation",
       "Computer vision",
-      "NLP applications",
-      "Data-driven insights"
     ],
     link: "/services/ai-ml"
   },
@@ -150,9 +158,7 @@ const services = ref<Service[]>([
     features: [
       "Security testing",
       "Penetration testing",
-      "Network security",
-      "Data encryption",
-      "Threat monitoring"
+      "Threat monitoring",
     ],
     link: "/services/cyber-security"
   },
@@ -162,25 +168,10 @@ const services = ref<Service[]>([
     description: "Cloud infrastructure and DevOps solutions for scalability",
     features: [
       "AWS, Azure & GCP",
-      "Cloud migration",
       "CI/CD pipelines",
-      "Docker & Kubernetes",
-      "High availability"
+      "High availability",
     ],
-    link: "/services/cloud-devops"
-  },
-  {
-    emoji: "🤝",
-    title: "IT Consulting",
-    description: "Strategic technology consulting to drive your business forward",
-    features: [
-      "Technology strategy",
-      "Digital transformation",
-      "System architecture",
-      "Cost optimization",
-      "Tech support"
-    ],
-    link: "/services/it-consulting"
-  },
+    link: "/services/cloud-and-devops"
+  }
 ])
 </script>

@@ -26,18 +26,21 @@
               <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
               </svg>
-              <span class="text-sm font-semibold text-primary">Mission-Critical Custom Software</span>
+              <span class="text-sm font-semibold text-primary">Custom Software Development</span>
             </div>
 
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight">
-              Custom Software Built for
-              <span class="block text-primary mt-2">Outcomes — Faster,<br>Secure, Scalable.</span>
+            <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-black mb-5 leading-tight tracking-tight text-base-content">
+              Software Built
+              <span class="block text-transparent bg-clip-text bg-gradient-to-r from-accent via-primary to-secondary mt-1">
+                Around Your Business
+              </span>
             </h1>
 
-            <p class="text-lg text-base-content/70 leading-relaxed max-w-xl">
-              We build mission-critical systems for fintech, healthcare &amp; marketplaces —
-              <strong class="text-base-content">8–20× performance gains</strong> in typical deployments.
-              Serious leads only: our engagements start with a paid discovery.
+            <p class="text-base sm:text-lg text-base-content/80 leading-relaxed max-w-lg mb-4">
+              Every business has unique challenges — your software should reflect that. At KM Software's, we design and develop custom software solutions tailored to your workflows, goals, and long-term scalability.
+            </p>
+            <p class="text-base sm:text-lg text-base-content/70 leading-relaxed max-w-lg">
+              From internal automation tools to large-scale enterprise platforms, we build secure, high-performance software that evolves with your business.
             </p>
 
             <!-- Metrics row -->
@@ -54,7 +57,7 @@
                 @click="showModal = true"
                 class="btn btn-primary btn-lg px-8 shadow-lg hover:shadow-xl hover:scale-105 transition-all group"
               >
-                <span>Request Proposal</span>
+                <span>Start Your Custom Project</span>
                 <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                 </svg>
@@ -105,8 +108,8 @@
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 max-w-3xl mx-auto">
           <div class="badge badge-outline badge-lg mb-4">What We Build</div>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">End-to-End Engineering</h2>
-          <p class="text-base-content/60 text-lg">Every engagement covers the full delivery stack — strategy, code, ops.</p>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">What We Build</h2>
+          <p class="text-base-content/60 text-lg">We develop powerful, business-focused software solutions — built for performance, flexibility, and growth.</p>
         </div>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
@@ -129,13 +132,41 @@
     </section>
 
     <!-- ═══════════════════════════════════
+         WHY CHOOSE CUSTOM SOFTWARE
+    ════════════════════════════════════ -->
+    <section id="why-custom" class="py-24 bg-base-200">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 max-w-3xl mx-auto">
+          <div class="badge badge-outline badge-lg mb-4">Competitive Edge</div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">Why Choose Custom Software?</h2>
+          <p class="text-base-content/60 text-lg">Custom-built software gives your business a true competitive edge</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div v-for="benefit in customBenefits" :key="benefit.title"
+            class="flex items-start gap-4 p-6 bg-base-100 rounded-2xl border border-base-content/5 hover:border-primary/20 hover:shadow-lg transition-all group">
+            <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+              <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="benefit.icon"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold mb-1">{{ benefit.title }}</h3>
+              <p class="text-sm text-base-content/60 leading-relaxed">{{ benefit.desc }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
          3. WHO IS THIS FOR
     ════════════════════════════════════ -->
-    <section id="who-we-serve" class="py-24 bg-base-200">
+    <section id="who-we-serve" class="py-24 bg-base-100">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
           <div>
-            <div class="badge badge-outline badge-lg mb-6">Ideal Clients</div>
+            <div class="badge badge-outline badge-lg mb-6">Industries We Serve</div>
             <h2 class="text-3xl sm:text-4xl font-black mb-8">Who This Is Built For</h2>
             <div class="space-y-4">
               <div v-for="industry in industries" :key="industry.name"
@@ -151,9 +182,9 @@
 
           <!-- Why a Specialist Studio -->
           <div>
-            <div class="badge badge-outline badge-lg mb-6">Our Positioning</div>
-            <h2 class="text-3xl sm:text-4xl font-black mb-4">Why a <em>Specialist</em> Studio — Not a Generic Agency</h2>
-            <p class="text-base-content/60 text-sm mb-8 leading-relaxed">We work with teams who have a real engineering problem — not a content update. Here's what that means in practice.</p>
+            <div class="badge badge-outline badge-lg mb-6">Why KM Software's</div>
+            <h2 class="text-3xl sm:text-4xl font-black mb-4">Why Choose <em>KM Software's</em>?</h2>
+            <p class="text-base-content/60 text-sm mb-8 leading-relaxed">We don't just build software — we build solutions that drive growth. Here's what sets us apart.</p>
 
             <div class="space-y-4 mb-8">
               <div v-for="pt in positioningPoints" :key="pt.title"
@@ -252,8 +283,8 @@
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 max-w-3xl mx-auto">
           <div class="badge badge-outline badge-lg mb-4">How We Work</div>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">Our Delivery Process</h2>
-          <p class="text-base-content/60">Six structured phases from first conversation to running production system.</p>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">Our Development Approach</h2>
+          <p class="text-base-content/60">We follow a structured, transparent process to ensure quality and scalability.</p>
         </div>
 
         <div class="max-w-5xl mx-auto space-y-4">
@@ -426,17 +457,21 @@
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <div class="max-w-3xl mx-auto text-primary-content">
           <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 leading-tight">
-            Ready to Start a Paid Discovery?
+            Build Software That
+            <span class="block mt-2">Works for You</span>
           </h2>
-          <p class="text-xl opacity-80 mb-10">
-            30-min scoping call → paid discovery → fixed-price roadmap. No commitment to proceed.
+          <p class="text-xl opacity-90 mb-4">
+            Transform your ideas into powerful digital solutions with KM Software's.
+          </p>
+          <p class="text-lg opacity-80 mb-10">
+            Let's create custom software that simplifies operations, boosts productivity, and scales with your business.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               @click="showModal = true"
               class="btn btn-lg bg-base-100 text-primary hover:bg-base-200 border-none shadow-2xl px-10 group"
             >
-              <span class="font-bold">Submit Proposal Request</span>
+              <span class="font-bold">Start Your Custom Project Today</span>
               <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
               </svg>
@@ -446,8 +481,8 @@
             </NuxtLink>
           </div>
           <div class="mt-10 flex flex-wrap justify-center gap-8 text-sm opacity-80">
-            <span>✓ NDA before discussion</span>
-            <span>✓ Discovery is non-refundable; credited if you proceed</span>
+            <span>✓ Free consultation</span>
+            <span>✓ Scalable architecture</span>
             <span>✓ Response within 24 hours</span>
           </div>
         </div>
@@ -557,11 +592,11 @@
 
 <script setup lang="ts">
 useHead({
-  title: "Custom Software Development | Mission-Critical Systems — KM Software's",
+  title: "Custom Software Development | KM Software's",
   meta: [
-    { name: 'description', content: 'Custom software development for fintech, healthcare & marketplaces. 8–20× performance gains. Transparent pricing, paid discovery, full IP assignment. Request a proposal today.' },
+    { name: 'description', content: 'Custom software development tailored to your business. KM Software\'s builds secure, scalable software solutions — from internal tools to enterprise platforms.' },
     { property: 'og:title', content: "Custom Software Development | KM Software's" },
-    { property: 'og:description', content: 'Mission-critical systems built faster, secure, scalable. Transparent pricing from ₹8L.' }
+    { property: 'og:description', content: 'Software built around your business. Custom CRM, ERP, SaaS platforms & automation tools.' }
   ]
 })
 
@@ -574,6 +609,15 @@ const heroMetrics = [
 ]
 
 const clientLogos = ['FinPay', 'MedCore', 'TradeNest', 'ShipSync', 'PulseHealth']
+
+const customBenefits = [
+  { title: 'Fully tailored to your workflows', desc: 'Software designed around how your team actually works — not the other way around.', icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4' },
+  { title: 'Scalable and future-ready', desc: 'Architecture built to grow with your business without costly rewrites.', icon: 'M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12' },
+  { title: 'Higher operational efficiency', desc: 'Streamlined processes and automation that reduce manual effort and save time.', icon: 'M13 10V3L4 14h7v7l9-11h-7z' },
+  { title: 'Better security & performance', desc: 'Enterprise-grade security and optimized performance from the ground up.', icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z' },
+  { title: 'Seamless integrations', desc: 'Connect with your existing tools, APIs, and services without friction.', icon: 'M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' },
+  { title: 'Long-term cost benefits', desc: 'No recurring license fees. Your software, your rules, your savings over time.', icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z' },
+]
 
 const codeLines = [
   { id: 1, text: 'const project = {', cls: 'text-base-content/80' },
@@ -589,12 +633,12 @@ const codeLines = [
 
 // ─── Service Buckets ────────────────────
 const serviceBuckets = [
-  { title: 'Discovery & Product Strategy', desc: 'We validate feasibility, define scope, and align business goals with architecture before writing a single line of code.', kpi: 'Reduces rework by 70%', icon: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z' },
-  { title: 'Full-Stack Engineering', desc: 'Web, mobile, backend, integrations — built by senior engineers with clean architecture, CI/CD, and automated tests.', kpi: '40% faster time-to-market', icon: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4' },
-  { title: 'AI / ML Integration', desc: 'Embed intelligent features — prediction, NLP, recommendation engines — directly into your product with MLOps pipelines.', kpi: '60% reduction in manual work', icon: 'M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18' },
-  { title: 'Systems Modernization', desc: 'Migrate legacy monoliths to modern microservices or cloud-native architecture without business disruption.', kpi: '8–12× throughput gains', icon: 'M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12' },
-  { title: 'API & Integrations', desc: 'ERP, payment gateways, CRM, healthcare data (FHIR/HL7) — we build robust, versioned integration layers.', kpi: 'Avg 3 integrations per project', icon: 'M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' },
-  { title: 'Support & DevOps (SLA)', desc: 'Managed infrastructure, 24/7 on-call rotation, incident response SLAs, and continuous performance monitoring.', kpi: '99.9%+ uptime SLA', icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z' },
+  { title: 'Business Process Automation', desc: 'Automate repetitive workflows and manual processes with intelligent software that saves time and reduces errors.', kpi: 'Reduces manual work by 70%', icon: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z' },
+  { title: 'Custom CRM & ERP Systems', desc: 'Purpose-built CRM and ERP platforms designed around your unique business processes and data needs.', kpi: 'Tailored to your workflows', icon: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4' },
+  { title: 'SaaS Platforms & Web Products', desc: 'Multi-tenant SaaS platforms, subscription billing, user management, and scalable cloud infrastructure.', kpi: 'Cloud-native & scalable', icon: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4' },
+  { title: 'Internal Dashboards & Admin Panels', desc: 'Real-time dashboards, analytics panels, and admin tools for better visibility and decision-making.', kpi: 'Data-driven insights', icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z' },
+  { title: 'Workflow Management Systems', desc: 'End-to-end workflow automation with approvals, notifications, role-based access, and audit trails.', kpi: 'Streamlined operations', icon: 'M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15' },
+  { title: 'API-Driven Platforms & Integrations', desc: 'Build robust API layers that connect your systems, third-party services, and data sources seamlessly.', kpi: 'Seamless connectivity', icon: 'M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' },
 ]
 
 // ─── Industries ─────────────────────────
@@ -608,24 +652,29 @@ const industries = [
 
 const positioningPoints = [
   {
-    title: 'We scope before we price — always',
-    desc: 'Every engagement begins with a structured discovery. This protects you from blown budgets and protects us from scope creep.',
+    title: 'Business-first development approach',
+    desc: 'We start by understanding your business goals, workflows, and challenges — then build software that truly fits.',
     icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2'
   },
   {
-    title: 'Senior-only delivery — no outsourcing',
-    desc: 'Your project is delivered by the same engineers you meet on the scoping call. No bait-and-switch with junior staff.',
-    icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0'
+    title: 'Modern tech stack',
+    desc: 'We use cutting-edge frameworks and tools to deliver fast, reliable, and maintainable software.',
+    icon: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4'
   },
   {
-    title: 'You own everything — 100% IP transfer',
-    desc: 'Code, infrastructure configs, data models, documentation — fully transferred on final milestone payment. No hostage code.',
+    title: 'Scalable architecture design',
+    desc: 'Built to grow with your business — from MVP to enterprise scale without costly rewrites.',
+    icon: 'M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12'
+  },
+  {
+    title: 'Secure and reliable systems',
+    desc: 'Enterprise-grade security practices, encrypted data handling, and robust infrastructure from day one.',
     icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z'
   },
   {
-    title: 'Fixed-scope or T\u0026M — your choice',
-    desc: 'For well-scoped products: fixed price with milestone billing. For evolving requirements: transparent time-and-material with fortnightly demos.',
-    icon: 'M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 11h.01M12 11h.01M15 11h.01M4 19h16a2 2 0 002-2V7a2 2 0 00-2-2H4a2 2 0 00-2 2v10a2 2 0 002 2z'
+    title: 'End-to-end development support',
+    desc: 'From discovery and design to deployment and ongoing maintenance — we\'re with you every step of the way.',
+    icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0'
   },
 ]
 
@@ -674,12 +723,12 @@ const pricingTiers = [
 
 // ─── Process Steps ──────────────────────
 const processSteps = [
-  { title: 'Quick Call', duration: '30 min', desc: 'Free scoping call to check fit, ballpark budget, and timeline. No pitch — just honest assessment.' },
-  { title: 'Paid Discovery', duration: '2–6 weeks', desc: 'Requirements, prototypes, architecture decisions, risk analysis, and measurable success metrics. Output: detailed SOW.' },
-  { title: 'Roadmap & Contract', duration: '1 week', desc: 'Milestone plan, acceptance criteria, payment schedule, IP assignment, NDA, and MSA signing.' },
-  { title: 'Sprint Delivery', duration: '2-week cadence', desc: 'Iterative builds with bi-weekly demos. You see working software every fortnight — not a black box.' },
-  { title: 'QA, Compliance & Launch', duration: '2–4 weeks', desc: 'Security review, performance benchmarking, compliance checks (HIPAA/SOC2 if required), staging → production.' },
-  { title: 'Operate & Improve', duration: 'Ongoing', desc: 'SLA monitoring, incident response, monthly retainer or break-fix support. Optional dedicated ops team.' },
+  { title: 'Discovery & Planning', duration: 'Week 1–2', desc: 'Understanding your business needs and technical requirements. We validate feasibility and define scope.' },
+  { title: 'UI/UX Design', duration: 'Week 2–4', desc: 'Creating intuitive, user-friendly experiences with wireframes, prototypes, and design systems.' },
+  { title: 'Agile Development', duration: 'Week 4–12', desc: 'Iterative development with continuous feedback. You see working software every sprint — not a black box.' },
+  { title: 'Testing & QA', duration: 'Week 10–14', desc: 'Rigorous testing — unit, integration, performance, and security — to ensure quality and reliability.' },
+  { title: 'Deployment & Launch', duration: 'Week 14–16', desc: 'Secure, high-quality releases with staging environments, CI/CD pipelines, and production deployment.' },
+  { title: 'Ongoing Support', duration: 'Ongoing', desc: 'Maintenance, upgrades, and long-term scalability. We provide SLA monitoring and continuous improvement.' },
 ]
 
 // ─── Trust Block ────────────────────────
@@ -737,15 +786,12 @@ const certifications = [
   'SOC2 Readiness',
 ]
 
-// ─── FAQ ────────────────────────────────
 const faqs = [
   { q: 'What is paid discovery and why is it non-refundable?', a: 'Discovery is a 2–6 week engagement where we deep-dive into requirements, architecture, risks, and build a full SOW. It costs ₹1.5L–₹4L. If you proceed with build, the discovery fee is credited. It is non-refundable because it is real engineering work — not a sales call.' },
   { q: 'What does a typical timeline look like?', a: 'MVP: 3–4 months. Mid-size product: 5–8 months. Enterprise platform: 9–18 months. Timeline depends on integrations, compliance requirements, and scope changes. We define milestones upfront so there are no surprises.' },
   { q: 'Who manages infrastructure and hosting?', a: 'By default, infrastructure is set up on your cloud account (AWS, GCP, or Azure) — you own it. We manage it under our DevOps retainer. You can always take it in-house. We use Terraform for IaC so handover is clean.' },
   { q: 'How are change requests handled?', a: 'Under fixed-scope contracts, changes go through formal change control (scoped, agreed, priced). Under T&M, new items are added to the sprint backlog with your approval. We never gold-plate without sign-off.' },
   { q: 'Do you offer a support SLA after launch?', a: 'Yes. P0 (system down) acknowledged within 1 hour, P1 within 4 hours, P2 within 1 business day. SLA tiers and resolution targets are defined in the MSA before project start.' },
-  { q: 'What happens if we need to cancel mid-project?', a: 'Under T&M, 30-day written notice with payment for all work completed. Under fixed scope, completed milestones are billed. We provide full code handover and documentation regardless.' },
-  { q: 'Do you work with co-founder or early-stage teams?', a: 'Yes — if the project is substantial (₹8L+) and technically non-trivial. We are not a design agency. If you need a quick landing page or MVP in 2 weeks for under ₹3L, we\'ll happily point you to better options.' },
 ]
 
 // ─── Modal ──────────────────────────────

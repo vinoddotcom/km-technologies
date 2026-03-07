@@ -28,14 +28,14 @@
                 <span class="text-sm font-bold text-primary">Staff Augmentation</span>
               </div>
               
-              <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 leading-[1.1] tracking-tight">
-                Scale Your Team with
-                <span class="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent mt-2">
-                  Expert Developers
+              <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-black mb-5 leading-tight tracking-tight text-base-content">
+                Dedicated Developers
+                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-accent via-primary to-secondary mt-1">
+                  For Your Business Needs
                 </span>
               </h1>
               
-              <p class="text-xl sm:text-2xl text-base-content/70 leading-relaxed font-light">
+              <p class="text-base sm:text-lg text-base-content/70 leading-relaxed max-w-lg">
                 Access pre-vetted, senior developers who integrate seamlessly with your team. Scale up or down on-demand without the overhead.
               </p>
             </div>
@@ -764,10 +764,6 @@ const faqs = ref([
   {
     question: 'How do you ensure code quality?',
     answer: 'All our developers follow industry best practices, use version control, write clean documented code, and participate in code reviews. We also provide regular progress updates and quality checks.'
-  },
-  {
-    question: 'What time zones do your developers work in?',
-    answer: 'We have developers across multiple time zones who can work according to your schedule. We ensure at least 4-5 hours of overlap with your team\'s working hours for effective collaboration.'
   }
 ])
 </script>

@@ -89,12 +89,13 @@
                   required
                 >
                   <option value="">Select a service...</option>
-                  <option value="ai-ml">AI/ML Solutions</option>
-                  <option value="cyber-security">Cyber Security</option>
-                  <option value="dedicated-developers">Dedicated Developers</option>
-                  <option value="mobile-apps">Mobile Apps</option>
                   <option value="website-development">Website Development</option>
+                  <option value="app-development">App Development</option>
                   <option value="custom-software">Custom Software</option>
+                  <option value="dedicated-developers">Dedicated Developers</option>
+                  <option value="ai-ml">AI & ML</option>
+                  <option value="cyber-security">Cyber Security</option>
+                  <option value="cloud-and-devops">Cloud & DevOps</option>
                   <option value="consultation">General Consultation</option>
                 </select>
               </div>
