@@ -199,7 +199,7 @@
       </div>
 
       <!-- Trust Badges -->
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 py-8 border-t border-base-content/10">
+      <!-- <div class="grid grid-cols-2 md:grid-cols-3 gap-4 py-8 border-t border-base-content/10">
         <div class="flex items-center gap-3 p-4 rounded-xl bg-base-100/50">
           <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
             <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -233,7 +233,7 @@
             <p class="text-xs text-base-content/60">Privacy First</p>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- Bottom Bar -->
       <div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-base-content/10">
