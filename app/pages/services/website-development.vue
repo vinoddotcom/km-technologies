@@ -118,20 +118,29 @@
     </section>
 
     <!-- Tech Stack -->
-    <section class="py-24 bg-base-100 relative overflow-hidden">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center mb-16 space-y-4 max-w-4xl mx-auto">
-          <h2 class="text-4xl sm:text-5xl font-black mb-6">Modern Technology Stack</h2>
-          <p class="text-xl text-base-content/70 font-light">
-            We build with the latest frameworks and tools to ensure maximum performance and reliability.
-          </p>
-        </div>
+   
+    <!-- Modern Technology Stack -->
+<section class="py-28 bg-base-100">
+  <div class="container mx-auto px-6">
 
-        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div v-for="category in techStack" :key="category.name"
-            class="card bg-base-200 shadow-sm border border-base-content/5 hover:border-primary/20 transition-all duration-300">
-            <div class="card-body p-8">
-              <div class="flex items-center gap-4 mb-6">
+    <div class="text-center max-w-3xl mx-auto mb-20">
+      <h2 class="text-4xl lg:text-5xl font-black mb-6">
+        Modern Technology Stack
+      </h2>
+      <p class="text-lg text-base-content/70">
+        We use modern, scalable technologies to build high-performance and secure websites.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+
+      <div
+        v-for="category in techStack"
+        :key="category.name"
+        class="p-8 rounded-2xl bg-base-200 border border-base-content/5
+               hover:shadow-xl transition duration-300">
+
+         <div class="flex items-center gap-4 mb-6">
                 <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                   <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="category.iconPath"></path>
@@ -139,55 +148,157 @@
                 </div>
                 <h3 class="text-2xl font-bold">{{ category.name }}</h3>
               </div>
-              <div class="flex flex-wrap gap-2">
-                <div v-for="tech in category.technologies" :key="tech" class="badge badge-outline badge-lg font-medium border-base-content/20 text-base-content/80">
-                  {{ tech }}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Development Process & Why Choose Us -->
-    <section class="py-24 bg-base-200">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
-          <!-- Process -->
-          <div>
-            <h2 class="text-3xl sm:text-4xl font-black mb-10 text-base-content">
-              Our Development Process
-            </h2>
-            <div class="space-y-4">
-              <div v-for="(step, index) in processSteps" :key="index" class="flex items-center gap-4 group">
-                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold shadow-sm group-hover:bg-primary group-hover:text-primary-content transition-all shrink-0 text-sm">
-                  {{ index + 1 }}
-                </div>
-                <h3 class="text-lg font-bold text-base-content group-hover:text-primary transition-colors">{{ step }}</h3>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Why Choose Us -->
-          <div class="bg-base-100 rounded-3xl p-8 sm:p-10 shadow-xl border border-base-content/10 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-48 h-48 bg-primary/5 rounded-full blur-3xl -mr-12 -mt-12 pointer-events-none"></div>
-            
-            <h2 class="text-2xl sm:text-3xl font-black mb-6 text-base-content relative z-10">
-              Why Choose KM Software's?
-            </h2>
-            <ul class="space-y-3 relative z-10">
-              <li v-for="reason in whyChooseUs" :key="reason" class="flex items-center gap-4 p-4 rounded-xl hover:bg-base-200/70 border border-transparent hover:border-primary/10 transition-all group">
-                <div class="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:shadow-md transition-all">
-                  <svg class="w-4 h-4 text-primary group-hover:text-primary-content transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
-                </div>
-                <span class="text-base font-semibold text-base-content/85">{{ reason }}</span>
-              </li>
-            </ul>
-          </div>
-        </div>
+      <div class="flex flex-wrap gap-3">
+
+  <div
+    v-for="tech in category.technologies"
+    :key="tech.name"
+    class="flex items-center gap-2 px-4 py-2 rounded-full
+           bg-base-100 border border-base-content/10
+           text-sm font-medium hover:bg-primary
+           hover:text-primary-content transition">
+
+    <img
+      :src="tech.logo"
+      :alt="tech.name"
+      class="w-4 h-4 object-contain"
+    />
+
+    <span>{{ tech.name }}</span>
+
+  </div>
+
+</div>
+
       </div>
-    </section>
+
+    </div>
+
+  </div>
+</section>
+<!-- Development Process -->
+<section class="py-28 bg-base-200">
+  <div class="container mx-auto px-6">
+
+    <div class="grid lg:grid-cols-2 gap-20 items-center max-w-7xl mx-auto">
+
+      <!-- LEFT CONTENT -->
+      <div>
+
+        <h2 class="text-4xl lg:text-5xl font-black mb-8">
+          Our Development Process
+        </h2>
+
+        <p class="text-lg text-base-content/70 mb-12">
+          Our structured development process ensures every project is delivered
+          with quality, efficiency, and long-term scalability.
+        </p>
+
+        <div class="space-y-6">
+
+          <div
+            v-for="(step,index) in processSteps"
+            :key="index"
+            class="flex items-start gap-5 group">
+
+            <div
+              class="w-10 h-10 rounded-full bg-primary text-primary-content
+                     flex items-center justify-center font-bold">
+
+              {{ index + 1 }}
+
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold group-hover:text-primary transition">
+                {{ step }}
+              </h3>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT IMAGE -->
+      <div class="relative">
+
+        <div class="absolute inset-0 bg-primary/10 rounded-3xl blur-2xl"></div>
+
+        <img
+          src="/images/portfolio-hero.png"
+          alt="Website development process"
+          class="relative rounded-3xl shadow-xl border border-base-content/10"
+        />
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- Why Choose Us CTA -->
+<section class="py-24 bg-base-100">
+  <div class="container mx-auto px-6">
+
+    <div class="max-w-5xl mx-auto bg-base-200 rounded-3xl p-14
+                border border-base-content/10 shadow-xl">
+
+      <div class="text-center mb-12">
+
+        <h2 class="text-4xl font-black mb-6">
+          Why Choose <span class="mt-2 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">KM Software's?</span> 
+        </h2>
+
+        <p class="text-lg text-base-content/70">
+          We help businesses build powerful, scalable websites that drive
+          real business growth and long-term success.
+        </p>
+
+      </div>
+
+
+      <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+
+        <div
+          v-for="reason in whyChooseUs"
+          :key="reason"
+          class="flex items-center gap-4">
+
+          <div
+            class="w-9 h-9 rounded-lg bg-primary/10
+                   flex items-center justify-center">
+
+            <svg class="w-5 h-5 text-primary"
+                 fill="none"
+                 stroke="currentColor"
+                 viewBox="0 0 24 24">
+
+              <path stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7" />
+
+            </svg>
+
+          </div>
+
+          <span class="font-semibold text-base-content/90">
+            {{ reason }}
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 
     <!-- FAQ -->
     <section class="py-24 bg-base-100 relative">
@@ -256,13 +367,41 @@ const servicesList = ref([
   { title: 'Web Application Development', description: 'Dynamic and feature-rich web applications with dashboards and user systems.', iconPath: 'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' },
   { title: 'CMS & WordPress Development', description: 'Easy-to-manage websites powered by flexible content management systems.', iconPath: 'M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z' },
   { title: 'SaaS & Portal Development', description: 'Subscription-based SaaS platforms and secure web portals.', iconPath: 'M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z' },
-  { title: 'Website Redesign & Optimization', description: 'Modern UI/UX upgrades with improved speed and performance.', iconPath: 'M13 10V3L4 14h7v7l9-11h-7z' }
 ])
 
 const techStack = ref([
-  { name: 'Frontend', iconPath: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4', technologies: ['React', 'Next.js', 'Vue', 'TypeScript', 'Tailwind CSS'] },
-  { name: 'Backend', iconPath: 'M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01', technologies: ['Node.js', 'Python', 'Laravel', '.NET', 'Django'] },
-  { name: 'Database', iconPath: 'M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4', technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis'] }
+  {
+    name: 'Frontend',
+    iconPath: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4',
+    technologies: [
+      { name: 'React', logo: '/tech/react.svg' },
+      { name: 'Next.js', logo: '/tech/nextdotjs.svg' },
+      { name: 'Vue', logo: '/tech/vuedotjs.svg' },
+      { name: 'TypeScript', logo: '/tech/typescript.svg' },
+      { name: 'Tailwind', logo: '/tech/tailwindcss.svg' }
+    ]
+  },
+  {
+    name: 'Backend',
+    iconPath: 'M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2',
+    technologies: [
+      { name: 'Node.js', logo: '/tech/nodedotjs.svg' },
+      { name: 'Python', logo: '/tech/python.svg' },
+      { name: 'Laravel', logo: '/tech/laravel.svg' },
+      { name: '.NET', logo: '/tech/dotnet.svg' },
+      { name: 'Django', logo: '/tech/django.svg' }
+    ]
+  },
+  {
+    name: 'Database',
+    iconPath: 'M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7',
+    technologies: [
+      { name: 'PostgreSQL', logo: '/tech/postgresql.svg' },
+      { name: 'MySQL', logo: '/tech/mysql.svg' },
+      { name: 'MongoDB', logo: '/tech/mongodb.svg' },
+      { name: 'Redis', logo: '/tech/redis.svg' }
+    ]
+  }
 ])
 
 const processSteps = ref([
