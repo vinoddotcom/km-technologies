@@ -68,9 +68,7 @@
               <div v-for="stat in trustStats" :key="stat.title" class="stat hover:bg-secondary/5 transition-colors">
                 <div class="stat-figure text-secondary">
                   <div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                      <path v-html="stat.iconPath"></path>
-                    </svg>
+                      <component :is="stat.icon" class="w-10 h-10 text-primary"/>
                   </div>
                 </div>
                 <div class="stat-title text-xs font-semibold opacity-70">{{ stat.title }}</div>
@@ -141,9 +139,7 @@
             
             <div class="md:w-1/3 p-8 flex flex-col items-center justify-center bg-gradient-to-br from-primary/5 to-secondary/5 border-b md:border-b-0 md:border-r border-base-content/10 relative">
               <div class="relative z-10 w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/10 flex items-center justify-center group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500 shadow-lg mb-4 text-primary">
-                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" v-html="platform.iconPath"></path>
-                </svg>
+                <component :is="platform.icon" class="w-10 h-10 text-primary"/>
               </div>
               <h3 class="relative z-10 text-3xl font-black text-center group-hover:text-primary transition-colors">
                 {{ platform.name }}
@@ -191,9 +187,7 @@
             <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div class="card-body items-center p-8">
               <div class="w-20 h-20 rounded-full bg-gradient-to-br from-accent/5 to-transparent flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-accent/10 transition-all duration-500 border border-accent/10">
-                <svg class="w-10 h-10 text-accent group-hover:-rotate-6 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" v-html="service.iconPath"></path>
-                </svg>
+                 <component :is="service.icon" class="w-10 h-10 text-primary"/>
               </div>
               <h3 class="card-title text-2xl font-black mb-4 group-hover:text-accent transition-colors">{{ service.title }}</h3>
               <p class="text-base-content/70 leading-relaxed mb-6">{{ service.description }}</p>
@@ -209,180 +203,86 @@
       </div>
     </section>
 
-    <!-- Development Process - Snake Path -->
-    <section class="py-24 bg-gradient-to-b from-base-100 to-base-200 overflow-hidden">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16 space-y-4">
-          <div class="inline-block">
-            <div class="badge badge-info badge-lg mb-4">Our Process</div>
-          </div>
-          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
-            From Idea to App Store
-          </h2>
-          <p class="text-xl sm:text-2xl text-base-content/60 font-light">
-            A proven 6-step process to deliver your mobile app
-          </p>
-        </div>
+  <!-- Development Process -->
+<section class="py-24 bg-base-100">
+  <div class="container mx-auto px-6">
 
-        <!-- Snake Path Container: SVG-driven snake/zigzag process -->
-        <div class="process-snake-outer">
-          <!-- LEFT EDGE LABEL: Start -->
-          <div class="process-edge-label process-edge-label--start">Start</div>
+    <!-- Heading -->
+    <div class="text-center mb-20">
+      <div class="badge badge-info badge-lg mb-4">Our Process</div>
 
-          <!-- MAIN SNAKE SVG -->
-          <!--
-            Layout (matching reference image):
-            Dot 1 (left) → curve right-up → Dot 2 (center) → Dot 3 (right) → curve down right side → Dot 4 (right-mid) → curve left → Dot 5 (center-left) → curve down → Dot 6 (bottom-left)
+      <h2 class="text-4xl lg:text-5xl font-black mb-6">
+        From Idea to App Store
+      </h2>
 
-            ViewBox: 1000 x 760
-            Dot positions:
-              1: (160, 160)  — left
-              2: (460, 120)  — center (slightly above center)
-              3: (780, 160)  — right
-              4: (760, 390)  — right-mid
-              5: (360, 490)  — center-left
-              6: (160, 650)  — bottom-left
-          -->
-          <svg
-            class="process-snake-svg"
-            viewBox="0 0 1000 760"
-            preserveAspectRatio="xMidYMid meet"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              <linearGradient id="processPathGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.9" />
-                <stop offset="50%" stop-color="#6366f1" stop-opacity="0.9" />
-                <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.9" />
-              </linearGradient>
-              <linearGradient id="processDotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#2563eb" />
-                <stop offset="100%" stop-color="#1d4ed8" />
-              </linearGradient>
-              <filter id="processPathGlow" x="-10%" y="-10%" width="120%" height="120%">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
-                <feMerge>
-                  <feMergeNode in="blur" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
-              <filter id="processDotGlow" x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
-                <feMerge>
-                  <feMergeNode in="blur" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
-            </defs>
+      <p class="text-xl text-base-content/60 max-w-3xl mx-auto">
+        A simple and proven process we follow to design, build and launch
+        high-quality mobile applications.
+      </p>
+    </div>
 
-            <!-- Snake path -->
-            <path
-              d="
-                M 160,160
-                C 260,100 360,100 460,120
-                C 580,140 680,140 780,160
-                C 840,175 860,260 840,330
-                C 820,380 800,400 760,390
-                C 700,375 580,430 460,470
-                C 410,487 380,492 360,490
-                C 280,487 220,560 200,610
-                C 180,650 165,655 160,650
-              "
-              fill="none"
-              stroke="url(#processPathGrad)"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              filter="url(#processPathGlow)"
-              opacity="0.9"
-            />
 
-            <!-- === DOT 1 (160, 160) === -->
-            <circle cx="160" cy="160" r="34" fill="#2563eb" fill-opacity="0.2" filter="url(#processDotGlow)" />
-            <circle cx="160" cy="160" r="26" fill="url(#processDotGrad)" stroke="#ffffff" stroke-width="2.5" stroke-opacity="0.3" />
-            <text x="160" y="160" text-anchor="middle" dominant-baseline="central" font-size="18" font-weight="900" fill="#ffffff" font-family="inherit">1</text>
+    <!-- Process Steps -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 relative">
 
-            <!-- STEP 1 TEXT — right of dot 1 -->
-            <text x="204" y="148" text-anchor="start" font-size="14" font-weight="800" fill="#3b82f6" font-family="inherit">{{ processSteps[0]?.title }}</text>
-            <foreignObject x="204" y="158" width="240" height="80">
-              <div xmlns="http://www.w3.org/1999/xhtml" style="font-size:11px;line-height:1.45;color:rgba(0,0,0,0.55);font-family:inherit;margin:0;padding:0;">
-                {{ processSteps[0]?.description }}
-              </div>
-            </foreignObject>
-
-            <!-- === DOT 2 (460, 120) === -->
-            <circle cx="460" cy="120" r="34" fill="#2563eb" fill-opacity="0.2" filter="url(#processDotGlow)" />
-            <circle cx="460" cy="120" r="26" fill="url(#processDotGrad)" stroke="#ffffff" stroke-width="2.5" stroke-opacity="0.3" />
-            <text x="460" y="120" text-anchor="middle" dominant-baseline="central" font-size="18" font-weight="900" fill="#ffffff" font-family="inherit">2</text>
-
-            <!-- STEP 2 TEXT — above / right of dot 2 -->
-            <text x="500" y="50" text-anchor="start" font-size="14" font-weight="800" fill="#3b82f6" font-family="inherit">{{ processSteps[1]?.title }}</text>
-            <foreignObject x="500" y="62" width="260" height="60">
-              <div xmlns="http://www.w3.org/1999/xhtml" style="font-size:11px;line-height:1.45;color:rgba(0,0,0,0.55);font-family:inherit;margin:0;padding:0;">
-                {{ processSteps[1]?.description }}
-              </div>
-            </foreignObject>
-
-            <!-- === DOT 3 (780, 160) === -->
-            <circle cx="780" cy="160" r="34" fill="#2563eb" fill-opacity="0.2" filter="url(#processDotGlow)" />
-            <circle cx="780" cy="160" r="26" fill="url(#processDotGrad)" stroke="#ffffff" stroke-width="2.5" stroke-opacity="0.3" />
-            <text x="780" y="160" text-anchor="middle" dominant-baseline="central" font-size="18" font-weight="900" fill="#ffffff" font-family="inherit">3</text>
-
-            <!-- STEP 3 TEXT — right of dot 3 -->
-            <text x="824" y="146" text-anchor="start" font-size="14" font-weight="800" fill="#3b82f6" font-family="inherit">{{ processSteps[2]?.title }}</text>
-            <foreignObject x="824" y="158" width="170" height="80">
-              <div xmlns="http://www.w3.org/1999/xhtml" style="font-size:11px;line-height:1.45;color:rgba(0,0,0,0.55);font-family:inherit;margin:0;padding:0;">
-                {{ processSteps[2]?.description }}
-              </div>
-            </foreignObject>
-
-            <!-- === DOT 4 (760, 390) === -->
-            <circle cx="760" cy="390" r="34" fill="#2563eb" fill-opacity="0.2" filter="url(#processDotGlow)" />
-            <circle cx="760" cy="390" r="26" fill="url(#processDotGrad)" stroke="#ffffff" stroke-width="2.5" stroke-opacity="0.3" />
-            <text x="760" y="390" text-anchor="middle" dominant-baseline="central" font-size="18" font-weight="900" fill="#ffffff" font-family="inherit">4</text>
-
-            <!-- STEP 4 TEXT — right of dot 4 -->
-            <text x="804" y="374" text-anchor="start" font-size="14" font-weight="800" fill="#3b82f6" font-family="inherit">{{ processSteps[3]?.title }}</text>
-            <foreignObject x="804" y="386" width="190" height="80">
-              <div xmlns="http://www.w3.org/1999/xhtml" style="font-size:11px;line-height:1.45;color:rgba(0,0,0,0.55);font-family:inherit;margin:0;padding:0;">
-                {{ processSteps[3]?.description }}
-              </div>
-            </foreignObject>
-
-            <!-- === DOT 5 (360, 490) === -->
-            <circle cx="360" cy="490" r="34" fill="#2563eb" fill-opacity="0.2" filter="url(#processDotGlow)" />
-            <circle cx="360" cy="490" r="26" fill="url(#processDotGrad)" stroke="#ffffff" stroke-width="2.5" stroke-opacity="0.3" />
-            <text x="360" y="490" text-anchor="middle" dominant-baseline="central" font-size="18" font-weight="900" fill="#ffffff" font-family="inherit">5</text>
-
-            <!-- STEP 5 TEXT — left of dot 5 -->
-            <text x="316" y="473" text-anchor="end" font-size="14" font-weight="800" fill="#3b82f6" font-family="inherit">{{ processSteps[4]?.title }}</text>
-            <foreignObject x="56" y="485" width="250" height="80">
-              <div xmlns="http://www.w3.org/1999/xhtml" style="font-size:11px;line-height:1.45;color:rgba(0,0,0,0.55);font-family:inherit;margin:0;padding:0;text-align:right;">
-                {{ processSteps[4]?.description }}
-              </div>
-            </foreignObject>
-
-            <!-- === DOT 6 (160, 650) === -->
-            <circle cx="160" cy="650" r="34" fill="#2563eb" fill-opacity="0.2" filter="url(#processDotGlow)" />
-            <circle cx="160" cy="650" r="26" fill="url(#processDotGrad)" stroke="#ffffff" stroke-width="2.5" stroke-opacity="0.3" />
-            <text x="160" y="650" text-anchor="middle" dominant-baseline="central" font-size="18" font-weight="900" fill="#ffffff" font-family="inherit">6</text>
-
-            <!-- STEP 6 TEXT — right of dot 6 -->
-            <text x="204" y="634" text-anchor="start" font-size="14" font-weight="800" fill="#3b82f6" font-family="inherit">{{ processSteps[5]?.title }}</text>
-            <foreignObject x="204" y="646" width="300" height="90">
-              <div xmlns="http://www.w3.org/1999/xhtml" style="font-size:11px;line-height:1.45;color:rgba(0,0,0,0.55);font-family:inherit;margin:0;padding:0;">
-                {{ processSteps[5]?.description }}
-              </div>
-            </foreignObject>
-
-            <!-- READY APP label at end of path - positioned to the right of dot 6 -->
-            <text x="560" y="640" text-anchor="middle" font-size="15" font-weight="800" fill="rgba(0,0,0,0.35)" font-family="inherit" letter-spacing="2">READY APP</text>
-          </svg>
-
-          <!-- RIGHT EDGE LABEL: Ready App (visible on wider screens) -->
-          <div class="process-edge-label process-edge-label--end">Ready App</div>
-        </div>
+      <!-- Step 1 -->
+      <div class="process-card">
+        <div class="process-number">01</div>
+        <h3 class="process-title">{{ processSteps[0]?.title }}</h3>
+        <p class="process-desc">
+          {{ processSteps[0]?.description }}
+        </p>
       </div>
-    </section>
+
+      <!-- Step 2 -->
+      <div class="process-card">
+        <div class="process-number">02</div>
+        <h3 class="process-title">{{ processSteps[1]?.title }}</h3>
+        <p class="process-desc">
+          {{ processSteps[1]?.description }}
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="process-card">
+        <div class="process-number">03</div>
+        <h3 class="process-title">{{ processSteps[2]?.title }}</h3>
+        <p class="process-desc">
+          {{ processSteps[2]?.description }}
+        </p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="process-card">
+        <div class="process-number">04</div>
+        <h3 class="process-title">{{ processSteps[3]?.title }}</h3>
+        <p class="process-desc">
+          {{ processSteps[3]?.description }}
+        </p>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="process-card">
+        <div class="process-number">05</div>
+        <h3 class="process-title">{{ processSteps[4]?.title }}</h3>
+        <p class="process-desc">
+          {{ processSteps[4]?.description }}
+        </p>
+      </div>
+
+      <!-- Step 6 -->
+      <div class="process-card">
+        <div class="process-number">06</div>
+        <h3 class="process-title">{{ processSteps[5]?.title }}</h3>
+        <p class="process-desc">
+          {{ processSteps[5]?.description }}
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
     <!-- Tech Stack Section -->
     <section class="py-24 bg-gradient-to-b from-base-200 to-base-100 relative overflow-hidden">
@@ -448,12 +348,15 @@
               </div>
             </div>
             <!-- Right -->
-            <div class="grid grid-cols-2 gap-4">
+            <!-- <div class="grid grid-cols-2 gap-4">
               <div v-for="metric in whyMetrics" :key="metric.value"
                 class="card bg-gradient-to-br from-base-200 to-base-100 border border-base-content/10 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all text-center p-6">
                 <div class="text-3xl font-black mb-1" :class="metric.color">{{ metric.value }}</div>
                 <div class="text-sm font-semibold text-base-content/70">{{ metric.label }}</div>
               </div>
+            </div> -->
+            <div class="grid grid-cols-1 gap-4">
+              <img src="/images/ChatGPT Image Mar 14, 2026, 10_34_13 PM.png" alt="">
             </div>
           </div>
         </div>
@@ -654,7 +557,7 @@
         </div>
 
         <!-- Trust Indicators -->
-        <div class="max-w-5xl mx-auto">
+        <!-- <div class="max-w-5xl mx-auto">
           <div class="divider text-base-content/40 text-sm">DELIVERED 150+ MOBILE APPS</div>
           
           <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
@@ -698,7 +601,7 @@
               <div class="text-sm text-base-content/60">client retention</div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -737,67 +640,163 @@
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-24 sm:py-32 relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-secondary via-accent to-primary"></div>
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.1),transparent_50%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.1),transparent_50%)]"></div>
-      <div class="absolute top-10 right-10 w-32 h-32 sm:w-64 sm:h-64 bg-white/5 rounded-full blur-3xl animate-pulse" style="animation-duration: 4s;"></div>
-      <div class="absolute bottom-10 left-10 w-48 h-48 sm:w-96 sm:h-96 bg-white/5 rounded-full blur-3xl animate-pulse" style="animation-duration: 6s;"></div>
-      
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="max-w-4xl mx-auto">
-          <div class="bg-white/10 backdrop-blur-xl rounded-3xl p-8 sm:p-12 md:p-16 border-2 border-white/20 shadow-2xl">
-            <div class="text-center text-white">
-              <div class="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 mb-6 sm:mb-8">
-                <svg class="w-4 h-4 sm:w-5 sm:h-5 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"/>
-                </svg>
-                <span class="text-sm sm:text-base font-bold">💬 Ready to Build Your Mobile App?</span>
-              </div>
-              
-              <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 sm:mb-8 leading-tight">
-                Turn Your Idea Into a
-                <span class="block opacity-90">Powerful Mobile Experience</span>
-              </h2>
-              
-              <p class="text-base sm:text-lg md:text-xl opacity-90 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
-                From concept to launch, our team at KM Software's is here to help you succeed. Let's build something great together.
-              </p>
-              
-              <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
-                <NuxtLink to="/contact" class="btn btn-lg bg-white text-secondary hover:bg-base-200 hover:scale-110 border-none shadow-2xl px-10 transition-all min-w-[260px] group">
-                  <span class="text-lg font-bold">👉 Get a Free Consultation Today</span>
-                  <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                  </svg>
-                </NuxtLink>
-              </div>
-              
-              <div class="pt-8 border-t-2 border-white/20">
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                  <div class="flex flex-col items-center gap-2">
-                    <div class="text-3xl font-black">150+</div>
-                    <div class="text-sm opacity-90">Apps Launched</div>
-                  </div>
-                  <div class="flex flex-col items-center gap-2">
-                    <div class="text-3xl font-black">5M+</div>
-                    <div class="text-sm opacity-90">Downloads</div>
-                  </div>
-                  <div class="flex flex-col items-center gap-2">
-                    <div class="text-3xl font-black">4.9/5</div>
-                    <div class="text-sm opacity-90">Client Rating</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+   <!-- ═══════════════════════════════════
+         10. FINAL CTA
+    ════════════════════════════════════ -->
+    <section id="contact" class="py-24 bg-base-100 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-primary/80"></div>
+      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.3),transparent_60%)]"></div>
+
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div class="max-w-3xl mx-auto text-primary-content">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 leading-tight">
+            Build Software That
+            <span class="block mt-2">Works for You</span>
+          </h2>
+          <p class="text-xl opacity-90 mb-4">
+            Transform your ideas into powerful digital solutions with KM Software's.
+          </p>
+          <p class="text-lg opacity-80 mb-10">
+            Let's create custom software that simplifies operations, boosts productivity, and scales with your business.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              @click="showModal = true"
+              class="btn btn-lg bg-base-100 text-primary hover:bg-base-200 border-none shadow-2xl px-10 group"
+            >
+              <span class="font-bold">Start Your Custom Project Today</span>
+              <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+              </svg>
+            </button>
+            <NuxtLink to="/contact" class="btn btn-lg btn-ghost border-2 border-base-100/40 text-primary-content hover:bg-base-100/10 px-10">
+              Or Contact Us
+            </NuxtLink>
+          </div>
+          <div class="mt-10 flex flex-wrap justify-center gap-8 text-sm opacity-80">
+            <span>✓ Free consultation</span>
+            <span>✓ Scalable architecture</span>
+            <span>✓ Response within 24 hours</span>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- ═══════════════════════════════════
+         INTAKE MODAL
+    ════════════════════════════════════ -->
+    <div v-if="showModal" class="modal modal-open z-[200]">
+      <div class="modal-box max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <button @click="showModal = false" class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4">✕</button>
+        <h3 class="font-black text-2xl mb-2">Request a Proposal</h3>
+        <p class="text-sm text-base-content/60 mb-6">We'll respond within 24 hours with next steps and a calendar link.</p>
+
+        <form @submit.prevent="submitForm" class="space-y-4">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="form-control">
+              <label class="label"><span class="label-text text-xs font-semibold">Company Name *</span></label>
+              <input v-model="form.company" type="text" required class="input input-bordered input-sm" placeholder="Acme Corp"/>
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text text-xs font-semibold">Your Name *</span></label>
+              <input v-model="form.name" type="text" required class="input input-bordered input-sm" placeholder="Ravi Kumar"/>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="form-control">
+              <label class="label"><span class="label-text text-xs font-semibold">Work Email *</span></label>
+              <input v-model="form.email" type="email" required class="input input-bordered input-sm" placeholder="ravi@acme.com"/>
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text text-xs font-semibold">Phone</span></label>
+              <input v-model="form.phone" type="tel" class="input input-bordered input-sm" placeholder="+91 98765 43210"/>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="form-control">
+              <label class="label"><span class="label-text text-xs font-semibold">Industry *</span></label>
+              <select v-model="form.industry" required class="select select-bordered select-sm">
+                <option value="">Select industry</option>
+                <option v-for="ind in industryOptions" :key="ind" :value="ind">{{ ind }}</option>
+              </select>
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text text-xs font-semibold">Budget Range *</span></label>
+              <select v-model="form.budget" required class="select select-bordered select-sm">
+                <option value="">Select range</option>
+                <option v-for="b in budgetOptions" :key="b" :value="b">{{ b }}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-control">
+            <label class="label"><span class="label-text text-xs font-semibold">Desired Start Date</span></label>
+            <input v-model="form.startDate" type="month" class="input input-bordered input-sm"/>
+          </div>
+
+          <div class="form-control">
+            <label class="label"><span class="label-text text-xs font-semibold">Brief Description (200 chars) *</span></label>
+            <textarea v-model="form.description" required maxlength="200" rows="3" class="textarea textarea-bordered text-sm" placeholder="What are you building? What problem does it solve?"></textarea>
+            <label class="label"><span class="label-alt text-xs text-base-content/40">{{ form.description.length }}/200</span></label>
+          </div>
+
+          <div class="form-control">
+            <label class="label cursor-pointer justify-start gap-3">
+              <input v-model="form.wantsEstimate" type="checkbox" class="checkbox checkbox-sm checkbox-primary"/>
+              <span class="label-text text-sm">I want a non-binding cost estimate</span>
+            </label>
+          </div>
+
+          <div class="form-control">
+            <label class="label cursor-pointer justify-start gap-3">
+              <input v-model="form.wantsNDA" type="checkbox" class="checkbox checkbox-sm checkbox-primary"/>
+              <span class="label-text text-sm">Please send an NDA before our first call</span>
+            </label>
+          </div>
+
+          <div class="modal-action mt-6">
+            <button type="submit" class="btn btn-primary w-full">
+              Submit Request
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+              </svg>
+            </button>
+          </div>
+        </form>
+
+        <div v-if="formSucceeded" class="absolute inset-0 bg-base-100 rounded-2xl flex flex-col items-center justify-center text-center p-12">
+          <div class="w-16 h-16 rounded-full bg-success/10 flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-black mb-2">Proposal Submitted!</h3>
+          <p class="text-base-content/60 text-sm mb-6">We'll review and respond within 24 hours with next steps and a calendar invite.</p>
+          <button @click="showModal = false; formSucceeded = false" class="btn btn-primary">Close</button>
+        </div>
+      </div>
+      <div class="modal-backdrop bg-base-content/40 backdrop-blur-sm" @click="showModal = false"></div>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import {
+ShoppingCartIcon,
+CalendarDaysIcon,
+ChatBubbleLeftRightIcon,
+HeartIcon,
+CurrencyDollarIcon,
+AcademicCapIcon,
+DevicePhoneMobileIcon,
+CpuChipIcon,
+Squares2X2Icon,
+RocketLaunchIcon,
+ArrowDownTrayIcon,
+StarIcon
+} from '@heroicons/vue/24/outline'
 useHead({
   title: "Mobile App Development Services | iOS & Android - KM Software's",
   meta: [
@@ -815,6 +814,22 @@ useHead({
     }
   ]
 })
+const showModal = ref(false)
+const formSucceeded = ref(false)
+const form = reactive({
+  company: '',
+  name: '',
+  email: '',
+  phone: '',
+  industry: '',
+  budget: '',
+  startDate: '',
+  description: '',
+  wantsEstimate: false,
+  wantsNDA: false,
+})
+const industryOptions = ['Fintech / Finance', 'Healthcare / HealthTech', 'SaaS / Marketplace', 'Enterprise IT', 'Manufacturing & IoT', 'E-commerce / Retail', 'Other']
+const budgetOptions = ['₹8L – ₹25L ($10k–$30k)', '₹25L – ₹60L ($30k–$75k)', '₹60L – ₹1.2Cr ($75k–$150k)', '₹1.2Cr+ ($150k+)', 'Not sure yet']
 
 const heroPoints = ref([
   'iOS, Android & Cross-Platform Apps',
@@ -822,92 +837,93 @@ const heroPoints = ref([
   'Scalable Architecture',
   'End-to-End Development'
 ])
-
 const trustStats = ref([
-  {
-    title: 'Apps Deployed',
-    value: '150+',
-    desc: 'On App/Play Store',
-    iconPath: 'd="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"'
-  },
-  {
-    title: 'Total Downloads',
-    value: '5M+',
-    desc: 'Combined installs',
-    iconPath: 'd="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"'
-  },
-  {
-    title: 'Average Rating',
-    value: '4.9',
-    desc: 'App Store rating',
-    iconPath: 'd="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"'
-  }
+{
+title: 'Apps Deployed',
+value: '150+',
+desc: 'On App/Play Store',
+icon: RocketLaunchIcon
+},
+
+{
+title: 'Total Downloads',
+value: '5M+',
+desc: 'Combined installs',
+icon: ArrowDownTrayIcon
+},
+
+{
+title: 'Average Rating',
+value: '4.9',
+desc: 'App Store rating',
+icon: StarIcon
+}
 ])
 
 const platforms = ref([
-  {
-    name: 'iOS Development',
-    description: 'Native iPhone and iPad apps built using Swift and the latest Apple frameworks for unmatched performance and seamless integration with the Apple ecosystem.',
-    iconPath: 'M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z',
-    technologies: ['Swift', 'SwiftUI', 'UIKit', 'Core Data', 'ARKit', 'CoreML']
-  },
-  {
-    name: 'Android Development',
-    description: 'High-performance Android apps using Kotlin and modern Android SDKs, delivering smooth experiences across the full Android device ecosystem.',
-    iconPath: 'M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z',
-    technologies: ['Kotlin', 'Jetpack Compose', 'Room', 'ML Kit', 'Firebase', 'WorkManager']
-  },
-  {
-    name: 'Cross-Platform',
-    description: 'Build once, deploy everywhere using Flutter and React Native for faster time-to-market without compromising on quality or user experience.',
-    iconPath: 'M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1h-4a1 1 0 01-1-1V5z',
-    technologies: ['Flutter', 'React Native', 'Expo', 'Dart', 'TypeScript', 'Redux']
-  }
-])
+{
+name: 'iOS Development',
+description: 'Native iPhone and iPad apps built using Swift and the latest Apple frameworks for unmatched performance and seamless integration with the Apple ecosystem.',
+icon: DevicePhoneMobileIcon,
+technologies: ['Swift', 'SwiftUI', 'UIKit', 'Core Data', 'ARKit', 'CoreML']
+},
 
+{
+name: 'Android Development',
+description: 'High-performance Android apps using Kotlin and modern Android SDKs, delivering smooth experiences across the full Android device ecosystem.',
+icon: CpuChipIcon,
+technologies: ['Kotlin', 'Jetpack Compose', 'Room', 'ML Kit', 'Firebase', 'WorkManager']
+},
+
+{
+name: 'Cross-Platform',
+description: 'Build once, deploy everywhere using Flutter and React Native for faster time-to-market without compromising on quality or user experience.',
+icon: Squares2X2Icon,
+technologies: ['Flutter', 'React Native', 'Expo', 'Dart', 'TypeScript', 'Redux']
+}
+])
 const appTypes = ref([
-  {
-    title: 'E-Commerce Apps',
-    description: 'Mobile shopping apps with secure payments, real-time order tracking, and seamless product catalog experiences.',
-    iconPath: 'M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z',
-    examples: ['Retail', 'Marketplace', 'Fashion']
-  },
-  {
-    title: 'On-Demand Apps',
-    description: 'Food delivery, ride-sharing, and service booking platforms with real-time tracking and smart dispatch.',
-    iconPath: 'M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z',
-    examples: ['Delivery', 'Rides', 'Booking']
-  },
-  {
-    title: 'Social Networking Apps',
-    description: 'Community platforms with chat, feeds, and real-time engagement features for meaningful connections.',
-    iconPath: 'M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z',
-    examples: ['Networks', 'Dating', 'Forums']
-  },
-  {
-    title: 'Healthcare Apps',
-    description: 'Telemedicine, health tracking, and medical appointment apps built to HIPAA-compliant standards.',
-    iconPath: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z',
-    examples: ['Telemedicine', 'Fitness', 'Wellness']
-  },
-  {
-    title: 'FinTech Apps',
-    description: 'Secure banking, digital wallet, and financial management apps with biometric auth and encryption.',
-    iconPath: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
-    examples: ['Banking', 'Wallets', 'Trading']
-  },
-  {
-    title: 'Education Apps',
-    description: 'E-learning platforms with courses, quizzes, and live sessions for engaging educational experiences.',
-    iconPath: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253',
-    examples: ['LMS', 'Courses', 'Live Sessions']
-  },
-  {
-    title: 'Enterprise Apps',
-    description: 'Internal business apps for operations, automation, and productivity to streamline your workflows.',
-    iconPath: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4',
-    examples: ['ERP', 'CRM', 'Automation']
-  }
+{
+title: 'E-Commerce Apps',
+description: 'Mobile shopping apps with secure payments, real-time order tracking, and seamless product catalog experiences.',
+icon: ShoppingCartIcon,
+examples: ['Retail', 'Marketplace', 'Fashion']
+},
+
+{
+title: 'On-Demand Apps',
+description: 'Food delivery, ride-sharing, and service booking platforms with real-time tracking and smart dispatch.',
+icon: CalendarDaysIcon,
+examples: ['Delivery', 'Rides', 'Booking']
+},
+
+{
+title: 'Social Networking Apps',
+description: 'Community platforms with chat, feeds, and real-time engagement features for meaningful connections.',
+icon: ChatBubbleLeftRightIcon,
+examples: ['Networks', 'Dating', 'Forums']
+},
+
+{
+title: 'Healthcare Apps',
+description: 'Telemedicine, health tracking, and medical appointment apps built to HIPAA-compliant standards.',
+icon: HeartIcon,
+examples: ['Telemedicine', 'Fitness', 'Wellness']
+},
+
+{
+title: 'FinTech Apps',
+description: 'Secure banking, digital wallet, and financial management apps with biometric auth and encryption.',
+icon: CurrencyDollarIcon,
+examples: ['Banking', 'Wallets', 'Trading']
+},
+
+{
+title: 'Education Apps',
+description: 'E-learning platforms with courses, quizzes, and live sessions for engaging educational experiences.',
+icon: AcademicCapIcon,
+examples: ['LMS', 'Courses', 'Live Sessions']
+}
 ])
 
 const techStacks = ref([
@@ -933,8 +949,8 @@ const techStacks = ref([
 
 const whyChooseUs = ref([
   { icon: '👨‍💻', title: 'Experienced Mobile App Developers', desc: 'Senior engineers with 5+ years in iOS, Android & cross-platform development.' },
-  { icon: '🏗️', title: 'Scalable & Secure App Architecture', desc: 'Built to grow with your user base from day one, with security at every layer.' },
-  { icon: '🎨', title: 'User-Centric Design Approach', desc: 'Beautiful, intuitive interfaces that delight users and drive retention.' },
+  // { icon: '🏗️', title: 'Scalable & Secure App Architecture', desc: 'Built to grow with your user base from day one, with security at every layer.' },
+  // { icon: '🎨', title: 'User-Centric Design Approach', desc: 'Beautiful, intuitive interfaces that delight users and drive retention.' },
   { icon: '⚡', title: 'Agile Development Process', desc: 'Iterative sprints with regular demos so you always know exactly where things stand.' },
   { icon: '🚀', title: 'On-Time Delivery', desc: 'We commit to timelines and deliver — 98% on-time delivery rate across all projects.' },
   { icon: '🛡️', title: 'Dedicated Support Team', desc: 'Post-launch monitoring, bug fixes, and ongoing maintenance to keep your app performing.' }
@@ -1002,13 +1018,56 @@ const faqs = ref([
     answer: 'Absolutely. We sign NDAs before any project discussion. All code and intellectual property belong to you from day one. We use secure development practices, code repositories with access controls, and can work within your own infrastructure if needed.'
   }
 ])
+const submitForm = () => {
+  // In production: call your API endpoint
+  formSucceeded.value = true
+}
 </script>
 
 <style scoped>
 /* ============================================================
    SNAKE / ZIGZAG PROCESS SECTION
    ============================================================ */
+.process-card{
+background:#fff;
+border:1px solid #eee;
+border-radius:16px;
+padding:30px;
+position:relative;
+transition:.3s;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
 
+.process-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.1);
+}
+
+.process-number{
+width:60px;
+height:60px;
+background:linear-gradient(135deg,#2563eb,#4f46e5);
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:700;
+font-size:20px;
+border-radius:50%;
+margin-bottom:20px;
+}
+
+.process-title{
+font-size:20px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.process-desc{
+font-size:15px;
+color:#666;
+line-height:1.6;
+}
 /* Outer wrapper — provides relative context for edge labels */
 .process-snake-outer {
   position: relative;

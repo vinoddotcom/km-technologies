@@ -332,77 +332,143 @@
         </div>
       </div>
     </section>
+     <!-- CTA Section -->
+    <section id="contact" class="py-24 bg-base-100 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-primary/80"></div>
+      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.3),transparent_60%)]"></div>
 
-    <!-- CTA Section -->
-    <section class="py-32 relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-accent"></div>
-      <div class="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.05)_50%,transparent_75%,transparent_100%)] bg-[length:250%_250%] animate-[gradient_15s_ease_infinite]"></div>
-      
-      <div class="absolute top-20 left-10 w-32 h-32 bg-white/5 rounded-full blur-2xl animate-pulse"></div>
-      <div class="absolute bottom-20 right-10 w-40 h-40 bg-white/5 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
-      
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="max-w-5xl mx-auto">
-          <div class="bg-white/10 backdrop-blur-xl rounded-3xl p-12 md:p-16 border border-white/20 shadow-2xl">
-            <div class="text-center text-white">
-              <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 mb-6">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span class="text-sm font-semibold">Secure Your Digital Future</span>
-              </div>
-              
-              <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight">
-                Ready to protect your
-                <span class="block bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent mt-2">
-                  business?
-                </span>
-              </h2>
-              
-              <p class="text-xl opacity-90 mb-12 max-w-2xl mx-auto leading-relaxed">
-                Protect your business from cyber threats with KM Software's. Get a comprehensive security assessment today.
-              </p>
-              
-              <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <NuxtLink to="/contact" class="btn btn-lg bg-white text-primary hover:bg-white hover:scale-105 border-none shadow-2xl px-10 transition-all group min-w-[240px]">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                  </svg>
-                  <span>Book a Security Consultation</span>
-                  <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                  </svg>
-                </NuxtLink>
-              </div>
-              
-              <!-- Trust Indicators -->
-              <div class="mt-12 pt-8 border-t border-white/20">
-                <div class="flex flex-wrap justify-center gap-8 text-sm">
-                  <div class="flex items-center gap-2 opacity-90">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                    </svg>
-                    <span>Free Assessment</span>
-                  </div>
-                  <div class="flex items-center gap-2 opacity-90">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                    </svg>
-                    <span>24/7 Monitoring</span>
-                  </div>
-                  <div class="flex items-center gap-2 opacity-90">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                    </svg>
-                    <span>Certified Experts</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div class="max-w-3xl mx-auto text-primary-content">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 leading-tight">
+        Ready to protect your
+            <span class="block mt-2">business?</span>
+          </h2>
+          <p class="text-xl opacity-90 mb-4">
+            Transform your ideas into powerful digital solutions with KM Software's.
+          </p>
+          <p class="text-lg opacity-80 mb-10">
+            Let's create custom software that simplifies operations, boosts productivity, and scales with your business.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              @click="showModal = true"
+              class="btn btn-lg bg-base-100 text-primary hover:bg-base-200 border-none shadow-2xl px-10 group"
+            >
+              <span class="font-bold">Start Your Custom Project Today</span>
+              <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+              </svg>
+            </button>
+            <NuxtLink to="/contact" class="btn btn-lg btn-ghost border-2 border-base-100/40 text-primary-content hover:bg-base-100/10 px-10">
+              Or Contact Us
+            </NuxtLink>
+          </div>
+          <div class="mt-10 flex flex-wrap justify-center gap-8 text-sm opacity-80">
+            <span>✓ Free consultation</span>
+            <span>✓ Scalable architecture</span>
+            <span>✓ Response within 24 hours</span>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- ═══════════════════════════════════
+         INTAKE MODAL
+    ════════════════════════════════════ -->
+    <div v-if="showModal" class="modal modal-open z-[200]">
+      <div class="modal-box max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <button @click="showModal = false" class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4">✕</button>
+        <h3 class="font-black text-2xl mb-2">Request a Proposal</h3>
+        <p class="text-sm text-base-content/60 mb-6">We'll respond within 24 hours with next steps and a calendar link.</p>
+
+        <form @submit.prevent="submitForm" class="space-y-4">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="form-control">
+              <label class="label"><span class="label-text text-xs font-semibold">Company Name *</span></label>
+              <input v-model="form.company" type="text" required class="input input-bordered input-sm" placeholder="Acme Corp"/>
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text text-xs font-semibold">Your Name *</span></label>
+              <input v-model="form.name" type="text" required class="input input-bordered input-sm" placeholder="Ravi Kumar"/>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="form-control">
+              <label class="label"><span class="label-text text-xs font-semibold">Work Email *</span></label>
+              <input v-model="form.email" type="email" required class="input input-bordered input-sm" placeholder="ravi@acme.com"/>
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text text-xs font-semibold">Phone</span></label>
+              <input v-model="form.phone" type="tel" class="input input-bordered input-sm" placeholder="+91 98765 43210"/>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="form-control">
+              <label class="label"><span class="label-text text-xs font-semibold">Industry *</span></label>
+              <select v-model="form.industry" required class="select select-bordered select-sm">
+                <option value="">Select industry</option>
+                <option v-for="ind in industryOptions" :key="ind" :value="ind">{{ ind }}</option>
+              </select>
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text text-xs font-semibold">Budget Range *</span></label>
+              <select v-model="form.budget" required class="select select-bordered select-sm">
+                <option value="">Select range</option>
+                <option v-for="b in budgetOptions" :key="b" :value="b">{{ b }}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-control">
+            <label class="label"><span class="label-text text-xs font-semibold">Desired Start Date</span></label>
+            <input v-model="form.startDate" type="month" class="input input-bordered input-sm"/>
+          </div>
+
+          <div class="form-control">
+            <label class="label"><span class="label-text text-xs font-semibold">Brief Description (200 chars) *</span></label>
+            <textarea v-model="form.description" required maxlength="200" rows="3" class="textarea textarea-bordered text-sm" placeholder="What are you building? What problem does it solve?"></textarea>
+            <label class="label"><span class="label-alt text-xs text-base-content/40">{{ form.description.length }}/200</span></label>
+          </div>
+
+          <div class="form-control">
+            <label class="label cursor-pointer justify-start gap-3">
+              <input v-model="form.wantsEstimate" type="checkbox" class="checkbox checkbox-sm checkbox-primary"/>
+              <span class="label-text text-sm">I want a non-binding cost estimate</span>
+            </label>
+          </div>
+
+          <div class="form-control">
+            <label class="label cursor-pointer justify-start gap-3">
+              <input v-model="form.wantsNDA" type="checkbox" class="checkbox checkbox-sm checkbox-primary"/>
+              <span class="label-text text-sm">Please send an NDA before our first call</span>
+            </label>
+          </div>
+
+          <div class="modal-action mt-6">
+            <button type="submit" class="btn btn-primary w-full">
+              Submit Request
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+              </svg>
+            </button>
+          </div>
+        </form>
+
+        <div v-if="formSucceeded" class="absolute inset-0 bg-base-100 rounded-2xl flex flex-col items-center justify-center text-center p-12">
+          <div class="w-16 h-16 rounded-full bg-success/10 flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-black mb-2">Proposal Submitted!</h3>
+          <p class="text-base-content/60 text-sm mb-6">We'll review and respond within 24 hours with next steps and a calendar invite.</p>
+          <button @click="showModal = false; formSucceeded = false" class="btn btn-primary">Close</button>
+        </div>
+      </div>
+      <div class="modal-backdrop bg-base-content/40 backdrop-blur-sm" @click="showModal = false"></div>
+    </div>
   </div>
 </template>
 
@@ -505,4 +571,26 @@ const faqs = ref([
     answer: 'Yes, we offer security awareness programs including phishing simulations, interactive training modules, and quarterly updates on emerging threats for your entire team.'
   }
 ]);
+const industryOptions = ['Fintech / Finance', 'Healthcare / HealthTech', 'SaaS / Marketplace', 'Enterprise IT', 'Manufacturing & IoT', 'E-commerce / Retail', 'Other']
+const budgetOptions = ['₹8L – ₹25L ($10k–$30k)', '₹25L – ₹60L ($30k–$75k)', '₹60L – ₹1.2Cr ($75k–$150k)', '₹1.2Cr+ ($150k+)', 'Not sure yet']
+
+const showModal = ref(false)
+const formSucceeded = ref(false)
+
+const form = reactive({
+  company: '',
+  name: '',
+  email: '',
+  phone: '',
+  industry: '',
+  budget: '',
+  startDate: '',
+  description: '',
+  wantsEstimate: false,
+  wantsNDA: false,
+})
+const submitForm = () => {
+  // In production: call your API endpoint
+  formSucceeded.value = true
+}
 </script>
