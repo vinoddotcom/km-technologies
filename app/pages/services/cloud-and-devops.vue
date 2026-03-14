@@ -326,76 +326,143 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-24 sm:py-32 relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-primary"></div>
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.1),transparent_50%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.1),transparent_50%)]"></div>
-      <div class="absolute top-10 right-10 w-32 h-32 sm:w-64 sm:h-64 bg-white/5 rounded-full blur-3xl animate-pulse" style="animation-duration: 4s;"></div>
-      <div class="absolute bottom-10 left-10 w-48 h-48 sm:w-96 sm:h-96 bg-white/5 rounded-full blur-3xl animate-pulse" style="animation-duration: 6s;"></div>
-      
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="max-w-4xl mx-auto">
-          <div class="bg-white/10 backdrop-blur-xl rounded-3xl p-8 sm:p-12 md:p-16 border-2 border-white/20 shadow-2xl">
-            <div class="text-center text-white">
-              <div class="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 mb-6 sm:mb-8">
-                <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M2 5a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm14 1a1 1 0 11-2 0 1 1 0 012 0zM2 13a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2zm14 1a1 1 0 11-2 0 1 1 0 012 0z" clip-rule="evenodd"/>
-                </svg>
-                <span class="text-sm sm:text-base font-bold">Modernize Your Infrastructure</span>
-              </div>
-              
-              <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 leading-tight">
-                Let's Modernize Your Infrastructure
-              </h2>
-              
-              <p class="text-lg sm:text-xl opacity-90 mb-4 max-w-2xl mx-auto leading-relaxed">
-                Partner with KM Software's to build secure, automated, and scalable cloud environments.
-              </p>
-              <p class="text-base opacity-80 mb-8 sm:mb-12 max-w-2xl mx-auto">
-                Move to the cloud with confidence.
-              </p>
-              
-              <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-                <NuxtLink to="/contact" class="btn btn-lg bg-white text-primary hover:bg-base-200 hover:scale-110 border-none shadow-2xl px-12 py-4 transition-all min-w-[260px] group/btn">
-                  <span class="text-lg font-bold">Move to the Cloud</span>
-                  <svg class="w-6 h-6 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                  </svg>
-                </NuxtLink>
-              </div>
-              
-              <div class="pt-10 border-t-2 border-white/20">
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-                  <div class="flex flex-col items-center gap-3 p-4 rounded-2xl bg-white/10 backdrop-blur-sm hover:bg-white/15 transition-all">
-                    <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
-                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                      </svg>
-                    </div>
-                    <span class="font-semibold">Free Assessment</span>
-                  </div>
-                  <div class="flex flex-col items-center gap-3 p-4 rounded-2xl bg-white/10 backdrop-blur-sm hover:bg-white/15 transition-all">
-                    <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
-                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
-                      </svg>
-                    </div>
-                    <span class="font-semibold">24-Hour Response</span>
-                  </div>
-                  <div class="flex flex-col items-center gap-3 p-4 rounded-2xl bg-white/10 backdrop-blur-sm hover:bg-white/15 transition-all">
-                    <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
-                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                      </svg>
-                    </div>
-                    <span class="font-semibold">Certified Experts</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+   
+    <section id="contact" class="py-24 bg-base-100 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-primary/80"></div>
+      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.3),transparent_60%)]"></div>
+
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div class="max-w-3xl mx-auto text-primary-content">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 leading-tight">
+          Let's Modernize Your
+            <span class="block mt-2">Infrastructure</span>
+          </h2>
+          <p class="text-xl opacity-90 mb-4">
+            Transform your ideas into powerful digital solutions with KM Software's.
+          </p>
+          <p class="text-lg opacity-80 mb-10">
+            Let's create custom software that simplifies operations, boosts productivity, and scales with your business.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              @click="showModal = true"
+              class="btn btn-lg bg-base-100 text-primary hover:bg-base-200 border-none shadow-2xl px-10 group"
+            >
+              <span class="font-bold">Start Your Custom Project Today</span>
+              <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+              </svg>
+            </button>
+            <NuxtLink to="/contact" class="btn btn-lg btn-ghost border-2 border-base-100/40 text-primary-content hover:bg-base-100/10 px-10">
+              Or Contact Us
+            </NuxtLink>
+          </div>
+          <div class="mt-10 flex flex-wrap justify-center gap-8 text-sm opacity-80">
+            <span>✓ Free consultation</span>
+            <span>✓ Scalable architecture</span>
+            <span>✓ Response within 24 hours</span>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- ═══════════════════════════════════
+         INTAKE MODAL
+    ════════════════════════════════════ -->
+    <div v-if="showModal" class="modal modal-open z-[200]">
+      <div class="modal-box max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <button @click="showModal = false" class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4">✕</button>
+        <h3 class="font-black text-2xl mb-2">Request a Proposal</h3>
+        <p class="text-sm text-base-content/60 mb-6">We'll respond within 24 hours with next steps and a calendar link.</p>
+
+        <form @submit.prevent="submitForm" class="space-y-4">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="form-control">
+              <label class="label"><span class="label-text text-xs font-semibold">Company Name *</span></label>
+              <input v-model="form.company" type="text" required class="input input-bordered input-sm" placeholder="Acme Corp"/>
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text text-xs font-semibold">Your Name *</span></label>
+              <input v-model="form.name" type="text" required class="input input-bordered input-sm" placeholder="Ravi Kumar"/>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="form-control">
+              <label class="label"><span class="label-text text-xs font-semibold">Work Email *</span></label>
+              <input v-model="form.email" type="email" required class="input input-bordered input-sm" placeholder="ravi@acme.com"/>
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text text-xs font-semibold">Phone</span></label>
+              <input v-model="form.phone" type="tel" class="input input-bordered input-sm" placeholder="+91 98765 43210"/>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="form-control">
+              <label class="label"><span class="label-text text-xs font-semibold">Industry *</span></label>
+              <select v-model="form.industry" required class="select select-bordered select-sm">
+                <option value="">Select industry</option>
+                <option v-for="ind in industryOptions" :key="ind" :value="ind">{{ ind }}</option>
+              </select>
+            </div>
+            <div class="form-control">
+              <label class="label"><span class="label-text text-xs font-semibold">Budget Range *</span></label>
+              <select v-model="form.budget" required class="select select-bordered select-sm">
+                <option value="">Select range</option>
+                <option v-for="b in budgetOptions" :key="b" :value="b">{{ b }}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-control">
+            <label class="label"><span class="label-text text-xs font-semibold">Desired Start Date</span></label>
+            <input v-model="form.startDate" type="month" class="input input-bordered input-sm"/>
+          </div>
+
+          <div class="form-control">
+            <label class="label"><span class="label-text text-xs font-semibold">Brief Description (200 chars) *</span></label>
+            <textarea v-model="form.description" required maxlength="200" rows="3" class="textarea textarea-bordered text-sm" placeholder="What are you building? What problem does it solve?"></textarea>
+            <label class="label"><span class="label-alt text-xs text-base-content/40">{{ form.description.length }}/200</span></label>
+          </div>
+
+          <div class="form-control">
+            <label class="label cursor-pointer justify-start gap-3">
+              <input v-model="form.wantsEstimate" type="checkbox" class="checkbox checkbox-sm checkbox-primary"/>
+              <span class="label-text text-sm">I want a non-binding cost estimate</span>
+            </label>
+          </div>
+
+          <div class="form-control">
+            <label class="label cursor-pointer justify-start gap-3">
+              <input v-model="form.wantsNDA" type="checkbox" class="checkbox checkbox-sm checkbox-primary"/>
+              <span class="label-text text-sm">Please send an NDA before our first call</span>
+            </label>
+          </div>
+
+          <div class="modal-action mt-6">
+            <button type="submit" class="btn btn-primary w-full">
+              Submit Request
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+              </svg>
+            </button>
+          </div>
+        </form>
+
+        <div v-if="formSucceeded" class="absolute inset-0 bg-base-100 rounded-2xl flex flex-col items-center justify-center text-center p-12">
+          <div class="w-16 h-16 rounded-full bg-success/10 flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-black mb-2">Proposal Submitted!</h3>
+          <p class="text-base-content/60 text-sm mb-6">We'll review and respond within 24 hours with next steps and a calendar invite.</p>
+          <button @click="showModal = false; formSucceeded = false" class="btn btn-primary">Close</button>
+        </div>
+      </div>
+      <div class="modal-backdrop bg-base-content/40 backdrop-blur-sm" @click="showModal = false"></div>
+    </div>
   </div>
 </template>
 
@@ -495,4 +562,27 @@ const faqs = ref([
     answer: 'Yes! We offer 24/7 monitoring, incident response, and continuous optimization as part of our managed services. We ensure your infrastructure remains secure, performant, and cost-efficient.'
   }
 ]);
+
+const industryOptions = ['Fintech / Finance', 'Healthcare / HealthTech', 'SaaS / Marketplace', 'Enterprise IT', 'Manufacturing & IoT', 'E-commerce / Retail', 'Other']
+const budgetOptions = ['₹8L – ₹25L ($10k–$30k)', '₹25L – ₹60L ($30k–$75k)', '₹60L – ₹1.2Cr ($75k–$150k)', '₹1.2Cr+ ($150k+)', 'Not sure yet']
+
+const showModal = ref(false)
+const formSucceeded = ref(false)
+
+const form = reactive({
+  company: '',
+  name: '',
+  email: '',
+  phone: '',
+  industry: '',
+  budget: '',
+  startDate: '',
+  description: '',
+  wantsEstimate: false,
+  wantsNDA: false,
+})
+const submitForm = () => {
+  // In production: call your API endpoint
+  formSucceeded.value = true
+}
 </script>
