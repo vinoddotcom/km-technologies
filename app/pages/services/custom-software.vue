@@ -159,64 +159,121 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════
-         3. WHO IS THIS FOR
-    ════════════════════════════════════ -->
-    <section id="who-we-serve" class="py-24 bg-base-100">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
-          <div>
-            <div class="badge badge-outline badge-lg mb-6">Industries We Serve</div>
-            <h2 class="text-3xl sm:text-4xl font-black mb-8">Who This Is Built For</h2>
-            <div class="space-y-4">
-              <div v-for="industry in industries" :key="industry.name"
-                class="flex items-start gap-4 p-5 bg-base-100 rounded-2xl border border-base-content/5 hover:border-primary/20 hover:shadow-md transition-all group">
-                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 text-xl">{{ industry.icon }}</div>
-                <div>
-                  <p class="font-bold text-sm">{{ industry.name }}</p>
-                  <p class="text-xs text-base-content/60 mt-1 leading-relaxed">{{ industry.desc }}</p>
-                </div>
-              </div>
-            </div>
+<!-- ═══════════════════════════════════
+     INDUSTRIES WE SERVE
+════════════════════════════════════ -->
+<section id="industries" class="py-24 bg-base-100">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Heading -->
+    <div class="text-center mb-16 max-w-3xl mx-auto">
+      <div class="badge badge-outline badge-lg mb-4">Industries We Serve</div>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">
+        Built for Real Businesses
+      </h2>
+      <p class="text-base-content/60 text-lg">
+        We create tailored software solutions across industries — solving real operational challenges.
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+
+      <div
+        v-for="industry in industries"
+        :key="industry.name"
+        class="group p-6 bg-base-200 rounded-2xl border border-base-content/5 hover:border-primary/20 hover:shadow-xl transition-all hover:-translate-y-1"
+      >
+        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-xl mb-4 group-hover:bg-primary/20 transition">
+          {{ industry.icon }}
+        </div>
+
+        <h3 class="font-bold text-base mb-2">{{ industry.name }}</h3>
+
+        <p class="text-sm text-base-content/60 leading-relaxed">
+          {{ industry.desc }}
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ═══════════════════════════════════
+     WHY CHOOSE KM SOFTWARE'S
+════════════════════════════════════ -->
+<section id="why-km" class="py-24 bg-base-200">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Heading -->
+    <div class="text-center mb-16 max-w-3xl mx-auto">
+      <div class="badge badge-outline badge-lg mb-4">Why KM Software's</div>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">
+        Why Choose <span class="text-primary">KM Software's</span>?
+      </h2>
+      <p class="text-base-content/60 text-lg">
+        We build scalable, secure, and business-driven software — not just code.
+      </p>
+    </div>
+
+    <!-- Content -->
+    <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
+
+      <!-- LEFT: POINTS -->
+      <div class="space-y-4">
+        <div
+          v-for="pt in positioningPoints"
+          :key="pt.title"
+          class="flex items-start gap-4 p-6 bg-base-100 rounded-2xl border border-base-content/5 hover:border-primary/20 hover:shadow-md transition-all"
+        >
+          <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="pt.icon"/>
+            </svg>
           </div>
 
-          <!-- Why a Specialist Studio -->
           <div>
-            <div class="badge badge-outline badge-lg mb-6">Why KM Software's</div>
-            <h2 class="text-3xl sm:text-4xl font-black mb-4">Why Choose <em>KM Software's</em>?</h2>
-            <p class="text-base-content/60 text-sm mb-8 leading-relaxed">We don't just build software — we build solutions that drive growth. Here's what sets us apart.</p>
-
-            <div class="space-y-4 mb-8">
-              <div v-for="pt in positioningPoints" :key="pt.title"
-                class="flex items-start gap-4 p-5 bg-base-100 rounded-2xl border border-base-content/5 hover:border-primary/20 hover:shadow-md transition-all">
-                <div class="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                  <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="pt.icon"/>
-                  </svg>
-                </div>
-                <div>
-                  <p class="font-bold text-sm mb-0.5">{{ pt.title }}</p>
-                  <p class="text-xs text-base-content/60 leading-relaxed">{{ pt.desc }}</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Testimonial -->
-            <div class="bg-base-100 border border-primary/10 rounded-2xl p-6">
-              <p class="text-base-content/80 text-sm leading-relaxed italic mb-4">"KM's paid discovery phase alone was worth the investment — they saved us 6 months of wrong turns and delivered a system processing ₹200Cr+ monthly."</p>
-              <div class="flex items-center gap-3">
-                <div class="w-9 h-9 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary text-sm">RK</div>
-                <div>
-                  <p class="text-sm font-semibold">Ravi Kumar</p>
-                  <p class="text-xs text-base-content/50">CTO, FinPay Technologies</p>
-                </div>
-              </div>
-            </div>
+            <p class="font-bold text-sm mb-1">{{ pt.title }}</p>
+            <p class="text-sm text-base-content/60 leading-relaxed">{{ pt.desc }}</p>
           </div>
         </div>
       </div>
-    </section>
 
+      <!-- RIGHT: TESTIMONIAL CARD -->
+      <div class="bg-gradient-to-br from-primary/5 via-base-100 to-secondary/5 p-8 rounded-3xl border border-primary/10 shadow-lg">
+
+        <h3 class="text-xl font-black mb-4">Client Impact</h3>
+
+        <p class="text-base-content/80 leading-relaxed italic mb-6">
+          "KM's paid discovery phase alone saved us 6 months of wrong decisions — and delivered a system processing ₹200Cr+ monthly."
+        </p>
+
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">
+            RK
+          </div>
+          <div>
+            <p class="font-semibold">Ravi Kumar</p>
+            <p class="text-xs text-base-content/50">CTO, FinPay Technologies</p>
+          </div>
+        </div>
+
+        <!-- Highlight Stats -->
+        <div class="grid grid-cols-2 gap-4 mt-6">
+          <div class="p-4 bg-base-100 rounded-xl border border-base-content/10 text-center">
+            <p class="text-xl font-black text-primary">6 months</p>
+            <p class="text-xs text-base-content/50">Time saved</p>
+          </div>
+          <div class="p-4 bg-base-100 rounded-xl border border-base-content/10 text-center">
+            <p class="text-xl font-black text-primary">₹200Cr+</p>
+            <p class="text-xs text-base-content/50">Processed monthly</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
     <!-- ═══════════════════════════════════
          4. ENGAGEMENT MODELS & PRICING
     ════════════════════════════════════ -->
@@ -646,6 +703,7 @@ const industries = [
   { icon: '🏦', name: 'Finance & Fintech', desc: 'Risk engines, payment infrastructure, lending platforms, wealth management dashboards, regulatory reporting.' },
   { icon: '🏥', name: 'Healthcare & HealthTech', desc: 'EHR integrations (FHIR/HL7), patient portals, clinical decision support, HIPAA-compliant data pipelines.' },
   { icon: '🛒', name: 'SaaS & Marketplaces', desc: 'Multi-tenant platforms, billing engines, seller/buyer dashboards, recommendation engines, logistics APIs.' },
+  { icon: '🏢', name: 'Enterprise IT', desc: 'Legacy modernization, ERP/CRM integrations, internal tooling, data warehouses, SSO & identity infrastructure.' },
   { icon: '🏢', name: 'Enterprise IT', desc: 'Legacy modernization, ERP/CRM integrations, internal tooling, data warehouses, SSO & identity infrastructure.' },
   { icon: '🌐', name: 'Industry & Manufacturing', desc: 'IoT data ingestion, real-time dashboards, predictive maintenance, supply chain visibility platforms.' },
 ]

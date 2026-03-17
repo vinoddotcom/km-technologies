@@ -1,88 +1,110 @@
 <template>
   <div class="min-h-screen bg-base-100">
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-primary/5 via-base-100 to-secondary/5 pt-24 pb-24 overflow-hidden">
-      <!-- Background Pattern -->
-      <div class="absolute inset-0 opacity-5">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(99,102,241,0.3),transparent_50%),radial-gradient(circle_at_80%_70%,rgba(236,72,153,0.3),transparent_50%)]"></div>
+    <section class="relative pt-28 pb-24 bg-base-100 overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.04]">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(59,130,246,0.45),transparent_35%),radial-gradient(circle_at_80%_70%,rgba(99,102,241,0.3),transparent_35%)]"></div>
       </div>
-      
+
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <!-- Breadcrumbs -->
-        <div class="breadcrumbs text-sm mb-8 opacity-70 hover:opacity-100 transition-opacity">
+        <div class="breadcrumbs text-sm mb-8 opacity-60">
           <ul>
             <li><NuxtLink to="/" class="hover:text-primary transition-colors">Home</NuxtLink></li>
             <li><NuxtLink to="/#services" class="hover:text-primary transition-colors">Services</NuxtLink></li>
             <li>Dedicated Developers</li>
           </ul>
         </div>
-        
-        <div class="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-          <!-- Left: Content -->
+
+        <div class="grid lg:grid-cols-2 gap-14 items-center max-w-7xl mx-auto">
+          <!-- Left -->
           <div class="space-y-8">
             <div>
-              <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 mb-6 hover:scale-105 transition-transform">
-                <svg class="w-5 h-5 text-primary animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+              <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+                <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
                 </svg>
-                <span class="text-sm font-bold text-primary">Staff Augmentation</span>
+                <span class="text-sm font-semibold text-primary">Staff Augmentation</span>
               </div>
-              
-              <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-black mb-5 leading-tight tracking-tight text-base-content">
+
+              <h1 class="text-3xl sm:text-4xl lg:text-[46px] font-black leading-tight tracking-tight text-base-content mb-5">
                 Dedicated Developers
-                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-accent via-primary to-secondary mt-1">
+                <span class="block text-primary mt-2">
                   For Your Business Needs
                 </span>
               </h1>
-              
-              <p class="text-base sm:text-lg text-base-content/70 leading-relaxed max-w-lg">
-                Access pre-vetted, senior developers who integrate seamlessly with your team. Scale up or down on-demand without the overhead.
+
+              <p class="text-base sm:text-lg text-base-content/70 leading-relaxed max-w-xl">
+                Access pre-vetted, senior developers who integrate seamlessly with your team. Scale up or down on-demand without the overhead of traditional hiring.
               </p>
             </div>
-            
+
             <div class="flex flex-col sm:flex-row gap-4">
-              <NuxtLink to="/contact" class="btn btn-primary btn-lg px-10 shadow-2xl hover:shadow-primary/50 hover:scale-110 transition-all group">
-                <span class="text-lg font-bold">Hire Developers</span>
-                <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <NuxtLink
+                to="/contact"
+                class="btn btn-primary btn-lg px-8 shadow-lg hover:shadow-xl transition-all group"
+              >
+                <span>Hire Developers</span>
+                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                 </svg>
               </NuxtLink>
-              
-              <button class="btn btn-outline btn-lg px-10 hover:scale-105 transition-all group">
-                <svg class="w-6 h-6 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                <span class="text-lg">View Pricing</span>
+
+              <button
+                @click="scrollToSection('#pricing')"
+                class="btn btn-outline btn-lg px-8"
+              >
+                View Pricing
               </button>
             </div>
-            
-            <!-- Trust Stats -->
-            <div class="stats stats-vertical sm:stats-horizontal shadow-xl bg-gradient-to-br from-base-200/80 to-base-300/50 backdrop-blur-lg border border-white/10 rounded-2xl">
-              <div v-for="stat in trustStats" :key="stat.title" class="stat hover:bg-primary/5 transition-colors">
-                <div class="stat-figure text-primary">
-                  <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <component :is="stat.icon" class="w-10 h-10 text-primary"/>
-                  </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6">
+              <div
+                v-for="stat in trustStats"
+                :key="stat.title"
+                class="rounded-2xl bg-base-200 border border-base-content/10 p-5"
+              >
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <component :is="stat.icon" class="w-5 h-5 text-primary" />
                 </div>
-                <div class="stat-title text-xs font-semibold opacity-70">{{ stat.title }}</div>
-                <div class="stat-value text-4xl text-primary">{{ stat.value }}</div>
-                <div class="stat-desc text-xs opacity-60">{{ stat.desc }}</div>
+                <p class="text-2xl font-black text-base-content">{{ stat.value }}</p>
+                <p class="text-sm font-semibold mt-1">{{ stat.title }}</p>
+                <p class="text-xs text-base-content/50 mt-1">{{ stat.desc }}</p>
               </div>
             </div>
           </div>
-          
-          <!-- Right: Developer Avatars Showcase -->
-          <div class="relative hidden lg:block">
-            <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl blur-3xl"></div>
-            <div class="relative grid grid-cols-3 gap-4 p-8">
-              <div v-for="(dev, index) in sampleDevelopers" :key="index"
-                class="avatar-group -space-x-6 hover:scale-110 transition-transform"
-                :class="index % 2 === 0 ? 'mt-8' : ''">
-                <div class="avatar">
-                  <div class="w-24 h-24 rounded-2xl ring ring-primary ring-offset-base-100 ring-offset-2 bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                    <span class="text-3xl font-black text-white">{{ dev.initial }}</span>
-                  </div>
+
+          <!-- Right -->
+          <div class="hidden lg:block">
+            <div class="relative rounded-3xl bg-base-200 border border-base-content/10 p-8 shadow-xl">
+              <div class="flex items-center justify-between pb-5 border-b border-base-content/10 mb-6">
+                <div>
+                  <p class="text-sm font-bold">Available Developer Pool</p>
+                  <p class="text-xs text-base-content/50">Senior engineers across top stacks</p>
                 </div>
+                <div class="badge badge-success badge-sm">Ready to onboard</div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4">
+                <div
+                  v-for="(dev, index) in sampleDevelopers"
+                  :key="index"
+                  class="rounded-2xl bg-base-100 border border-base-content/10 p-5 text-center hover:border-primary/20 transition-all"
+                >
+                  <div class="w-16 h-16 mx-auto rounded-2xl bg-primary/10 flex items-center justify-center text-primary font-black text-xl mb-3">
+                    {{ dev.initial }}
+                  </div>
+                  <p class="text-sm font-bold">{{ dev.role }}</p>
+                  <p class="text-xs text-base-content/50 mt-1">{{ dev.stack }}</p>
+                </div>
+              </div>
+
+              <div class="mt-6 rounded-2xl bg-primary/5 border border-primary/10 p-4">
+                <p class="text-sm font-semibold text-base-content">
+                  Need a custom team mix?
+                </p>
+                <p class="text-xs text-base-content/60 mt-1">
+                  We can assemble frontend, backend, mobile, DevOps, and QA resources based on your exact requirements.
+                </p>
               </div>
             </div>
           </div>
@@ -91,85 +113,70 @@
     </section>
 
     <!-- Why Choose Dedicated Developers -->
-    <section class="py-24 bg-gradient-to-b from-base-100 to-base-200">
+    <section class="py-24 bg-base-200">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16 space-y-4">
-          <div class="inline-block">
-            <div class="badge badge-primary badge-lg mb-4">Why Choose Us</div>
-          </div>
-          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
+        <div class="text-center mb-16 max-w-3xl mx-auto">
+          <div class="badge badge-outline badge-lg mb-4">Why Choose Us</div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">
             The Advantages of Dedicated Developers
           </h2>
-          <p class="text-xl sm:text-2xl text-base-content/60 max-w-3xl mx-auto font-light">
-            Get the flexibility of remote talent with the commitment of an in-house team
+          <p class="text-base-content/60 text-lg">
+            Get the flexibility of remote talent with the commitment of an in-house team.
           </p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-          <div v-for="(benefit, index) in benefits" :key="index"
-            class="group card bg-gradient-to-br from-base-100 to-base-200 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-base-content/5 hover:border-primary/20">
-            <div class="card-body">
-              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
-                <component :is="benefit.icon" class="w-10 h-10 text-primary"/>
-              </div>
-              <h3 class="card-title text-2xl mb-3 group-hover:text-primary transition-colors">{{ benefit.title }}</h3>
-              <p class="text-base-content/70 leading-relaxed">{{ benefit.description }}</p>
+          <div
+            v-for="(benefit, index) in benefits"
+            :key="index"
+            class="group bg-base-100 rounded-2xl border border-base-content/10 p-7 hover:border-primary/20 hover:shadow-lg transition-all"
+          >
+            <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
+              <component :is="benefit.icon" class="w-6 h-6 text-primary" />
             </div>
+            <h3 class="text-lg font-bold mb-2">{{ benefit.title }}</h3>
+            <p class="text-sm text-base-content/60 leading-relaxed">
+              {{ benefit.description }}
+            </p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Tech Stack -->
-    <section class="py-24 bg-gradient-to-b from-base-200 to-base-100 relative overflow-hidden">
-      <!-- Decorative background -->
-      <div class="absolute inset-0 opacity-5">
-        <div class="absolute top-20 left-10 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
-        <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
-      </div>
-      
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center mb-16 space-y-4 max-w-4xl mx-auto">
-          <div class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-secondary/10 to-accent/10 border border-secondary/20 backdrop-blur-sm mb-4 hover:scale-105 transition-transform">
-            <svg class="w-5 h-5 text-secondary animate-pulse" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-            </svg>
-            <span class="text-sm font-bold text-secondary">Technology Expertise</span>
-          </div>
-          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
+    <section class="py-24 bg-base-100">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 max-w-3xl mx-auto">
+          <div class="badge badge-outline badge-lg mb-4">Technology Expertise</div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">
             Our Developer Expertise
           </h2>
-          <p class="text-xl sm:text-2xl text-base-content/60 font-light">
-            Access expert developers across all major technology stacks
+          <p class="text-base-content/60 text-lg">
+            Access expert developers across all major technologies and product stacks.
           </p>
         </div>
 
         <div class="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-          <div v-for="(category, index) in techStack" :key="category.name" 
-            class="group card bg-gradient-to-br from-base-100 to-base-200 shadow-xl hover:shadow-2xl border-2 border-base-content/10 hover:border-secondary/30 transition-all duration-500 hover:-translate-y-2">
-            <div class="card-body">
-              <!-- Icon and Title -->
-              <div class="flex items-center gap-4 mb-6">
-                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary/20 to-accent/10 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
-                   <component :is="category.icon" class="w-10 h-10 text-primary"/>
-                </div>
-                <h3 class="text-2xl font-black group-hover:text-secondary transition-colors">
-                  {{ category.name }}
-                </h3>
+          <div
+            v-for="(category, index) in techStack"
+            :key="category.name"
+            class="bg-base-200 rounded-2xl border border-base-content/10 p-7"
+          >
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                <component :is="category.icon" class="w-6 h-6 text-primary" />
               </div>
-              
-              <!-- Technologies Grid -->
-              <div class="grid grid-cols-2 gap-3">
-                <div v-for="tech in category.technologies" :key="tech"
-                  class="px-4 py-2.5 rounded-xl bg-gradient-to-br from-base-200/50 to-base-300/50 border border-base-content/10 hover:border-secondary/40 hover:bg-secondary/5 transition-all duration-300 text-center font-semibold text-sm hover:scale-105 cursor-pointer group/tech">
-                  <span class="group-hover/tech:text-secondary transition-colors">{{ tech }}</span>
-                </div>
-              </div>
-              
-              <!-- Decorative corner element -->
-              <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-secondary/20 to-accent/20 backdrop-blur-sm"></div>
-              </div>
+              <h3 class="text-xl font-black">{{ category.name }}</h3>
+            </div>
+
+            <div class="flex flex-wrap gap-2">
+              <span
+                v-for="tech in category.technologies"
+                :key="tech"
+                class="px-3 py-2 rounded-lg bg-base-100 border border-base-content/10 text-sm font-medium text-base-content/70"
+              >
+                {{ tech }}
+              </span>
             </div>
           </div>
         </div>
@@ -177,293 +184,237 @@
     </section>
 
     <!-- Hiring Models / Pricing -->
-    <section class="py-24 sm:py-32 bg-base-100 relative overflow-hidden">
-      <!-- Subtle decorative elements -->
-      <div class="absolute inset-0 opacity-[0.02]">
-        <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-primary rounded-full blur-3xl"></div>
-        <div class="absolute bottom-1/4 left-1/4 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
-      </div>
-      
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <!-- Header -->
-        <div class="text-center mb-16 space-y-6 max-w-3xl mx-auto">
-          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight">
-            Simple pricing based on
-            <span class="block mt-2">your needs</span>
+    <section id="pricing" class="py-24 bg-base-200">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 max-w-3xl mx-auto">
+          <div class="badge badge-outline badge-lg mb-4">Pricing</div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">
+            Simple Pricing Based on Your Needs
           </h2>
-          <p class="text-lg sm:text-xl text-base-content/60 font-light">
-            Choose the perfect plan for your project. All plans include access to our talent pool,
-            <br class="hidden sm:block"/>dedicated support, and flexible terms.
+          <p class="text-base-content/60 text-lg">
+            Choose the engagement model that fits your project, timeline, and budget.
           </p>
         </div>
 
-        <!-- Pricing Cards -->
-        <div class="grid lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto mb-16">
-          <!-- Card 1: Hourly -->
-          <div class="card bg-gradient-to-br from-warning/10 to-warning/5 backdrop-blur-sm border border-warning/30 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
-            <div class="card-body p-8">
-              <!-- Plan Name -->
-              <div class="mb-6">
-                <h3 class="text-2xl font-bold text-base-content mb-1">Hourly</h3>
-                <p class="text-sm text-base-content/60">Pay only for the hours worked</p>
-              </div>
-              
-              <!-- Price -->
-              <div class="mb-8">
-                <div class="flex items-baseline gap-2 mb-2">
-                  <span class="text-5xl font-black text-base-content">$25-50</span>
-                  <span class="text-xl text-base-content/50">/hour</span>
-                </div>
-                <p class="text-sm text-base-content/60">Perfect for short-term projects</p>
-              </div>
-              
-              <!-- Features -->
-              <div class="space-y-3 mb-8 flex-grow">
-                <div class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span class="text-sm text-base-content/80">Flexible hours</span>
-                </div>
-                <div class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span class="text-sm text-base-content/80">No minimum commitment</span>
-                </div>
-                <div class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span class="text-sm text-base-content/80">Weekly invoicing</span>
-                </div>
-                <div class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span class="text-sm text-base-content/80">Easy scaling</span>
-                </div>
-              </div>
-              
-              <!-- CTA -->
-              <NuxtLink to="/contact" class="btn btn-outline border-2 hover:btn-primary w-full group-hover:scale-105 transition-all">
-                Get started
-              </NuxtLink>
+        <div class="grid lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+          <!-- Hourly -->
+          <div class="bg-base-100 rounded-2xl border border-base-content/10 p-8 shadow-sm hover:shadow-lg transition-all">
+            <div class="mb-6">
+              <h3 class="text-2xl font-bold text-base-content mb-1">Hourly</h3>
+              <p class="text-sm text-base-content/60">Pay only for the hours worked</p>
             </div>
-          </div>
 
-          <!-- Card 2: Part-Time (Popular) -->
-          <div class="relative card bg-gradient-to-br from-primary/10 to-primary/5 backdrop-blur-sm border-2 border-primary shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-3 lg:scale-105 group">
-            <!-- Popular Badge -->
-            <div class="absolute -top-4 left-1/2 -translate-x-1/2">
-              <div class="badge badge-primary badge-lg px-6 py-3 shadow-xl font-bold border-2 border-primary-content/20">
-                MOST POPULAR
+            <div class="mb-6">
+              <div class="flex items-end gap-2">
+                <span class="text-4xl font-black text-base-content">$25-50</span>
+                <span class="text-base text-base-content/50 mb-1">/hour</span>
               </div>
             </div>
-            
-            <div class="card-body p-8 pt-10">
-              <!-- Plan Name -->
-              <div class="mb-6">
-                <h3 class="text-2xl font-bold text-base-content mb-1">Part-Time</h3>
-                <p class="text-sm text-base-content/60">4 hours per day, 5 days a week</p>
-              </div>
-              
-              <!-- Price -->
-              <div class="mb-8">
-                <div class="flex items-baseline gap-2 mb-2">
-                  <span class="text-5xl font-black bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">$3,200</span>
-                  <span class="text-xl text-base-content/50">/month</span>
-                </div>
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-success/10 border border-success/20">
-                  <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="text-xs font-semibold text-success">Save 30% vs hourly</span>
-                </div>
-              </div>
-              
-              <!-- Features -->
-              <div class="space-y-3 mb-8 flex-grow">
-                <div class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span class="text-sm text-base-content/90 font-medium">80 hours per month</span>
-                </div>
-                <div class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span class="text-sm text-base-content/90 font-medium">Dedicated developer</span>
-                </div>
-                <div class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span class="text-sm text-base-content/90 font-medium">Fixed monthly billing</span>
-                </div>
-                <div class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span class="text-sm text-base-content/90 font-medium">Direct communication</span>
-                </div>
-                <div class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span class="text-sm text-base-content/90 font-medium">Priority support</span>
-                </div>
-              </div>
-              
-              <!-- CTA -->
-              <NuxtLink to="/contact" class="btn btn-primary btn-lg w-full shadow-xl hover:shadow-2xl group-hover:scale-105 transition-all">
-                <span class="font-bold">Get started</span>
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+
+            <div class="space-y-3 mb-8">
+              <div class="flex items-start gap-3">
+                <svg class="w-4 h-4 text-success shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
                 </svg>
-              </NuxtLink>
+                <span class="text-sm text-base-content/70">Flexible hours</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-4 h-4 text-success shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-sm text-base-content/70">No minimum commitment</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-4 h-4 text-success shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-sm text-base-content/70">Weekly invoicing</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-4 h-4 text-success shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-sm text-base-content/70">Easy scaling</span>
+              </div>
             </div>
+
+            <NuxtLink to="/contact" class="btn btn-outline w-full">
+              Get Started
+            </NuxtLink>
           </div>
 
-          <!-- Card 3: Full-Time -->
-          <div class="card bg-gradient-to-br from-success/10 to-success/5 backdrop-blur-sm border border-success/30 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
-            <div class="card-body p-8">
-              <!-- Plan Name -->
-              <div class="mb-6">
-                <h3 class="text-2xl font-bold text-base-content mb-1">Full-Time</h3>
-                <p class="text-sm text-base-content/60">8 hours per day, 5 days a week</p>
-              </div>
-              
-              <!-- Price -->
-              <div class="mb-8">
-                <div class="flex items-baseline gap-2 mb-2">
-                  <span class="text-5xl font-black text-base-content">$5,600</span>
-                  <span class="text-xl text-base-content/50">/month</span>
-                </div>
-                <p class="text-sm text-base-content/60">Maximum productivity & value</p>
-              </div>
-              
-              <!-- Features -->
-              <div class="space-y-3 mb-8 flex-grow">
-                <div class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span class="text-sm text-base-content/80">160+ hours per month</span>
-                </div>
-                <div class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span class="text-sm text-base-content/80">Fully dedicated resource</span>
-                </div>
-                <div class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span class="text-sm text-base-content/80">Long-term engagement</span>
-                </div>
-                <div class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span class="text-sm text-base-content/80">Best value for money</span>
-                </div>
-                <div class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span class="text-sm text-base-content/80">VIP support</span>
-                </div>
-              </div>
-              
-              <!-- CTA -->
-              <NuxtLink to="/contact" class="btn btn-outline border-2 hover:btn-success w-full group-hover:scale-105 transition-all">
-                Contact us
-              </NuxtLink>
+          <!-- Part-Time -->
+          <div class="relative bg-base-100 rounded-2xl border-2 border-primary p-8 shadow-xl">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+              <div class="badge badge-primary px-4 py-3 font-bold">Most Popular</div>
             </div>
+
+            <div class="pt-4 mb-6">
+              <h3 class="text-2xl font-bold text-base-content mb-1">Part-Time</h3>
+              <p class="text-sm text-base-content/60">4 hours per day, 5 days a week</p>
+            </div>
+
+            <div class="mb-6">
+              <div class="flex items-end gap-2">
+                <span class="text-4xl font-black text-primary">$3,200</span>
+                <span class="text-base text-base-content/50 mb-1">/month</span>
+              </div>
+              <p class="text-xs text-success font-semibold mt-2">Save 30% vs hourly</p>
+            </div>
+
+            <div class="space-y-3 mb-8">
+              <div class="flex items-start gap-3">
+                <svg class="w-4 h-4 text-primary shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-sm text-base-content/80">80 hours per month</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-4 h-4 text-primary shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-sm text-base-content/80">Dedicated developer</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-4 h-4 text-primary shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-sm text-base-content/80">Fixed monthly billing</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-4 h-4 text-primary shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-sm text-base-content/80">Direct communication</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-4 h-4 text-primary shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-sm text-base-content/80">Priority support</span>
+              </div>
+            </div>
+
+            <NuxtLink to="/contact" class="btn btn-primary w-full">
+              Get Started
+            </NuxtLink>
+          </div>
+
+          <!-- Full-Time -->
+          <div class="bg-base-100 rounded-2xl border border-base-content/10 p-8 shadow-sm hover:shadow-lg transition-all">
+            <div class="mb-6">
+              <h3 class="text-2xl font-bold text-base-content mb-1">Full-Time</h3>
+              <p class="text-sm text-base-content/60">8 hours per day, 5 days a week</p>
+            </div>
+
+            <div class="mb-6">
+              <div class="flex items-end gap-2">
+                <span class="text-4xl font-black text-base-content">$5,600</span>
+                <span class="text-base text-base-content/50 mb-1">/month</span>
+              </div>
+            </div>
+
+            <div class="space-y-3 mb-8">
+              <div class="flex items-start gap-3">
+                <svg class="w-4 h-4 text-success shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-sm text-base-content/70">160+ hours per month</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-4 h-4 text-success shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-sm text-base-content/70">Fully dedicated resource</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-4 h-4 text-success shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-sm text-base-content/70">Long-term engagement</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-4 h-4 text-success shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-sm text-base-content/70">Best value for money</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-4 h-4 text-success shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-sm text-base-content/70">VIP support</span>
+              </div>
+            </div>
+
+            <NuxtLink to="/contact" class="btn btn-outline w-full">
+              Contact Us
+            </NuxtLink>
           </div>
         </div>
-
-        <!-- Trust Indicators -->
-      
       </div>
     </section>
 
     <!-- How It Works -->
-  <section class="py-20 bg-base-100">
-  <div class="container mx-auto px-6">
-
-    <!-- Heading -->
-    <div class="text-center mb-16">
-      <div class="badge badge-info mb-4">Simple Process</div>
-
-      <h2 class="text-4xl font-bold mb-4">
-        How It Works
-      </h2>
-
-      <p class="text-lg text-base-content/60 max-w-2xl mx-auto">
-        Get started with dedicated developers in just four simple steps.
-      </p>
-    </div>
-
-
-    <!-- Steps -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
-
-      <div v-for="(step, index) in processSteps" :key="index" class="process-step">
-
-        <!-- Number -->
-        <div class="step-number">
-          {{ index + 1 }}
+    <section class="py-24 bg-base-100">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 max-w-3xl mx-auto">
+          <div class="badge badge-outline badge-lg mb-4">Simple Process</div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">
+            How It Works
+          </h2>
+          <p class="text-base-content/60 text-lg">
+            Get started with dedicated developers in just four simple steps.
+          </p>
         </div>
 
-        <!-- Title -->
-        <h3 class="text-xl font-semibold mb-2">
-          {{ step.title }}
-        </h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          <div
+            v-for="(step, index) in processSteps"
+            :key="index"
+            class="text-center bg-base-200 rounded-2xl border border-base-content/10 p-8"
+          >
+            <div class="w-12 h-12 mx-auto mb-5 rounded-full bg-primary text-primary-content flex items-center justify-center font-black">
+              {{ index + 1 }}
+            </div>
 
-        <!-- Description -->
-        <p class="text-sm text-base-content/60 leading-relaxed">
-          {{ step.description }}
-        </p>
-
+            <h3 class="text-lg font-bold mb-3">{{ step.title }}</h3>
+            <p class="text-sm text-base-content/60 leading-relaxed">
+              {{ step.description }}
+            </p>
+          </div>
+        </div>
       </div>
-
-    </div>
-
-  </div>
-</section>
+    </section>
 
     <!-- FAQ Section -->
-    <section class="py-24 bg-gradient-to-b from-base-200 via-base-100 to-base-200">
+    <section class="py-24 bg-base-200">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-4xl mx-auto">
-          <div class="text-center mb-16 space-y-4">
-            <div class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-warning/10 border border-warning/20 backdrop-blur-sm mb-4">
-              <svg class="w-5 h-5 text-warning" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
-              </svg>
-              <span class="text-sm font-bold text-warning">FAQ</span>
-            </div>
-            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
+          <div class="text-center mb-16">
+            <div class="badge badge-outline badge-lg mb-4">FAQ</div>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">
               Frequently Asked Questions
             </h2>
-            <p class="text-xl sm:text-2xl text-base-content/60 font-light">
-              Everything you need to know about hiring dedicated developers
+            <p class="text-base-content/60 text-lg">
+              Everything you need to know about hiring dedicated developers.
             </p>
           </div>
 
           <div class="space-y-4">
-            <div v-for="(faq, index) in faqs" :key="index"
-              class="collapse collapse-plus bg-gradient-to-br from-base-100 to-base-200 rounded-2xl border-2 border-base-content/10 hover:border-primary/30 hover:shadow-2xl transition-all duration-300 group">
+            <div
+              v-for="(faq, index) in faqs"
+              :key="index"
+              class="collapse collapse-plus bg-base-100 rounded-2xl border border-base-content/10 hover:border-primary/20 transition-all"
+            >
               <input type="radio" name="faq-accordion" :checked="index === 0" />
-              <div class="collapse-title text-lg sm:text-xl font-bold group-hover:text-primary transition-colors pr-12">
+              <div class="collapse-title text-lg font-bold pr-12">
                 {{ faq.question }}
               </div>
               <div class="collapse-content">
-                <p class="text-base-content/70 leading-relaxed pt-2 text-base">{{ faq.answer }}</p>
+                <p class="text-base-content/70 leading-relaxed pt-2 text-sm sm:text-base">
+                  {{ faq.answer }}
+                </p>
               </div>
             </div>
           </div>
@@ -471,10 +422,7 @@
       </div>
     </section>
 
-
-     <!-- ═══════════════════════════════════
-         10. FINAL CTA
-    ════════════════════════════════════ -->
+    <!-- Final CTA -->
     <section id="contact" class="py-24 bg-base-100 relative overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-primary/80"></div>
       <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.3),transparent_60%)]"></div>
@@ -482,41 +430,42 @@
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <div class="max-w-3xl mx-auto text-primary-content">
           <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 leading-tight">
-            Hire Your Dedicated Team 
-            <span class="block mt-2">Today Works for You</span>
+            Hire Your Dedicated Team
+            <span class="block mt-2">Today</span>
           </h2>
           <p class="text-xl opacity-90 mb-4">
             Transform your ideas into powerful digital solutions with KM Software's.
           </p>
           <p class="text-lg opacity-80 mb-10">
-            Let's create custom software that simplifies operations, boosts productivity, and scales with your business.
+            Let's create software that boosts productivity, simplifies operations, and scales with your business.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               @click="showModal = true"
               class="btn btn-lg bg-base-100 text-primary hover:bg-base-200 border-none shadow-2xl px-10 group"
             >
-              <span class="font-bold">Start Your Custom Project Today</span>
+              <span class="font-bold">Start Your Project Today</span>
               <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
               </svg>
             </button>
-            <NuxtLink to="/contact" class="btn btn-lg btn-ghost border-2 border-base-100/40 text-primary-content hover:bg-base-100/10 px-10">
+            <NuxtLink
+              to="/contact"
+              class="btn btn-lg btn-ghost border-2 border-base-100/40 text-primary-content hover:bg-base-100/10 px-10"
+            >
               Or Contact Us
             </NuxtLink>
           </div>
           <div class="mt-10 flex flex-wrap justify-center gap-8 text-sm opacity-80">
             <span>✓ Free consultation</span>
-            <span>✓ Scalable architecture</span>
+            <span>✓ Flexible hiring</span>
             <span>✓ Response within 24 hours</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════
-         INTAKE MODAL
-    ════════════════════════════════════ -->
+    <!-- Intake Modal -->
     <div v-if="showModal" class="modal modal-open z-[200]">
       <div class="modal-box max-w-2xl w-full max-h-[90vh] overflow-y-auto">
         <button @click="showModal = false" class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4">✕</button>
@@ -570,7 +519,14 @@
 
           <div class="form-control">
             <label class="label"><span class="label-text text-xs font-semibold">Brief Description (200 chars) *</span></label>
-            <textarea v-model="form.description" required maxlength="200" rows="3" class="textarea textarea-bordered text-sm" placeholder="What are you building? What problem does it solve?"></textarea>
+            <textarea
+              v-model="form.description"
+              required
+              maxlength="200"
+              rows="3"
+              class="textarea textarea-bordered text-sm"
+              placeholder="What are you building? What problem does it solve?"
+            ></textarea>
             <label class="label"><span class="label-alt text-xs text-base-content/40">{{ form.description.length }}/200</span></label>
           </div>
 
@@ -616,18 +572,19 @@
 
 <script setup lang="ts">
 import {
-CodeBracketIcon,
-ServerStackIcon,
-DevicePhoneMobileIcon,
-CircleStackIcon,
-ArrowTrendingUpIcon,
-CurrencyDollarIcon,
-CheckBadgeIcon,
-ClockIcon,
-UserGroupIcon,
-BoltIcon,
-StarIcon
+  CodeBracketIcon,
+  ServerStackIcon,
+  DevicePhoneMobileIcon,
+  CircleStackIcon,
+  ArrowTrendingUpIcon,
+  CurrencyDollarIcon,
+  CheckBadgeIcon,
+  ClockIcon,
+  UserGroupIcon,
+  BoltIcon,
+  StarIcon
 } from '@heroicons/vue/24/outline'
+
 useHead({
   title: "Dedicated Developers | Staff Augmentation Services - KM Software's",
   meta: [
@@ -645,7 +602,7 @@ useHead({
     }
   ]
 })
-// ─── Modal ──────────────────────────────
+
 const showModal = ref(false)
 const formSucceeded = ref(false)
 
@@ -662,107 +619,118 @@ const form = reactive({
   wantsNDA: false,
 })
 
-const industryOptions = ['Fintech / Finance', 'Healthcare / HealthTech', 'SaaS / Marketplace', 'Enterprise IT', 'Manufacturing & IoT', 'E-commerce / Retail', 'Other']
-const budgetOptions = ['₹8L – ₹25L ($10k–$30k)', '₹25L – ₹60L ($30k–$75k)', '₹60L – ₹1.2Cr ($75k–$150k)', '₹1.2Cr+ ($150k+)', 'Not sure yet']
+const industryOptions = [
+  'Fintech / Finance',
+  'Healthcare / HealthTech',
+  'SaaS / Marketplace',
+  'Enterprise IT',
+  'Manufacturing & IoT',
+  'E-commerce / Retail',
+  'Other'
+]
+
+const budgetOptions = [
+  '₹8L – ₹25L ($10k–$30k)',
+  '₹25L – ₹60L ($30k–$75k)',
+  '₹60L – ₹1.2Cr ($75k–$150k)',
+  '₹1.2Cr+ ($150k+)',
+  'Not sure yet'
+]
 
 const submitForm = () => {
-  // In production: call your API endpoint
   formSucceeded.value = true
 }
-const trustStats = ref([
-{
-title: 'Developers',
-value: '500+',
-desc: 'Pre-vetted experts',
-icon: UserGroupIcon
-},
 
-{
-title: 'Time to Start',
-value: '48h',
-desc: 'Quick onboarding',
-icon: BoltIcon
-},
-
-{
-title: 'Client Satisfaction',
-value: '98%',
-desc: 'Happy clients',
-icon: StarIcon
+const scrollToSection = (selector: string) => {
+  if (import.meta.client) {
+    document.querySelector(selector)?.scrollIntoView({ behavior: 'smooth' })
+  }
 }
+
+const trustStats = ref([
+  {
+    title: 'Developers',
+    value: '500+',
+    desc: 'Pre-vetted experts',
+    icon: UserGroupIcon
+  },
+  {
+    title: 'Time to Start',
+    value: '48h',
+    desc: 'Quick onboarding',
+    icon: BoltIcon
+  },
+  {
+    title: 'Client Satisfaction',
+    value: '98%',
+    desc: 'Happy clients',
+    icon: StarIcon
+  }
 ])
 
 const sampleDevelopers = ref([
-  { initial: 'JS' },
-  { initial: 'PY' },
-  { initial: 'GO' },
-  { initial: 'TS' },
-  { initial: 'RB' },
-  { initial: 'PH' }
+  { initial: 'JS', role: 'Frontend Developer', stack: 'React / Vue / TypeScript' },
+  { initial: 'PY', role: 'Backend Developer', stack: 'Python / Django / FastAPI' },
+  { initial: 'GO', role: 'Backend Engineer', stack: 'Go / APIs / Microservices' },
+  { initial: 'TS', role: 'Full-Stack Developer', stack: 'Node / React / PostgreSQL' },
+  { initial: 'RB', role: 'RoR Developer', stack: 'Ruby on Rails / APIs' },
+  { initial: 'PH', role: 'PHP Developer', stack: 'Laravel / MySQL / REST' }
 ])
 
 const benefits = ref([
-{
-title: 'Rapid Scaling',
-description: 'Quickly scale your team up or down based on project demands without long-term commitments or hiring overhead.',
-icon: ArrowTrendingUpIcon
-},
-
-{
-title: 'Cost Effective',
-description: 'Save up to 60% on development costs compared to traditional hiring, with no recruitment fees or benefits overhead.',
-icon: CurrencyDollarIcon
-},
-
-{
-title: 'Pre-Vetted Talent',
-description: 'Access rigorously screened developers with proven expertise, verified portfolios, and excellent communication skills.',
-icon: CheckBadgeIcon
-},
-
-{
-title: 'Quick Onboarding',
-description: 'Developers can start contributing to your project within 48 hours, integrating seamlessly with your existing team.',
-icon: BoltIcon
-},
-
-{
-title: 'Dedicated Resources',
-description: 'Get full-time commitment from developers who work exclusively on your project during engagement hours.',
-icon: UserGroupIcon
-},
-
-{
-title: 'Flexible Engagement',
-description: 'Choose from hourly, part-time, or full-time models with the flexibility to adjust as your needs evolve.',
-icon: ClockIcon
-}
+  {
+    title: 'Rapid Scaling',
+    description: 'Quickly scale your team up or down based on project demands without long-term commitments or hiring overhead.',
+    icon: ArrowTrendingUpIcon
+  },
+  {
+    title: 'Cost Effective',
+    description: 'Save up to 60% on development costs compared to traditional hiring, with no recruitment fees or benefits overhead.',
+    icon: CurrencyDollarIcon
+  },
+  {
+    title: 'Pre-Vetted Talent',
+    description: 'Access rigorously screened developers with proven expertise, verified portfolios, and excellent communication skills.',
+    icon: CheckBadgeIcon
+  },
+  {
+    title: 'Quick Onboarding',
+    description: 'Developers can start contributing to your project within 48 hours, integrating seamlessly with your existing team.',
+    icon: BoltIcon
+  },
+  {
+    title: 'Dedicated Resources',
+    description: 'Get full-time commitment from developers who work exclusively on your project during engagement hours.',
+    icon: UserGroupIcon
+  },
+  {
+    title: 'Flexible Engagement',
+    description: 'Choose from hourly, part-time, or full-time models with the flexibility to adjust as your needs evolve.',
+    icon: ClockIcon
+  }
 ])
 
 const techStack = ref([
-{
-name: 'Frontend Development',
-icon: CodeBracketIcon,
-technologies: ['React', 'Vue.js', 'Angular', 'Next.js', 'Nuxt.js', 'TypeScript', 'Tailwind CSS', 'Redux']
-},
-
-{
-name: 'Backend Development',
-icon: ServerStackIcon,
-technologies: ['Node.js', 'Python', 'Java', 'PHP', 'Go', 'Ruby on Rails', '.NET', 'Django']
-},
-
-{
-name: 'Mobile Development',
-icon: DevicePhoneMobileIcon,
-technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Ionic', 'Xamarin']
-},
-
-{
-name: 'Database & DevOps',
-icon: CircleStackIcon,
-technologies: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Docker', 'Kubernetes', 'AWS', 'Azure']
-}
+  {
+    name: 'Frontend Development',
+    icon: CodeBracketIcon,
+    technologies: ['React', 'Vue.js', 'Angular', 'Next.js', 'Nuxt.js', 'TypeScript', 'Tailwind CSS', 'Redux']
+  },
+  {
+    name: 'Backend Development',
+    icon: ServerStackIcon,
+    technologies: ['Node.js', 'Python', 'Java', 'PHP', 'Go', 'Ruby on Rails', '.NET', 'Django']
+  },
+  {
+    name: 'Mobile Development',
+    icon: DevicePhoneMobileIcon,
+    technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Ionic', 'Xamarin']
+  },
+  {
+    name: 'Database & DevOps',
+    icon: CircleStackIcon,
+    technologies: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Docker', 'Kubernetes', 'AWS', 'Azure']
+  }
 ])
 
 const hiringModels = ref([
@@ -854,22 +822,11 @@ const faqs = ref([
   }
 ])
 </script>
-<style>
-.process-step{
-padding:20px;
-}
 
-.step-number{
-width:50px;
-height:50px;
-margin:0 auto 16px;
-border-radius:50%;
-background:#2563eb;
-color:#fff;
-display:flex;
-align-items:center;
-justify-content:center;
-font-weight:700;
-font-size:18px;
+<style scoped>
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
 }
 </style>

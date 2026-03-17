@@ -117,17 +117,11 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           <div v-for="(service, index) in services" :key="index" 
             class="group relative bg-base-100 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-transparent hover:border-primary/20">
-            <div class="absolute top-8 right-8 opacity-10 group-hover:opacity-20 transition-opacity">
-              <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" v-html="service.iconPath"></path>
-              </svg>
-            </div>
+           
             
             <div class="relative z-10">
               <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" v-html="service.iconPath"></path>
-                </svg>
+              <component :is="service.icon" class="w-7 h-7 text-primary" />
               </div>
               
               <h3 class="text-2xl font-bold mb-4">{{ service.title }}</h3>
@@ -220,68 +214,82 @@
     </section>
 
     <!-- Security Methodology Timeline -->
-    <section class="py-24 bg-gradient-to-b from-base-200 to-base-100 overflow-hidden">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto">
-          <div class="text-center mb-20 space-y-4">
-            <div class="inline-block">
-              <div class="badge badge-primary badge-lg mb-4">Our Process</div>
-            </div>
-            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
-              Our Security Methodology
-            </h2>
-            <p class="text-xl sm:text-2xl text-base-content/60 font-light max-w-2xl mx-auto">
-              A proven, systematic approach to protecting your digital assets
-            </p>
-          </div>
+  <section class="py-24 bg-base-100">
+  <div class="container mx-auto px-6">
 
-          <ul class="timeline timeline-vertical timeline-compact">
-            <li v-for="(step, index) in securityProcess" :key="index" class="group">
-              <div class="timeline-start font-mono text-xs sm:text-sm text-base-content/50 group-hover:text-primary transition-colors pr-2 sm:pr-4">{{ step.phase }}</div>
-              <div class="timeline-middle">
-                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/10 flex items-center justify-center border-4 border-base-100 shadow-lg group-hover:scale-110 transition-all duration-500">
-                  <span class="text-lg sm:text-xl font-black text-primary">{{ index + 1 }}</span>
-                </div>
-              </div>
-              <div class="timeline-end timeline-box bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-content/10 group-hover:border-primary/30 shadow-lg group-hover:shadow-xl transition-all duration-300 ml-2 sm:ml-4 max-w-md">
-                <h3 class="text-lg sm:text-xl font-black mb-2 group-hover:text-primary transition-colors">{{ step.title }}</h3>
-                <p class="text-sm text-base-content/70 leading-relaxed">{{ step.description }}</p>
-              </div>
-              <hr v-if="index < securityProcess.length - 1" class="bg-gradient-to-b from-primary/30 to-primary/10"/>
-            </li>
-          </ul>
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <div class="badge badge-outline mb-4">Our Process</div>
+      <h2 class="text-4xl font-black mb-4">
+        Our Security Methodology
+      </h2>
+      <p class="text-base-content/60 max-w-2xl mx-auto">
+        A simple, structured approach to securing your business from modern threats.
+      </p>
+    </div>
+
+    <!-- Steps -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+      <div v-for="(step, index) in securityProcess" :key="index"
+        class="p-6 bg-base-200 rounded-2xl border border-base-content/10 hover:border-primary/20 transition">
+
+        <!-- Step Number -->
+        <div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold mb-4">
+          {{ index + 1 }}
         </div>
+
+        <!-- Content -->
+        <h3 class="font-bold mb-2">{{ step.title }}</h3>
+        <p class="text-sm text-base-content/60 leading-relaxed">
+          {{ step.description }}
+        </p>
+
       </div>
-    </section>
+
+    </div>
+
+  </div>
+</section>
     <!-- Why KM Software's -->
-    <section class="py-24 bg-base-100">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-5xl mx-auto">
-          <div class="bg-gradient-to-br from-primary/5 via-base-100 to-secondary/5 rounded-3xl p-10 md:p-16 border border-base-content/10 shadow-xl">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 class="text-3xl sm:text-4xl font-black mb-6 leading-tight">
-                  Why Choose
-                  <span class="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mt-2">KM Software's?</span>
-                </h2>
-                <p class="text-lg text-base-content/70 italic font-semibold">
-                  Your trusted partner for enterprise-grade digital security.
-                </p>
-              </div>
-              
-              <div class="space-y-4">
-                <div v-for="reason in whyChooseUs" :key="reason" class="flex items-center gap-4 p-4 rounded-xl bg-base-100 shadow-sm border border-base-content/5 hover:border-primary/20 transition-all">
-                  <div class="w-8 h-8 rounded-full bg-success/20 text-success flex items-center justify-center flex-shrink-0">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                  </div>
-                  <span class="font-bold text-lg text-base-content/90">{{ reason }}</span>
-                </div>
-              </div>
-            </div>
-          </div>
+  <section class="py-24 bg-base-200">
+  <div class="container mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <div class="badge badge-outline mb-4">Why KM Software's</div>
+      <h2 class="text-4xl font-black mb-4">
+        Why Choose KM Software's?
+      </h2>
+      <p class="text-base-content/60 max-w-2xl mx-auto">
+        A trusted partner for enterprise-grade cybersecurity solutions.
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+
+      <div v-for="reason in whyChooseUs" :key="reason"
+        class="flex items-start gap-4 p-6 bg-base-100 rounded-2xl border border-base-content/10 hover:border-primary/20 transition">
+
+        <!-- Icon -->
+        <div class="w-10 h-10 rounded-full bg-success/10 flex items-center justify-center flex-shrink-0">
+          <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+          </svg>
         </div>
+
+        <!-- Text -->
+        <div>
+          <p class="font-semibold">{{ reason }}</p>
+        </div>
+
       </div>
-    </section>
+
+    </div>
+
+  </div>
+</section>
 
     <!-- FAQ Section -->
     <section class="py-24 bg-base-200">
@@ -473,6 +481,13 @@
 </template>
 
 <script setup lang="ts">
+import {
+  LockClosedIcon,
+  ShieldCheckIcon,
+  CloudIcon,
+  CodeBracketIcon,
+  EyeIcon
+} from '@heroicons/vue/24/outline'
 useHead({
   title: "Cyber Security Services | KM Software's",
   meta: [
@@ -484,34 +499,55 @@ const services = ref([
   {
     title: 'Vulnerability Assessment & Penetration Testing',
     description: 'Identify and fix security gaps before attackers do.',
-    iconPath: 'M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z',
-    features: ['Web & mobile app testing', 'Network penetration testing', 'API security audits', 'Security reports with fixes']
+    icon: LockClosedIcon,
+    features: [
+      'Web & mobile app testing',
+      'Network penetration testing',
+      'API security audits',
+      'Security reports with fixes'
+    ]
   },
   {
     title: 'Security Audits & Risk Assessment',
     description: 'Comprehensive evaluation of your digital infrastructure.',
-    iconPath: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
-    features: ['Infrastructure security audits', 'Compliance readiness', 'Risk analysis & mitigation plans']
+    icon: ShieldCheckIcon,
+    features: [
+      'Infrastructure security audits',
+      'Compliance readiness',
+      'Risk analysis & mitigation plans'
+    ]
   },
   {
     title: 'Cloud Security',
     description: 'Secure your cloud environments end-to-end.',
-    iconPath: 'M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z',
-    features: ['AWS / Azure / GCP security', 'Identity & access management', 'Data encryption & monitoring']
+    icon: CloudIcon,
+    features: [
+      'AWS / Azure / GCP security',
+      'Identity & access management',
+      'Data encryption & monitoring'
+    ]
   },
   {
     title: 'Application Security',
     description: 'Build secure software from the ground up.',
-    iconPath: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4',
-    features: ['Secure coding practices', 'Code audits', 'DevSecOps implementation']
+    icon: CodeBracketIcon,
+    features: [
+      'Secure coding practices',
+      'Code audits',
+      'DevSecOps implementation'
+    ]
   },
   {
     title: 'Threat Monitoring & Response',
     description: 'Real-time monitoring and incident response.',
-    iconPath: 'M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z',
-    features: ['24/7 threat detection', 'Security alerts', 'Rapid breach response']
+    icon: EyeIcon,
+    features: [
+      '24/7 threat detection',
+      'Security alerts',
+      'Rapid breach response'
+    ]
   }
-]);
+])
 
 const certifications = ref([
   { name: 'ISO 27001', icon: 'ISO', color: 'text-primary', description: 'Information Security Management' },
