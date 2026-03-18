@@ -181,39 +181,46 @@
     </section>
 
     <!-- Our Approach / Methodology -->
-    <section class="py-24 bg-gradient-to-b from-base-200 to-base-100 overflow-hidden">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto">
-          <div class="text-center mb-20 space-y-4">
-            <div class="inline-block">
-              <div class="badge badge-primary badge-lg mb-4">Our Approach</div>
-            </div>
-            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
-              Our Approach
-            </h2>
-            <p class="text-xl sm:text-2xl text-base-content/60 font-light max-w-2xl mx-auto">
-              We focus on building infrastructure that is secure, scalable, and efficient
-            </p>
-          </div>
+ <section class="py-24 bg-base-100">
+  <div class="container mx-auto px-6">
 
-          <ul class="timeline timeline-vertical timeline-compact">
-            <li v-for="(step, index) in devopsProcess" :key="index" class="group">
-              <div class="timeline-start font-mono text-xs sm:text-sm text-base-content/50 group-hover:text-primary transition-colors pr-2 sm:pr-4">{{ step.phase }}</div>
-              <div class="timeline-middle">
-                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/10 flex items-center justify-center border-4 border-base-100 shadow-lg group-hover:scale-110 transition-all duration-500">
-                  <span class="text-lg sm:text-xl font-black text-primary">{{ index + 1 }}</span>
-                </div>
-              </div>
-              <div class="timeline-end timeline-box bg-gradient-to-br from-base-100 to-base-200 border-2 border-base-content/10 group-hover:border-primary/30 shadow-lg group-hover:shadow-xl transition-all duration-300 ml-2 sm:ml-4 max-w-md">
-                <h3 class="text-lg sm:text-xl font-black mb-2 group-hover:text-primary transition-colors">{{ step.title }}</h3>
-                <p class="text-sm text-base-content/70 leading-relaxed">{{ step.description }}</p>
-              </div>
-              <hr v-if="index < devopsProcess.length - 1" class="bg-gradient-to-b from-primary/30 to-primary/10"/>
-            </li>
-          </ul>
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <div class="badge badge-outline mb-4">Our Approach</div>
+      <h2 class="text-4xl font-black mb-4">
+        Our Approach
+      </h2>
+      <p class="text-base-content/60 max-w-2xl mx-auto">
+        A structured process to build scalable, reliable, and efficient cloud infrastructure.
+      </p>
+    </div>
+
+    <!-- Steps -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+      <div v-for="(step, index) in devopsProcess" :key="index"
+        class="p-6 bg-base-200 rounded-2xl border border-base-content/10 transition hover:border-primary/20">
+
+        <!-- Step Number -->
+        <div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold mb-4">
+          {{ index + 1 }}
         </div>
+
+        <!-- Content -->
+        <h3 class="font-semibold mb-2">
+          {{ step.title }}
+        </h3>
+
+        <p class="text-sm text-base-content/60 leading-relaxed">
+          {{ step.description }}
+        </p>
+
       </div>
-    </section>
+
+    </div>
+
+  </div>
+</section>
 
     <!-- Why Choose KM Software's -->
     <section class="py-24 bg-base-100">
@@ -528,6 +535,7 @@ const devopsProcess = ref([
   { phase: 'Phase 2', title: 'Architecture Design', description: 'Design cloud-native, scalable infrastructure tailored to your performance and cost requirements.' },
   { phase: 'Phase 3', title: 'Automation Setup', description: 'Implement CI/CD pipelines, infrastructure as code, and deployment automation for faster releases.' },
   { phase: 'Phase 4', title: 'Deployment & Migration', description: 'Execute secure and seamless transitions to cloud environments with minimal downtime.' },
+  { phase: 'Ongoing', title: 'Continuous Monitoring & Support', description: 'Ensure performance, security, and reliability over time with 24/7 monitoring and proactive optimization.' },
   { phase: 'Ongoing', title: 'Continuous Monitoring & Support', description: 'Ensure performance, security, and reliability over time with 24/7 monitoring and proactive optimization.' }
 ]);
 
