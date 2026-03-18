@@ -1,0 +1,8 @@
+{
+  "error": true,
+  "url": "https://km-technologies.pages.dev/api/auth/login",
+  "statusCode": 500,
+  "statusMessage": "Cannot read properties of undefined (reading 'prepare')",
+  "message": "Cannot read properties of undefined (reading 'prepare')",
+  "data": "TypeError: Cannot read properties of undefined (reading 'prepare')\n    at SQLiteD1Session.prepareQuery (chunks/_/db.mjs:13:25076)\n    at SQLiteD1Session.prepareOneTimeQuery (chunks/_/db.mjs:13:22499)\n    at SQLiteSelectBase._prepare (chunks/_/db.mjs:13:6006)\n    at SQLiteSelectBase.all (chunks/_/db.mjs:13:6407)\n    at SQLiteSelectBase.execute (chunks/_/db.mjs:13:6519)\n    at SQLiteSelectBase.then (chunks/_/db.mjs:1:11244)\n    at async Object.handler (chunks/routes/api/auth/login.post.mjs:1:381)\n    at async Object.handler (chunks/nitro/nitro.mjs:1:87125)\n    at async chunks/nitro/nitro.mjs:1:90299\n    at async b (chunks/nitro/nitro.mjs:1:72858)"
+}

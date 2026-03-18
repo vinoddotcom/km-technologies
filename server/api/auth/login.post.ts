@@ -60,10 +60,14 @@ export default defineEventHandler(async (event) => {
       },
     };
   } catch (err: any) {
-    throw createError({
-      statusCode: 500,
-      statusMessage: err.message || 'Server Error',
-      data: err.stack,
-    });
+    setResponseStatus(event, 500);
+    return {
+      error: true,
+      debug: 'bypassing-create-error',
+      message: err.message,
+      stack: err.stack,
+      name: err.name,
+      cause: err.cause,
+    };
   }
 });
