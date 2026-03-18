@@ -346,32 +346,50 @@ const formData = ref({
 const isSubmitting = ref(false);
 const showSuccess = ref(false);
 
+const errorMessage = ref('');
+
 const handleSubmit = async () => {
   isSubmitting.value = true;
+  errorMessage.value = '';
   
-  // Simulate API call
-  await new Promise(resolve => setTimeout(resolve, 1500));
-  
-  // Show success message
-  showSuccess.value = true;
-  
-  // Reset form
-  formData.value = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    service: '',
-    budget: '',
-    message: '',
-    agreedToPrivacy: false
-  };
-  
-  isSubmitting.value = false;
-  
-  // Hide success message after 5 seconds
-  setTimeout(() => {
-    showSuccess.value = false;
-  }, 5000);
+  try {
+    await $fetch('/api/contact', {
+      method: 'POST',
+      body: {
+        firstName: formData.value.firstName,
+        lastName: formData.value.lastName,
+        email: formData.value.email,
+        phone: formData.value.phone,
+        service: formData.value.service,
+        budget: formData.value.budget,
+        message: formData.value.message,
+        agreedToPrivacy: formData.value.agreedToPrivacy,
+      },
+    });
+    
+    // Show success message
+    showSuccess.value = true;
+    
+    // Reset form
+    formData.value = {
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      service: '',
+      budget: '',
+      message: '',
+      agreedToPrivacy: false
+    };
+    
+    // Hide success message after 5 seconds
+    setTimeout(() => {
+      showSuccess.value = false;
+    }, 5000);
+  } catch (err: any) {
+    errorMessage.value = err?.data?.statusMessage || 'Failed to send message. Please try again.';
+  } finally {
+    isSubmitting.value = false;
+  }
 };
 </script>

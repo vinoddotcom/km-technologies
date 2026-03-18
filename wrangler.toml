@@ -1,0 +1,19 @@
+name = "km-it-services"
+compatibility_date = "2025-01-01"
+pages_build_output_dir = ".output/public"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "km-it-services-db"
+database_id = "400fdca8-cc6f-4451-844d-53ad24bd06a5"
+preview_database_id = "400fdca8-cc6f-4451-844d-53ad24bd06a5"
+# Forces local dev to use the deployed remote DB
+remote = true
+
+[vars]
+# You can define env vars here for Cloudflare via wrangler
+JWT_SECRET = "km-it-services-secret-key-2026"
+ADMIN_EMAIL = "admin@kmsoftware.com"
+SITE_URL = "http://localhost:3000"
+# Add your real Resend API key here for now:
+RESEND_API_KEY = "re_your_api_key_here"
