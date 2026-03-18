@@ -19,7 +19,7 @@ export default defineEventHandler(async (event) => {
 
     return allBlogs.map((b) => ({
       ...b,
-      tags: b.tags ? JSON.parse(b.tags) : [],
+      tags: (b.tags ? JSON.parse(b.tags) : []) as string[],
     }));
   }
 
@@ -32,6 +32,6 @@ export default defineEventHandler(async (event) => {
 
   return publishedBlogs.map((b) => ({
     ...b,
-    tags: b.tags ? JSON.parse(b.tags) : [],
+    tags: (b.tags ? JSON.parse(b.tags) : []) as string[],
   }));
 });

@@ -22,6 +22,6 @@ export default defineEventHandler(async (event) => {
 
   return {
     ...blog,
-    tags: blog.tags ? JSON.parse(blog.tags) : [],
+    tags: (blog.tags ? JSON.parse(blog.tags) : []) as string[],
   };
 });

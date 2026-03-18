@@ -104,8 +104,10 @@ const slug = route.params.slug as string;
 
 const { data: post, pending } = await useFetch(`/api/blogs/${slug}`);
 
-const config = useRuntimeConfig();
-const pageUrl = computed(() => `${config.public.siteUrl}/blog/${slug}`);
+const pageUrl = computed(() => {
+  const origin = import.meta.client ? window.location.origin : '';
+  return `${origin}/blog/${slug}`;
+});
 
 const readingTime = computed(() => {
   if (!post.value) return 0;

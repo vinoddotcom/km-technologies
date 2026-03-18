@@ -40,8 +40,6 @@ export default defineNuxtConfig({
     jwtSecret: process.env.JWT_SECRET || 'km-it-services-secret-key-2026',
     resendApiKey: process.env.RESEND_API_KEY || '',
     adminEmail: process.env.ADMIN_EMAIL || 'admin@kmsoftware.com',
-    public: {
-      siteUrl: process.env.SITE_URL || 'http://localhost:3000',
-    },
+    public: {},
   },
 });
