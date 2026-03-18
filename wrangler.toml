@@ -20,8 +20,18 @@ JWT_SECRET = "km-it-services-secret-key-2026-production"
 ADMIN_EMAIL = "admin@kmsoftware.com"
 RESEND_API_KEY = "re_your_api_key_here"
 
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "km-it-services-db"
+database_id = "400fdca8-cc6f-4451-844d-53ad24bd06a5"
+
 # Preview environment vars (used for any preview deployments and other branches)
 [env.preview.vars]
 JWT_SECRET = "km-it-services-secret-key-2026-preview"
 ADMIN_EMAIL = "admin@kmsoftware.com"
 RESEND_API_KEY = "re_your_api_key_here"
+
+[[env.preview.d1_databases]]
+binding = "DB"
+database_name = "km-it-services-db"
+database_id = "400fdca8-cc6f-4451-844d-53ad24bd06a5"
