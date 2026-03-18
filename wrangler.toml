@@ -1,19 +1,31 @@
 name = "km-it-services"
 compatibility_date = "2025-01-01"
-pages_build_output_dir = ".output/public"
+pages_build_output_dir = "dist"
 
 [[d1_databases]]
 binding = "DB"
 database_name = "km-it-services-db"
 database_id = "400fdca8-cc6f-4451-844d-53ad24bd06a5"
 preview_database_id = "400fdca8-cc6f-4451-844d-53ad24bd06a5"
-# Forces local dev to use the deployed remote DB
-remote = true
+# Forces local dev to use the deployed remote DB (flag handled via CLI usually)
 
+# Default environment vars (used for local dev `npm run dev` and fallback)
 [vars]
-# You can define env vars here for Cloudflare via wrangler
 JWT_SECRET = "km-it-services-secret-key-2026"
 ADMIN_EMAIL = "admin@kmsoftware.com"
 SITE_URL = "http://localhost:3000"
-# Add your real Resend API key here for now:
+RESEND_API_KEY = "re_your_api_key_here"
+
+# Production environment vars (used when you push to your main/master branch)
+[env.production.vars]
+JWT_SECRET = "km-it-services-secret-key-2026-production" # You should probably change this!
+ADMIN_EMAIL = "admin@kmsoftware.com"
+SITE_URL = "https://km-it-services.com" # Replace with your real production domain
+RESEND_API_KEY = "re_your_api_key_here"
+
+# Preview environment vars (used for any preview deployments and other branches)
+[env.preview.vars]
+JWT_SECRET = "km-it-services-secret-key-2026-preview"
+ADMIN_EMAIL = "admin@kmsoftware.com"
+SITE_URL = "https://km-it-services.pages.dev" # Main pages.dev generic preview domain or leave blank
 RESEND_API_KEY = "re_your_api_key_here"
