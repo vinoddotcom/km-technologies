@@ -323,40 +323,37 @@
       </div>
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="max-w-6xl mx-auto">
+          <!-- Full-width Heading Section -->
+          <div class="mb-12 text-center">
+            <div class="inline-block">
+              <div class="badge badge-secondary badge-lg mb-4">🎯 Why Choose KM Software's?</div>
+            </div>
+            <h2 class="text-4xl sm:text-5xl font-black leading-tight mb-4">
+              We Don't Just Build Apps.
+              <span class="block text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">We Build Experiences.</span>
+            </h2>
+            <p class="text-lg text-base-content/65 leading-relaxed max-w-3xl mx-auto">
+              We focus on building mobile apps that are not just visually appealing but also reliable, scalable, and performance-driven.
+            </p>
+          </div>
+
+          <!-- 2-Column Layout for Features and Image -->
           <div class="grid lg:grid-cols-2 gap-16 items-center">
-            <!-- Left -->
-            <div class="space-y-6">
-              <div class="inline-block">
-                <div class="badge badge-secondary badge-lg mb-4">🎯 Why Choose KM Software's?</div>
-              </div>
-              <h2 class="text-4xl sm:text-5xl font-black leading-tight">
-                We Don't Just Build Apps.
-                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">We Build Experiences.</span>
-              </h2>
-              <p class="text-lg text-base-content/65 leading-relaxed">
-                We focus on building mobile apps that are not just visually appealing but also reliable, scalable, and performance-driven.
-              </p>
-              <div class="space-y-4 pt-2">
-                <div v-for="reason in whyChooseUs" :key="reason.title"
-                  class="flex items-start gap-4 p-4 rounded-2xl bg-base-200/60 border border-base-content/5 hover:border-secondary/20 hover:bg-secondary/5 transition-all group">
-                  <div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform text-lg">{{ reason.icon }}</div>
-                  <div>
-                    <div class="font-bold text-base-content text-sm mb-0.5">{{ reason.title }}</div>
-                    <div class="text-sm text-base-content/60">{{ reason.desc }}</div>
-                  </div>
+            <!-- Left: Features -->
+            <div class="space-y-4">
+              <div v-for="reason in whyChooseUs" :key="reason.title"
+                class="flex items-start gap-4 p-4 rounded-2xl bg-base-200/60 border border-base-content/5 hover:border-secondary/20 hover:bg-secondary/5 transition-all group">
+                <div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform text-lg">{{ reason.icon }}</div>
+                <div>
+                  <div class="font-bold text-base-content text-sm mb-0.5">{{ reason.title }}</div>
+                  <div class="text-sm text-base-content/60">{{ reason.desc }}</div>
                 </div>
               </div>
             </div>
-            <!-- Right -->
-            <!-- <div class="grid grid-cols-2 gap-4">
-              <div v-for="metric in whyMetrics" :key="metric.value"
-                class="card bg-gradient-to-br from-base-200 to-base-100 border border-base-content/10 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all text-center p-6">
-                <div class="text-3xl font-black mb-1" :class="metric.color">{{ metric.value }}</div>
-                <div class="text-sm font-semibold text-base-content/70">{{ metric.label }}</div>
-              </div>
-            </div> -->
-            <div class="grid grid-cols-1 gap-4">
-              <img src="/images/ChatGPT Image Mar 14, 2026, 10_34_13 PM.png" alt="">
+            
+            <!-- Right: Image -->
+            <div class="flex justify-center lg:justify-end">
+              <img src="/images/mobile-phone.png" alt="Mobile App Experience" class="rounded-2xl shadow-xl w-full object-cover transform hover:scale-105 transition-transform duration-500">
             </div>
           </div>
         </div>
@@ -840,7 +837,7 @@ const heroPoints = ref([
 const trustStats = ref([
 {
 title: 'Apps Deployed',
-value: '150+',
+value: '100+',
 desc: 'On App/Play Store',
 icon: RocketLaunchIcon
 },
@@ -1046,7 +1043,7 @@ box-shadow:0 20px 40px rgba(0,0,0,0.1);
 .process-number{
 width:60px;
 height:60px;
-background:linear-gradient(135deg,#2563eb,#4f46e5);
+background:#0C59AF;
 color:#fff;
 display:flex;
 align-items:center;

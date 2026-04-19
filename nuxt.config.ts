@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   css: ["./app/tailwind.css"],
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  modules: ['@nuxt/icon'],
 
   // ─── Hybrid Rendering Rules ───────────────────────────
   routeRules: {

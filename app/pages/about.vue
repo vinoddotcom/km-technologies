@@ -31,22 +31,10 @@
         </p>
 
         <!-- Quick Stats -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-2xl mx-auto">
-          <div class="stat bg-base-200/50 backdrop-blur-sm rounded-2xl p-4 hover:bg-base-300/50 transition-colors">
-            <div class="stat-value text-3xl text-accent font-black">500+</div>
-            <div class="stat-title text-sm opacity-70">Projects Delivered</div>
-          </div>
-          <div class="stat bg-base-200/50 backdrop-blur-sm rounded-2xl p-4 hover:bg-base-300/50 transition-colors">
-            <div class="stat-value text-3xl text-primary font-black">200+</div>
-            <div class="stat-title text-sm opacity-70">Happy Clients</div>
-          </div>
-          <div class="stat bg-base-200/50 backdrop-blur-sm rounded-2xl p-4 hover:bg-base-300/50 transition-colors">
-            <div class="stat-value text-3xl text-secondary font-black">50+</div>
-            <div class="stat-title text-sm opacity-70">Expert Team</div>
-          </div>
-          <div class="stat bg-base-200/50 backdrop-blur-sm rounded-2xl p-4 hover:bg-base-300/50 transition-colors">
-            <div class="stat-value text-3xl text-info font-black">99%</div>
-            <div class="stat-title text-sm opacity-70">Client Retention</div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-2xl mx-auto" ref="statsSection">
+          <div v-for="(stat, index) in stats" :key="stat.label" class="stat bg-base-200/50 backdrop-blur-sm rounded-2xl p-4 hover:bg-base-300/50 transition-colors border border-base-content/5 hover:border-primary/20">
+            <div class="stat-value text-3xl font-black text-primary">{{ displayValues[index] }}{{ stat.suffix }}</div>
+            <div class="stat-title text-sm opacity-70 mt-1">{{ stat.label }}</div>
           </div>
         </div>
       </section>
@@ -242,10 +230,10 @@
               </p>
               <!-- Technologies -->
               <div class="flex flex-wrap gap-2">
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity">React</span>
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity">Vue.js</span>
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity">Next.js</span>
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity">Tailwind</span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:react" /> React</span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:vue" /> Vue.js</span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:nextjs-icon" /> Next.js</span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:tailwindcss-icon" /> Tailwind</span>
               </div>
             </div>
             
@@ -266,10 +254,10 @@
               </p>
               <!-- Technologies -->
               <div class="flex flex-wrap gap-2">
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity">Flutter</span>
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity">React Native</span>
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity">Swift</span>
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity">Kotlin</span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:flutter" /> Flutter</span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:react" /> React Native</span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:swift" /> Swift</span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:kotlin-icon" /> Kotlin</span>
               </div>
             </div>
             
@@ -290,10 +278,10 @@
               </p>
               <!-- Technologies -->
               <div class="flex flex-wrap gap-2">
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity">Node.js</span>
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity">Python</span>
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity">.NET</span>
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity">Java</span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:nodejs-icon" /> Node.js</span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:python" /> Python</span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:dotnet" /> .NET</span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:java" /> Java</span>
               </div>
             </div>
             
@@ -314,10 +302,10 @@
               </p>
               <!-- Technologies -->
               <div class="flex flex-wrap gap-2">
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity">TensorFlow</span>
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity">Security Audit</span>
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity">Pen Testing</span>
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity">Compliance</span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:tensorflow" /> TensorFlow</span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="carbon:security" class="text-accent" /> Security Audit</span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="mdi:shield-bug" class="text-error" /> Pen Testing</span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="mdi:check-decagram" class="text-success" /> Compliance</span>
               </div>
             </div>
           </div>
@@ -696,6 +684,68 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted } from 'vue'
+
+interface Stat {
+  target: number
+  suffix: string
+  label: string
+}
+
+const stats: Stat[] = [
+  { target: 10, suffix: "+", label: "Years Experience" },
+  { target: 100, suffix: "+", label: "Projects Delivered" },
+  { target: 50, suffix: "+", label: "Happy Clients" },
+  { target: 99, suffix: "%", label: "Client Satisfaction" },
+]
+
+const displayValues = ref<number[]>(stats.map(() => 0))
+const statsSection = ref<HTMLElement | null>(null)
+const hasAnimated = ref(false)
+
+function animateCountUp() {
+  if (hasAnimated.value) return
+  hasAnimated.value = true
+
+  stats.forEach((stat, index) => {
+    const duration = 1800 // ms
+    const steps = 60
+    const increment = stat.target / steps
+    let current = 0
+    let step = 0
+
+    const interval = setInterval(() => {
+      step++
+      // Ease-out: slower at the end
+      current = Math.round(stat.target * (1 - Math.pow(1 - step / steps, 3)))
+      displayValues.value[index] = current
+
+      if (step >= steps) {
+        displayValues.value[index] = stat.target
+        clearInterval(interval)
+      }
+    }, duration / steps)
+  })
+}
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCountUp()
+          observer.disconnect()
+        }
+      })
+    },
+    { threshold: 0.3 }
+  )
+
+  if (statsSection.value) {
+    observer.observe(statsSection.value)
+  }
+})
+
 useHead({
   title: "About Us | KM Software's - Engineering the Future with Smart & Secure Technology",
   meta: [

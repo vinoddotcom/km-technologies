@@ -28,7 +28,7 @@
         </NuxtLink>
         
         <!-- Services Dropdown -->
-        <div class="dropdown dropdown-hover">
+        <div class="dropdown" :class="{ 'dropdown-hover': isHoverEnabled }" @mouseenter="isHoverEnabled = true">
           <div 
             tabindex="0" 
             role="button" 
@@ -39,20 +39,22 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </div>
-          <ul 
-            tabindex="0" 
-            class="dropdown-content menu bg-base-100 dark:bg-base-200 rounded-2xl z-[100] w-72 p-3 shadow-2xl border border-base-content/10 mt-2 backdrop-blur-xl"
-          >
-            <li v-for="service in services" :key="service.title">
-              <NuxtLink :to="service.link" class="flex items-center gap-3 hover:bg-primary/10 rounded-xl p-3 group transition-all">
-                <span class="text-2xl group-hover:scale-110 transition-transform">{{ service.icon }}</span>
-                <div>
-                  <div class="font-semibold text-base-content">{{ service.title }}</div>
-                  <div class="text-xs opacity-60">{{ service.subtitle }}</div>
-                </div>
-              </NuxtLink>
-            </li>
-          </ul>
+          <div class="dropdown-content z-[100] pt-2">
+            <ul 
+              tabindex="0" 
+              class="menu bg-base-100 dark:bg-base-200 rounded-2xl w-72 p-3 shadow-2xl border border-base-content/10 backdrop-blur-xl"
+            >
+              <li v-for="service in services" :key="service.title">
+                <NuxtLink :to="service.link" @click="closeDropdown" class="flex items-center gap-3 hover:bg-primary/10 rounded-xl p-3 group transition-all">
+                  <span class="text-2xl group-hover:scale-110 transition-transform">{{ service.icon }}</span>
+                  <div>
+                    <div class="font-semibold text-base-content">{{ service.title }}</div>
+                    <div class="text-xs opacity-60">{{ service.subtitle }}</div>
+                  </div>
+                </NuxtLink>
+              </li>
+            </ul>
+          </div>
         </div>
         
         <NuxtLink 
@@ -114,7 +116,7 @@
             tabindex="0" 
             class="dropdown-content menu bg-base-100 dark:bg-base-200 backdrop-blur-xl rounded-2xl z-[100] w-72 p-3 shadow-2xl border border-base-content/10 mt-2 max-h-[80vh] overflow-y-auto"
           >
-            <li><NuxtLink to="/" class="rounded-xl hover:bg-primary/10">Home</NuxtLink></li>
+            <li><NuxtLink to="/" @click="closeDropdown" class="rounded-xl hover:bg-primary/10">Home</NuxtLink></li>
             
             <!-- Services with submenu -->
             <li>
@@ -122,7 +124,7 @@
                 <summary class="rounded-xl hover:bg-primary/10">Services</summary>
                 <ul class="p-2 bg-base-200/50 rounded-xl mt-2">
                   <li v-for="service in services" :key="service.title">
-                    <NuxtLink :to="service.link" class="flex items-center gap-2 hover:bg-primary/10 rounded-lg text-sm">
+                    <NuxtLink :to="service.link" @click="closeDropdown" class="flex items-center gap-2 hover:bg-primary/10 rounded-lg text-sm">
                       <span class="text-lg">{{ service.icon }}</span>
                       <span>{{ service.title }}</span>
                     </NuxtLink>
@@ -131,9 +133,9 @@
               </details>
             </li>
             
-            <li><NuxtLink to="/about" class="rounded-xl hover:bg-primary/10">About</NuxtLink></li>
-            <li><NuxtLink to="/portfolio" class="rounded-xl hover:bg-primary/10">Portfolio</NuxtLink></li>
-            <li><NuxtLink to="/contact" class="rounded-xl hover:bg-primary/10">Contact</NuxtLink></li>
+            <li><NuxtLink to="/about" @click="closeDropdown" class="rounded-xl hover:bg-primary/10">About</NuxtLink></li>
+            <li><NuxtLink to="/portfolio" @click="closeDropdown" class="rounded-xl hover:bg-primary/10">Portfolio</NuxtLink></li>
+            <li><NuxtLink to="/contact" @click="closeDropdown" class="rounded-xl hover:bg-primary/10">Contact</NuxtLink></li>
           </ul>
         </div>
       </div>
@@ -144,6 +146,16 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
 
+const isHoverEnabled = ref(true);
+
+const closeDropdown = () => {
+  isHoverEnabled.value = false;
+  if (import.meta.client) {
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+  }
+};
 
 const services = [
   { icon: '🌐', title: 'Website Development', subtitle: 'Modern Web Solutions', link: '/services/website-development' },

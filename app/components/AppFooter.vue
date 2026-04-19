@@ -47,7 +47,7 @@
             </a>
             <!-- WhatsApp — Issue 7: Added WhatsApp icon -->
             <a 
-              href="https://wa.me/1234567890"
+              href="https://wa.me/917668901013"
               target="_blank"
               rel="noopener noreferrer"
               class="btn btn-circle btn-sm bg-base-100 hover:bg-[#25D366] hover:text-white border-base-content/10 transition-all duration-300 hover:scale-110 hover:shadow-lg"
@@ -165,8 +165,8 @@
               </svg>
               <div>
                 <p class="text-base-content/90 font-medium text-sm">Email</p>
-                <a href="mailto:info@kmsoftware.com" class="text-primary hover:underline text-sm font-medium">
-                  info@kmsoftware.com
+                <a href="mailto:Info@kmsoftwares.com" class="text-primary hover:underline text-sm font-medium">
+                  Info@kmsoftwares.com
                 </a>
               </div>
             </li>
@@ -176,8 +176,8 @@
               </svg>
               <div>
                 <p class="text-base-content/90 font-medium text-sm">Phone</p>
-                <a href="tel:+1234567890" class="text-primary hover:underline text-sm font-medium">
-                  +1 (234) 567-890
+                <a href="tel:+917668901013" class="text-primary hover:underline text-sm font-medium">
+                  +91 76689 01013
                 </a>
               </div>
             </li>

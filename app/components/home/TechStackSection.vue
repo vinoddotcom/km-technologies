@@ -37,19 +37,36 @@
             <div class="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-base-200 to-transparent z-10"></div>
             
             <!-- Scrolling content -->
-            <div class="flex animate-marquee hover:[animation-play-state:paused]">
-              <div class="flex gap-4 pr-4">
+            <div class="flex w-max animate-marquee hover:[animation-play-state:paused]">
+              <div class="flex gap-4 pr-4" aria-hidden="true">
                 <!-- Issue 4: Improved pill — vertical layout, bigger icon, hover lift + shadow -->
                 <div 
-                  v-for="(tech, index) in [...category.technologies, ...category.technologies]" 
-                  :key="`${category.name}-${tech.name}-${index}`"
+                  v-for="(tech, index) in category.technologies" 
+                  :key="`first-${category.name}-${tech.name}-${index}`"
                   class="flex flex-col items-center gap-2 px-5 py-4 rounded-2xl bg-base-100
                          border border-base-content/8 hover:border-primary/40
                          hover:shadow-md hover:shadow-primary/10
                          transition-all duration-300 whitespace-nowrap group
                          hover:-translate-y-1"
                 >
-                  <span class="text-2xl group-hover:scale-110 transition-transform duration-300">{{ tech.icon }}</span>
+                  <Icon :name="tech.icon" class="w-8 h-8 group-hover:scale-110 transition-transform duration-300" />
+                  <span class="text-xs font-semibold text-base-content/75 group-hover:text-primary transition-colors">
+                    {{ tech.name }}
+                  </span>
+                </div>
+              </div>
+              <div class="flex gap-4 pr-4" aria-hidden="true">
+                <!-- Duplicate group to create seamless infinite loop -->
+                <div 
+                  v-for="(tech, index) in category.technologies" 
+                  :key="`second-${category.name}-${tech.name}-${index}`"
+                  class="flex flex-col items-center gap-2 px-5 py-4 rounded-2xl bg-base-100
+                         border border-base-content/8 hover:border-primary/40
+                         hover:shadow-md hover:shadow-primary/10
+                         transition-all duration-300 whitespace-nowrap group
+                         hover:-translate-y-1"
+                >
+                  <Icon :name="tech.icon" class="w-8 h-8 group-hover:scale-110 transition-transform duration-300" />
                   <span class="text-xs font-semibold text-base-content/75 group-hover:text-primary transition-colors">
                     {{ tech.name }}
                   </span>
@@ -78,62 +95,62 @@ const techCategories = ref<TechCategory[]>([
   {
     name: "Frontend",
     technologies: [
-      { name: "React.js", icon: "⚛️" },
-      { name: "Vue.js", icon: "💚" },
-      { name: "Angular", icon: "🅰️" },
-      { name: "Next.js", icon: "▲" },
-      { name: "Nuxt.js", icon: "💚" },
-      { name: "TypeScript", icon: "📘" },
-      { name: "Tailwind CSS", icon: "🎨" },
+      { name: "React.js", icon: "logos:react" },
+      { name: "Vue.js", icon: "logos:vue" },
+      { name: "Angular", icon: "logos:angular-icon" },
+      { name: "Next.js", icon: "logos:nextjs-icon" },
+      { name: "Nuxt.js", icon: "logos:nuxt-icon" },
+      { name: "TypeScript", icon: "logos:typescript-icon" },
+      { name: "Tailwind CSS", icon: "logos:tailwindcss-icon" },
     ]
   },
   {
     name: "Backend",
     technologies: [
-      { name: "Node.js", icon: "💚" },
-      { name: "Python", icon: "🐍" },
-      { name: "Java", icon: "☕" },
-      { name: "Django", icon: "🎸" },
-      { name: "Spring Boot", icon: "🍃" },
-      { name: "Flask", icon: "🧪" },
-      { name: "Express.js", icon: "🚀" },
+      { name: "Node.js", icon: "logos:nodejs-icon" },
+      { name: "Python", icon: "logos:python" },
+      { name: "Java", icon: "logos:java" },
+      { name: "Django", icon: "vscode-icons:file-type-django" },
+      { name: "Spring Boot", icon: "logos:spring-icon" },
+      { name: "Flask", icon: "devicon:flask" },
+      { name: "Express.js", icon: "skill-icons:expressjs-light" },
     ]
   },
   {
     name: "Mobile & Database",
     technologies: [
-      { name: "Flutter", icon: "💙" },
-      { name: "React Native", icon: "📱" },
-      { name: "Swift", icon: "🍎" },
-      { name: "Kotlin", icon: "🤖" },
-      { name: "PostgreSQL", icon: "🐘" },
-      { name: "MongoDB", icon: "🍃" },
-      { name: "MySQL", icon: "🐬" },
-      { name: "Firebase", icon: "🔥" },
+      { name: "Flutter", icon: "logos:flutter" },
+      { name: "React Native", icon: "logos:react" },
+      { name: "Swift", icon: "logos:swift" },
+      { name: "Kotlin", icon: "logos:kotlin-icon" },
+      { name: "PostgreSQL", icon: "logos:postgresql" },
+      { name: "MongoDB", icon: "logos:mongodb-icon" },
+      { name: "MySQL", icon: "logos:mysql-icon" },
+      { name: "Firebase", icon: "logos:firebase" },
     ]
   },
   {
     name: "Cloud & DevOps",
     technologies: [
-      { name: "AWS", icon: "☁️" },
-      { name: "Azure", icon: "🔷" },
-      { name: "Google Cloud", icon: "🌐" },
-      { name: "Docker", icon: "🐳" },
-      { name: "Kubernetes", icon: "⛵" },
-      { name: "Jenkins", icon: "🔧" },
-      { name: "GitHub Actions", icon: "🐙" },
+      { name: "AWS", icon: "logos:aws" },
+      { name: "Azure", icon: "logos:microsoft-azure" },
+      { name: "Google Cloud", icon: "logos:google-cloud" },
+      { name: "Docker", icon: "logos:docker-icon" },
+      { name: "Kubernetes", icon: "logos:kubernetes" },
+      { name: "Jenkins", icon: "logos:jenkins" },
+      { name: "GitHub Actions", icon: "devicon:githubactions" },
     ]
   },
   {
     name: "AI/ML & Security",
     technologies: [
-      { name: "TensorFlow", icon: "🧠" },
-      { name: "PyTorch", icon: "🔥" },
-      { name: "OpenCV", icon: "👁️" },
-      { name: "Scikit-learn", icon: "📊" },
-      { name: "Kali Linux", icon: "🐧" },
-      { name: "Burp Suite", icon: "🔐" },
-      { name: "Metasploit", icon: "🛡️" },
+      { name: "TensorFlow", icon: "logos:tensorflow" },
+      { name: "PyTorch", icon: "logos:pytorch-icon" },
+      { name: "OpenCV", icon: "logos:opencv" },
+      { name: "Scikit-learn", icon: "devicon:scikitlearn" },
+      { name: "Kali Linux", icon: "devicon:kalilinux" },
+      { name: "AppSec", icon: "carbon:ibm-cloud-security" },
+      { name: "Pen Testing", icon: "mdi:shield-bug" },
     ]
   },
 ])

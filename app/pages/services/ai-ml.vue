@@ -155,24 +155,36 @@
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           <div v-for="(service, index) in services" :key="index" 
-            class="group relative bg-base-200 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-primary/20">
+            class="group relative bg-base-100 rounded-3xl p-8 flex flex-col h-full shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-base-content/10 hover:border-primary/40 overflow-hidden">
            
-            <div class="relative z-10">
-              <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <component :is="service.icon" class="w-6 h-6 text-primary" />
+            <!-- Sophisticated Background Glow on Hover -->
+            <div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-base-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            
+            <div class="relative z-10 flex flex-col flex-grow">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
+                <component :is="service.icon" class="w-8 h-8 text-primary" />
               </div>
               
-              <h3 class="text-2xl font-bold mb-4">{{ service.title }}</h3>
-              <p class="text-base-content/70 mb-6 leading-relaxed">
+              <h3 class="text-2xl font-bold mb-4 text-base-content group-hover:text-primary transition-colors duration-300">{{ service.title }}</h3>
+              
+              <p class="text-base-content/70 mb-8 leading-relaxed flex-grow">
                 {{ service.description }}
               </p>
               
-              <!-- <div class="flex flex-wrap gap-2">
+              <div class="flex flex-wrap gap-2 mb-8 mt-auto">
                 <span v-for="tech in service.technologies" :key="tech" 
-                  class="">
+                  class="px-3 py-1 text-xs font-semibold rounded-lg bg-base-200 border border-base-content/5 text-base-content/80 group-hover:bg-primary/5 group-hover:border-primary/20 transition-colors">
                   {{ tech }}
                 </span>
-              </div> -->
+              </div>
+              
+               <!-- Subtle Call To Action Link -->
+              <div class="pt-4 border-t border-base-content/10 flex items-center text-sm font-bold text-base-content/60 group-hover:text-primary transition-colors w-full cursor-pointer">
+                Explore Solution
+                <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
@@ -496,7 +508,8 @@ import {
   ChatBubbleBottomCenterTextIcon,
   ChartBarIcon,
   LanguageIcon,
-  EyeIcon
+  EyeIcon,
+  SparklesIcon
 } from '@heroicons/vue/24/outline'
 // SEO
 useHead({
@@ -536,31 +549,37 @@ const whyAiMatters = ref([
 const services = ref([
   {
     title: 'Custom AI Solutions',
-    description: 'Tailor-made AI systems designed for your business workflows.',
-    technologies: ['AI automation', 'Recommendation engines', 'Decision dashboards', 'Intelligent workflows'],
+    description: 'Tailor-made AI systems designed specifically for your unique business workflows. We help automate repetitive tasks and optimize operational efficiency through dedicated machine learning models.',
+    technologies: ['AI automation', 'Decision dashboards', 'Intelligent workflows', 'Process Mining'],
     icon: CpuChipIcon
   },
   {
     title: 'AI Chatbots & Assistants',
-    description: 'Automate conversations with smart, human-like AI.',
-    technologies: ['WhatsApp bots', '24/7 support', 'Lead qualification', 'Multilingual'],
+    description: 'Automate conversations with smart, human-like AI capable of contextual understanding. Provide 24/7 support, qualify leads automatically, and enhance customer satisfaction.',
+    technologies: ['WhatsApp bots', 'LLM Agents', 'Lead qualification', 'Voice Bots'],
     icon: ChatBubbleBottomCenterTextIcon
   },
   {
     title: 'Predictive Analytics',
-    description: 'Turn your data into actionable insights. Make proactive, data-driven decisions.',
-    technologies: ['Sales forecasting', 'Churn prediction', 'Demand forecasting', 'Behavioral analytics'],
+    description: 'Turn your historical data into actionable foresight. We build models that predict trends, forecast demand, and identify potential risks before they impact your business.',
+    technologies: ['Sales forecasting', 'Churn prediction', 'Demand forecasting', 'Risk Analysis'],
     icon: ChartBarIcon
   },
   {
-    title: 'Natural Language Processing (NLP)',
-    description: 'Understand and process text or voice using AI.',
-    technologies: ['Sentiment analysis', 'Resume screening', 'Voice assistants', 'Document automation'],
+    title: 'Generative AI Integration',
+    description: 'Leverage the power of Large Language Models to generate high-quality content, code, and automate complex cognitive tasks seamlessly within your infrastructure.',
+    technologies: ['ChatGPT Integration', 'Custom LLM fine-tuning', 'RAG pipelines', 'Content generation'],
+    icon: SparklesIcon
+  },
+  {
+    title: 'Natural Language Processing',
+    description: 'Extract meaning from unstructured text or voice. We develop NLP solutions that analyze customer sentiment, automate document processing, and extract key entities.',
+    technologies: ['Sentiment analysis', 'Entity extraction', 'Voice recognition', 'Document automation'],
     icon: LanguageIcon
   },
   {
     title: 'Computer Vision',
-    description: 'AI that understands images and video.',
+    description: 'Empower your systems to understand and interpret images and video streams in real-time. Ideal for quality control, security, and automated visual inspections.',
     technologies: ['Face recognition', 'Object detection', 'CCTV analytics', 'Image classification'],
     icon: EyeIcon
   }
