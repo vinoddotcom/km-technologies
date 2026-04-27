@@ -355,24 +355,30 @@ useHead({
         <!-- Modal Content -->
         <div class="max-h-[85vh] overflow-y-auto w-full">
           <!-- Header Bar -->
-          <div class="bg-base-200 p-8 pt-12 pb-8 border-b border-base-300">
-            <div class="flex items-center gap-3 mb-4">
+          <div class="bg-base-200 p-5 sm:p-8 pt-10 sm:pt-12 pb-6 sm:pb-8 border-b border-base-300">
+            <div class="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
               <span class="badge badge-outline border-base-content/20 text-base-content/70">{{ selectedProject.industry }}</span>
-              <span class="text-base-content/40 text-sm">•</span>
-              <span class="text-sm font-medium text-base-content/60">{{ selectedProject.timeline_months }} Months Delivery</span>
+              <span class="hidden sm:inline text-base-content/40 text-sm">•</span>
+              <span class="hidden sm:inline text-sm font-medium text-base-content/60">{{ selectedProject.timeline_months }} Months Delivery</span>
             </div>
-            <h2 class="text-3xl font-bold text-base-content mb-4">{{ selectedProject.title }}</h2>
-            <div class="p-4 bg-success/10 border border-success/20 rounded-xl inline-block">
-              <p class="text-success font-semibold flex items-center gap-2">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
-                Measurable Impact: {{ selectedProject.outcome }}
-              </p>
+            <h2 class="text-2xl sm:text-3xl font-bold text-base-content mb-4">{{ selectedProject.title }}</h2>
+            
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 sm:items-center">
+              <div class="p-3 sm:p-4 bg-success/10 border border-success/20 rounded-xl inline-block flex-1">
+                <p class="text-success font-semibold flex items-start sm:items-center gap-2 text-sm sm:text-base leading-snug">
+                  <svg class="w-5 h-5 flex-shrink-0 mt-0.5 sm:mt-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                  <span>Impact: {{ selectedProject.outcome }}</span>
+                </p>
+              </div>
+              <a v-if="selectedProject.link" :href="selectedProject.link" target="_blank" rel="noopener noreferrer" class="btn btn-primary lg:hidden shadow-lg shadow-primary/20">
+                Visit Website
+              </a>
             </div>
           </div>
 
-          <div class="p-8 lg:p-12">
+          <div class="p-5 sm:p-8 lg:p-12">
             <!-- Grid Layout for Content -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
               
               <!-- Main Content Column -->
               <div class="lg:col-span-2 space-y-10 focus:outline-none">
@@ -392,7 +398,7 @@ useHead({
                   </ul>
                 </section>
 
-                <section v-if="selectedProject.testimonial" class="bg-base-200/50 rounded-2xl p-6 border border-base-200 relative overflow-hidden">
+                <section v-if="selectedProject.testimonial" class="hidden md:block bg-base-200/50 rounded-2xl p-6 border border-base-200 relative overflow-hidden">
                   <svg class="absolute top-4 left-4 w-10 h-10 text-base-content/5 opacity-50" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" /></svg>
                   <blockquote class="relative z-10 font-medium text-lg leading-relaxed text-base-content mb-4 pl-4 border-l-2 border-primary">
                     "{{ selectedProject.testimonial.quote }}"
@@ -441,7 +447,7 @@ useHead({
                   </div>
                 </div>
 
-                <div>
+                <div class="hidden lg:block">
                   <a v-if="selectedProject.link" :href="selectedProject.link" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full group">
                     Visit Website
                     <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>

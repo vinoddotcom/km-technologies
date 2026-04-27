@@ -28,15 +28,6 @@
               <span class="text-4xl opacity-50">📁</span>
             </div>
             
-            <!-- Overlay on hover -->
-            <div class="absolute inset-0 bg-gradient-to-t from-base-100/90 via-base-100/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-              <a v-if="project.link" :href="project.link" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm w-full shadow-lg">
-                Visit Website
-                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                </svg>
-              </a>
-            </div>
           </figure>
 
           <div class="card-body p-5">
@@ -56,9 +47,16 @@
             </h3>
 
             <!-- Description -->
-            <p class="text-sm text-base-content/60 line-clamp-2">
+            <p class="text-sm text-base-content/60 line-clamp-2 mb-4">
               {{ project.summary }}
             </p>
+
+            <div class="mt-auto pt-2 border-t border-base-content/10">
+              <a v-if="project.link" :href="project.link" target="_blank" rel="noopener noreferrer" class="btn btn-ghost hover:bg-primary/10 text-primary group/btn w-full justify-between">
+                Visit Website
+                <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+            </div>
 
             <!-- Tech Stack -->
             <div class="flex flex-wrap gap-1.5 mt-3">
