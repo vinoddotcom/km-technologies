@@ -6,11 +6,11 @@ const route = useRoute()
 const router = useRouter()
 
 // Fetch projects
-const { data: projects, pending } = useFetch('/api/projects')
+const { data: projects, pending } = useFetch('/api/projects?portfolio=true')
 
 // Filter State
 const selectedIndustry = ref(route.query.industry || 'All')
-const industries = ['All', 'FinTech', 'Healthcare', 'Enterprise', 'Automotive', 'Logistics', 'Hospitality', 'E-Commerce', 'Tourism', 'Lifestyle']
+const industries = ['All', 'Enterprise', 'FinTech', 'Automotive', 'Healthcare', 'Lifestyle', 'E-Commerce', 'Hospitality', 'Tourism']
 
 // Watch for filter changes to update URL for shareability
 watch(selectedIndustry, (newVal) => {

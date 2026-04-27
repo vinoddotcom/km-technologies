@@ -94,7 +94,7 @@
 </template>
 
 <script setup lang="ts">
-const { data: projects } = await useFetch('/api/projects')
+const { data: projects } = await useFetch('/api/projects?home=true')
 
 const industryBadgeClass = (industry: string): string => {
   const classes: Record<string, string> = {
