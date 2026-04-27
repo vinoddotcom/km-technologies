@@ -10,7 +10,7 @@ const { data: projects, pending } = useFetch('/api/projects')
 
 // Filter State
 const selectedIndustry = ref(route.query.industry || 'All')
-const industries = ['All', 'Fintech', 'Healthcare', 'Marketplaces', 'SaaS', 'Retail/IoT']
+const industries = ['All', 'FinTech', 'Healthcare', 'Enterprise', 'Automotive', 'Logistics', 'Hospitality', 'E-Commerce', 'Tourism', 'Lifestyle']
 
 // Watch for filter changes to update URL for shareability
 watch(selectedIndustry, (newVal) => {
@@ -245,7 +245,8 @@ useHead({
           >
             <!-- Card Image Area Using Service -->
             <div class="aspect-[4/3] bg-base-200 relative overflow-hidden flex items-center justify-center">
-              <img :src="`https://placehold.co/600x450/e2e8f0/475569?text=${project.title.replace(/ /g, '+')}`" :alt="project.title" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <img v-if="project.images && project.images.length > 0" :src="project.images[0]" :alt="project.title" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <img v-else :src="`https://placehold.co/600x450/e2e8f0/475569?text=${project.title.replace(/ /g, '+')}`" :alt="project.title" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
               
               <!-- Tags floating on top -->
               <div class="absolute top-4 left-4 z-20 flex gap-2">
@@ -377,19 +378,16 @@ useHead({
               <div class="lg:col-span-2 space-y-10 focus:outline-none">
                 
                 <section>
-                  <h3 class="text-xl font-semibold mb-3">The Problem</h3>
-                  <p class="text-base-content/70 leading-relaxed">{{ selectedProject.summary }} We approached this by thoroughly mapping the existing constraints and identifying the primary bottleneck causing revenue leakage.</p>
+                  <h3 class="text-xl font-semibold mb-3">Project Summary</h3>
+                  <p class="text-base-content/70 leading-relaxed">{{ selectedProject.summary }}</p>
                 </section>
 
-                <section>
-                  <h3 class="text-xl font-semibold mb-3">Architecture & Solution</h3>
-                  <div class="aspect-video bg-base-200 rounded-xl mb-4 border border-base-300 flex items-center justify-center">
-                     <span class="text-base-content/40 font-mono text-sm">[Interactive Architecture Diagram SVG]</span>
+                <section v-if="selectedProject.images && selectedProject.images.length > 0">
+                  <h3 class="text-xl font-semibold mb-3">Project Preview</h3>
+                  <div class="aspect-video bg-base-200 rounded-xl mb-4 border border-base-300 flex items-center justify-center overflow-hidden">
+                     <img :src="selectedProject.images[0]" :alt="selectedProject.title" class="w-full h-full object-cover object-top" loading="lazy" />
                   </div>
-                  <p class="text-base-content/70 leading-relaxed mb-4">
-                    The solution leverages a modern, event-driven microservices approach to ensure scalability and isolation of failure domains.
-                  </p>
-                  <ul class="list-disc pl-5 space-y-2 text-base-content/70">
+                  <ul v-if="selectedProject.security && selectedProject.security.length > 0" class="list-disc pl-5 space-y-2 text-base-content/70 mt-4">
                     <li v-for="sec in selectedProject.security" :key="sec">{{ sec }}</li>
                   </ul>
                 </section>
@@ -444,11 +442,11 @@ useHead({
                 </div>
 
                 <div>
-                  <button @click="openContact" class="btn btn-primary w-full group">
-                    Request Similar Build
+                  <a v-if="selectedProject.link" :href="selectedProject.link" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full group">
+                    Visit Website
                     <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                  </button>
-                  <button class="btn btn-outline w-full mt-3">
+                  </a>
+                  <button @click="openContact" class="btn btn-outline w-full mt-3">
                     <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                     Download SOW Sample
                   </button>
