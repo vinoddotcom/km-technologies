@@ -15,8 +15,9 @@
         <!-- subtle glow -->
         <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
 
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm mb-6">
-          <span class="text-lg font-bold tracking-wider uppercase text-primary">About KM Software's</span>
+        <div
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm mb-6">
+          <span class="text-lg font-bold tracking-wider uppercase text-primary">About KM Software</span>
         </div>
 
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
@@ -26,13 +27,14 @@
         </h1>
 
         <p class="text-xl sm:text-2xl text-base-content/70 leading-relaxed max-w-3xl mx-auto mb-8">
-          KM Software's is a technology-driven IT company specializing in building modern, intelligent,
+          KM Software is a technology-driven IT company specializing in building modern, intelligent,
           and secure digital solutions that empower businesses to grow and innovate.
         </p>
 
         <!-- Quick Stats -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-2xl mx-auto" ref="statsSection">
-          <div v-for="(stat, index) in stats" :key="stat.label" class="stat bg-base-200/50 backdrop-blur-sm rounded-2xl p-4 hover:bg-base-300/50 transition-colors border border-base-content/5 hover:border-primary/20">
+          <div v-for="(stat, index) in stats" :key="stat.label"
+            class="stat bg-base-200/50 backdrop-blur-sm rounded-2xl p-4 hover:bg-base-300/50 transition-colors border border-base-content/5 hover:border-primary/20">
             <div class="stat-value text-3xl font-black text-primary">{{ displayValues[index] }}{{ stat.suffix }}</div>
             <div class="stat-title text-sm opacity-70 mt-1">{{ stat.label }}</div>
           </div>
@@ -60,7 +62,7 @@
 
                 <div class="space-y-4">
                   <p class="text-lg text-base-content/70 leading-relaxed">
-                    KM Software's was founded with a revolutionary vision — to bridge the gap between
+                    KM Software was founded with a revolutionary vision — to bridge the gap between
                     innovative technology and real-world business needs. What began as a small team of
                     passionate engineers has evolved into a global technology partner trusted by enterprises
                     across multiple industries.
@@ -91,8 +93,7 @@
 
             <!-- Right: Visual -->
             <div class="relative">
-              <div
-                class=" rounded-3xl overflow-hidden bg-gradient-to-br from-base-200 to-base-300 p-8 shadow-2xl">
+              <div class=" rounded-3xl overflow-hidden bg-gradient-to-br from-base-200 to-base-300 p-8 shadow-2xl">
                 <div
                   class="aspect-video rounded-2xl bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10 flex items-center justify-center">
                   <div class="text-center">
@@ -133,7 +134,7 @@
 
             <p class="text-xl text-base-content/70 max-w-3xl mx-auto">
               We are a team of passionate developers, designers, and technology experts with a strong
-              focus on quality and innovation. At KM Software's, we believe technology should not only
+              focus on quality and innovation. At KM Software, we believe technology should not only
               solve problems but also create new opportunities for businesses to scale and succeed.
             </p>
           </div>
@@ -141,36 +142,50 @@
           <!-- Team Values -->
           <div class="grid md:grid-cols-3 gap-8 mt-12">
             <!-- Expertise & Excellence -->
-            <div class="group bg-base-100 rounded-2xl p-8 border-2 border-base-content/5 hover:border-accent/30 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-              <div class="w-16 h-16 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <div
+              class="group bg-base-100 rounded-2xl p-8 border-2 border-base-content/5 hover:border-accent/30 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              <div
+                class="w-16 h-16 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+                  </path>
                 </svg>
               </div>
               <h3 class="text-xl font-bold mb-4 group-hover:text-accent transition-colors">Expertise & Excellence</h3>
-              <p class="text-base-content/70">Deep technical knowledge combined with a commitment to delivering exceptional quality in every project.</p>
+              <p class="text-base-content/70">Deep technical knowledge combined with a commitment to delivering
+                exceptional quality in every project.</p>
             </div>
-            
+
             <!-- Innovation Driven -->
-            <div class="group bg-base-100 rounded-2xl p-8 border-2 border-base-content/5 hover:border-accent/30 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-              <div class="w-16 h-16 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <div
+              class="group bg-base-100 rounded-2xl p-8 border-2 border-base-content/5 hover:border-accent/30 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              <div
+                class="w-16 h-16 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z">
+                  </path>
                 </svg>
               </div>
               <h3 class="text-xl font-bold mb-4 group-hover:text-accent transition-colors">Innovation Driven</h3>
-              <p class="text-base-content/70">Constantly exploring new technologies and methodologies to provide cutting-edge solutions.</p>
+              <p class="text-base-content/70">Constantly exploring new technologies and methodologies to provide
+                cutting-edge solutions.</p>
             </div>
-            
+
             <!-- Client Partnership -->
-            <div class="group bg-base-100 rounded-2xl p-8 border-2 border-base-content/5 hover:border-accent/30 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-              <div class="w-16 h-16 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <div
+              class="group bg-base-100 rounded-2xl p-8 border-2 border-base-content/5 hover:border-accent/30 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              <div
+                class="w-16 h-16 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                  </path>
                 </svg>
               </div>
               <h3 class="text-xl font-bold mb-4 group-hover:text-accent transition-colors">Client Partnership</h3>
-              <p class="text-base-content/70">Building long-term relationships based on trust, transparency, and mutual success.</p>
+              <p class="text-base-content/70">Building long-term relationships based on trust, transparency, and mutual
+                success.</p>
             </div>
           </div>
 
@@ -214,11 +229,15 @@
 
           <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Web Development -->
-            <div class="group bg-base-100 border-2 border-transparent hover:border-accent hover:bg-base-100 rounded-2xl p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+            <div
+              class="group bg-base-100 border-2 border-transparent hover:border-accent hover:bg-base-100 rounded-2xl p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
               <div class="mb-6">
-                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/10 to-accent/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div
+                  class="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/10 to-accent/5 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                    </path>
                   </svg>
                 </div>
               </div>
@@ -226,23 +245,35 @@
                 Web Development
               </h3>
               <p class="text-base-content/70 mb-6">
-                Modern, responsive websites built for performance and scalability with clean design and strong functionality.
+                Modern, responsive websites built for performance and scalability with clean design and strong
+                functionality.
               </p>
               <!-- Technologies -->
               <div class="flex flex-wrap gap-2">
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:react" /> React</span>
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:vue" /> Vue.js</span>
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:nextjs-icon" /> Next.js</span>
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:tailwindcss-icon" /> Tailwind</span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1">
+                  <Icon name="logos:react" /> React
+                </span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1">
+                  <Icon name="logos:vue" /> Vue.js
+                </span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1">
+                  <Icon name="logos:nextjs-icon" /> Next.js
+                </span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1">
+                  <Icon name="logos:tailwindcss-icon" /> Tailwind
+                </span>
               </div>
             </div>
-            
+
             <!-- App Development -->
-            <div class="group bg-base-100 border-2 border-transparent hover:border-accent hover:bg-base-100 rounded-2xl p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+            <div
+              class="group bg-base-100 border-2 border-transparent hover:border-accent hover:bg-base-100 rounded-2xl p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
               <div class="mb-6">
-                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/10 to-accent/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div
+                  class="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/10 to-accent/5 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
                   </svg>
                 </div>
               </div>
@@ -254,19 +285,30 @@
               </p>
               <!-- Technologies -->
               <div class="flex flex-wrap gap-2">
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:flutter" /> Flutter</span>
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:react" /> React Native</span>
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:swift" /> Swift</span>
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:kotlin-icon" /> Kotlin</span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1">
+                  <Icon name="logos:flutter" /> Flutter
+                </span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1">
+                  <Icon name="logos:react" /> React Native
+                </span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1">
+                  <Icon name="logos:swift" /> Swift
+                </span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1">
+                  <Icon name="logos:kotlin-icon" /> Kotlin
+                </span>
               </div>
             </div>
-            
+
             <!-- Custom Software -->
-            <div class="group bg-base-100 border-2 border-transparent hover:border-accent hover:bg-base-100 rounded-2xl p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+            <div
+              class="group bg-base-100 border-2 border-transparent hover:border-accent hover:bg-base-100 rounded-2xl p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
               <div class="mb-6">
-                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/10 to-accent/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div
+                  class="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/10 to-accent/5 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                   </svg>
                 </div>
               </div>
@@ -278,19 +320,31 @@
               </p>
               <!-- Technologies -->
               <div class="flex flex-wrap gap-2">
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:nodejs-icon" /> Node.js</span>
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:python" /> Python</span>
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:dotnet" /> .NET</span>
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:java" /> Java</span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1">
+                  <Icon name="logos:nodejs-icon" /> Node.js
+                </span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1">
+                  <Icon name="logos:python" /> Python
+                </span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1">
+                  <Icon name="logos:dotnet" /> .NET
+                </span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1">
+                  <Icon name="logos:java" /> Java
+                </span>
               </div>
             </div>
-            
+
             <!-- AI & Cyber Security -->
-            <div class="group bg-base-100 border-2 border-transparent hover:border-accent hover:bg-base-100 rounded-2xl p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+            <div
+              class="group bg-base-100 border-2 border-transparent hover:border-accent hover:bg-base-100 rounded-2xl p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
               <div class="mb-6">
-                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/10 to-accent/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div
+                  class="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/10 to-accent/5 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                    </path>
                   </svg>
                 </div>
               </div>
@@ -302,10 +356,18 @@
               </p>
               <!-- Technologies -->
               <div class="flex flex-wrap gap-2">
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="logos:tensorflow" /> TensorFlow</span>
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="carbon:security" class="text-accent" /> Security Audit</span>
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="mdi:shield-bug" class="text-error" /> Pen Testing</span>
-                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1"><Icon name="mdi:check-decagram" class="text-success" /> Compliance</span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1">
+                  <Icon name="logos:tensorflow" /> TensorFlow
+                </span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1">
+                  <Icon name="carbon:security" class="text-accent" /> Security Audit
+                </span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1">
+                  <Icon name="mdi:shield-bug" class="text-error" /> Pen Testing
+                </span>
+                <span class="badge badge-outline badge-sm opacity-70 hover:opacity-100 transition-opacity gap-1">
+                  <Icon name="mdi:check-decagram" class="text-success" /> Compliance
+                </span>
               </div>
             </div>
           </div>
@@ -470,7 +532,7 @@
         <div class="max-w-6xl mx-auto">
           <div class="text-center mb-16">
             <span class="badge badge-accent badge-lg mb-4 px-8 py-3 border-2 border-accent/30">
-             
+
               Why Choose Us
             </span>
 
@@ -486,11 +548,14 @@
           <!-- Benefits Grid -->
           <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Strong Expertise -->
-            <div class="group bg-base-100 rounded-2xl p-8 border-2 border-base-content/5 hover:border-accent/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+            <div
+              class="group bg-base-100 rounded-2xl p-8 border-2 border-base-content/5 hover:border-accent/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
               <div class="mb-6">
-                <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div
+                  class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                   </svg>
                 </div>
               </div>
@@ -501,13 +566,17 @@
                 Deep knowledge across multiple technologies and frameworks with certified professionals.
               </p>
             </div>
-            
+
             <!-- Security Focus -->
-            <div class="group bg-base-100 rounded-2xl p-8 border-2 border-base-content/5 hover:border-accent/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+            <div
+              class="group bg-base-100 rounded-2xl p-8 border-2 border-base-content/5 hover:border-accent/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
               <div class="mb-6">
-                <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div
+                  class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                    </path>
                   </svg>
                 </div>
               </div>
@@ -518,13 +587,17 @@
                 Enterprise-grade security protocols and best practices integrated into every solution.
               </p>
             </div>
-            
+
             <!-- Custom Solutions -->
-            <div class="group bg-base-100 rounded-2xl p-8 border-2 border-base-content/5 hover:border-accent/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+            <div
+              class="group bg-base-100 rounded-2xl p-8 border-2 border-base-content/5 hover:border-accent/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
               <div class="mb-6">
-                <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div
+                  class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                    </path>
                   </svg>
                 </div>
               </div>
@@ -535,13 +608,17 @@
                 Tailored solutions aligned with your business goals and specific requirements.
               </p>
             </div>
-            
+
             <!-- Transparent Communication -->
-            <div class="group bg-base-100 rounded-2xl p-8 border-2 border-base-content/5 hover:border-accent/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+            <div
+              class="group bg-base-100 rounded-2xl p-8 border-2 border-base-content/5 hover:border-accent/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
               <div class="mb-6">
-                <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div
+                  class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                    </path>
                   </svg>
                 </div>
               </div>
@@ -552,13 +629,16 @@
                 Regular updates and clear communication throughout projects with dedicated account managers.
               </p>
             </div>
-            
+
             <!-- Timely Delivery -->
-            <div class="group bg-base-100 rounded-2xl p-8 border-2 border-base-content/5 hover:border-accent/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+            <div
+              class="group bg-base-100 rounded-2xl p-8 border-2 border-base-content/5 hover:border-accent/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
               <div class="mb-6">
-                <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div
+                  class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                   </svg>
                 </div>
               </div>
@@ -569,13 +649,16 @@
                 Commitment to deadlines and project milestones with agile development methodologies.
               </p>
             </div>
-            
+
             <!-- Quality Commitment -->
-            <div class="group bg-base-100 rounded-2xl p-8 border-2 border-base-content/5 hover:border-accent/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+            <div
+              class="group bg-base-100 rounded-2xl p-8 border-2 border-base-content/5 hover:border-accent/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
               <div class="mb-6">
-                <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div
+                  class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                   </svg>
                 </div>
               </div>
@@ -596,7 +679,7 @@
               </h3>
 
               <p class="text-xl text-base-content/70 mb-8 leading-relaxed">
-                At <span class="font-bold text-accent">KM Software's</span>, we go beyond development.
+                At <span class="font-bold text-accent">KM Software</span>, we go beyond development.
                 We collaborate with our clients to build future-ready digital solutions that deliver
                 real business value and sustainable growth.
               </p>
@@ -646,7 +729,7 @@
             </h3>
 
             <p class="text-xl text-base-content/70 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Partner with KM Software's to transform your ideas into powerful digital solutions
+              Partner with KM Software to transform your ideas into powerful digital solutions
               that drive business growth and innovation.
             </p>
 
@@ -674,7 +757,7 @@
             </div>
 
             <p class="mt-10 text-base-content/60 text-sm">
-              KM Software's — Building Smart, Secure & Scalable Digital Solutions
+              KM Software — Building Smart, Secure & Scalable Digital Solutions
             </p>
           </div>
         </div>
@@ -747,11 +830,11 @@ onMounted(() => {
 })
 
 useHead({
-  title: "About Us | KM Software's - Engineering the Future with Smart & Secure Technology",
+  title: "About Us | KM Software - Engineering the Future with Smart & Secure Technology",
   meta: [
     {
       name: 'description',
-      content: "KM Software's is a technology-driven IT company specializing in building modern, intelligent, and secure digital solutions that empower businesses to grow and innovate."
+      content: "KM Software is a technology-driven IT company specializing in building modern, intelligent, and secure digital solutions that empower businesses to grow and innovate."
     }
   ]
 })

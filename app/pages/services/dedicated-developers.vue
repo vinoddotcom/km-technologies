@@ -3,14 +3,20 @@
     <!-- Hero Section -->
     <section class="relative pt-28 pb-24 bg-base-100 overflow-hidden">
       <div class="absolute inset-0 opacity-[0.04]">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(59,130,246,0.45),transparent_35%),radial-gradient(circle_at_80%_70%,rgba(99,102,241,0.3),transparent_35%)]"></div>
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(59,130,246,0.45),transparent_35%),radial-gradient(circle_at_80%_70%,rgba(99,102,241,0.3),transparent_35%)]">
+        </div>
       </div>
 
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="breadcrumbs text-sm mb-8 opacity-60">
           <ul>
-            <li><NuxtLink to="/" class="hover:text-primary transition-colors">Home</NuxtLink></li>
-            <li><NuxtLink to="/#services" class="hover:text-primary transition-colors">Services</NuxtLink></li>
+            <li>
+              <NuxtLink to="/" class="hover:text-primary transition-colors">Home</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/#services" class="hover:text-primary transition-colors">Services</NuxtLink>
+            </li>
             <li>Dedicated Developers</li>
           </ul>
         </div>
@@ -19,14 +25,17 @@
           <!-- Left -->
           <div class="space-y-8">
             <div>
-              <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+              <div
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
                 <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
+                  <path
+                    d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
                 </svg>
                 <span class="text-sm font-semibold text-primary">Staff Augmentation</span>
               </div>
 
-              <h1 class="text-3xl sm:text-4xl lg:text-[46px] font-black leading-tight tracking-tight text-base-content mb-5">
+              <h1
+                class="text-3xl sm:text-4xl lg:text-[46px] font-black leading-tight tracking-tight text-base-content mb-5">
                 Dedicated Developers
                 <span class="block text-primary mt-2">
                   For Your Business Needs
@@ -34,35 +43,30 @@
               </h1>
 
               <p class="text-base sm:text-lg text-base-content/70 leading-relaxed max-w-xl">
-                Access pre-vetted, senior developers who integrate seamlessly with your team. Scale up or down on-demand without the overhead of traditional hiring.
+                Access pre-vetted, senior developers who integrate seamlessly with your team. Scale up or down on-demand
+                without the overhead of traditional hiring.
               </p>
             </div>
 
             <div class="flex flex-col sm:flex-row gap-4">
-              <NuxtLink
-                to="/contact"
-                class="btn btn-primary btn-lg px-8 shadow-lg hover:shadow-xl transition-all group"
-              >
+              <NuxtLink to="/contact"
+                class="btn btn-primary btn-lg px-8 shadow-lg hover:shadow-xl transition-all group">
                 <span>Hire Developers</span>
-                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6">
+                  </path>
                 </svg>
               </NuxtLink>
 
-              <button
-                @click="scrollToSection('#pricing')"
-                class="btn btn-outline btn-lg px-8"
-              >
+              <button @click="scrollToSection('#pricing')" class="btn btn-outline btn-lg px-8">
                 View Pricing
               </button>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6">
-              <div
-                v-for="stat in trustStats"
-                :key="stat.title"
-                class="rounded-2xl bg-base-200 border border-base-content/10 p-5"
-              >
+              <div v-for="stat in trustStats" :key="stat.title"
+                class="rounded-2xl bg-base-200 border border-base-content/10 p-5">
                 <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                   <component :is="stat.icon" class="w-5 h-5 text-primary" />
                 </div>
@@ -85,12 +89,10 @@
               </div>
 
               <div class="grid grid-cols-2 gap-4">
-                <div
-                  v-for="(dev, index) in sampleDevelopers"
-                  :key="index"
-                  class="rounded-2xl bg-base-100 border border-base-content/10 p-5 text-center hover:border-primary/20 transition-all"
-                >
-                  <div class="w-16 h-16 mx-auto rounded-2xl bg-primary/10 flex items-center justify-center text-primary font-black text-xl mb-3">
+                <div v-for="(dev, index) in sampleDevelopers" :key="index"
+                  class="rounded-2xl bg-base-100 border border-base-content/10 p-5 text-center hover:border-primary/20 transition-all">
+                  <div
+                    class="w-16 h-16 mx-auto rounded-2xl bg-primary/10 flex items-center justify-center text-primary font-black text-xl mb-3">
                     {{ dev.initial }}
                   </div>
                   <p class="text-sm font-bold">{{ dev.role }}</p>
@@ -126,11 +128,8 @@
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-          <div
-            v-for="(benefit, index) in benefits"
-            :key="index"
-            class="group bg-base-100 rounded-2xl border border-base-content/10 p-7 hover:border-primary/20 hover:shadow-lg transition-all"
-          >
+          <div v-for="(benefit, index) in benefits" :key="index"
+            class="group bg-base-100 rounded-2xl border border-base-content/10 p-7 hover:border-primary/20 hover:shadow-lg transition-all">
             <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
               <component :is="benefit.icon" class="w-6 h-6 text-primary" />
             </div>
@@ -157,11 +156,8 @@
         </div>
 
         <div class="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-          <div
-            v-for="(category, index) in techStack"
-            :key="category.name"
-            class="bg-base-200 rounded-2xl border border-base-content/10 p-7"
-          >
+          <div v-for="(category, index) in techStack" :key="category.name"
+            class="bg-base-200 rounded-2xl border border-base-content/10 p-7">
             <div class="flex items-center gap-4 mb-6">
               <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                 <component :is="category.icon" class="w-6 h-6 text-primary" />
@@ -170,11 +166,8 @@
             </div>
 
             <div class="flex flex-wrap gap-2">
-              <span
-                v-for="tech in category.technologies"
-                :key="tech"
-                class="px-3 py-2 rounded-lg bg-base-100 border border-base-content/10 text-sm font-medium text-base-content/70"
-              >
+              <span v-for="tech in category.technologies" :key="tech"
+                class="px-3 py-2 rounded-lg bg-base-100 border border-base-content/10 text-sm font-medium text-base-content/70">
                 {{ tech }}
               </span>
             </div>
@@ -198,7 +191,8 @@
 
         <div class="grid lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           <!-- Hourly -->
-          <div class="bg-base-100 rounded-2xl border border-base-content/10 p-8 shadow-sm hover:shadow-lg transition-all">
+          <div
+            class="bg-base-100 rounded-2xl border border-base-content/10 p-8 shadow-sm hover:shadow-lg transition-all">
             <div class="mb-6">
               <h3 class="text-2xl font-bold text-base-content mb-1">Hourly</h3>
               <p class="text-sm text-base-content/60">Pay only for the hours worked</p>
@@ -301,7 +295,8 @@
           </div>
 
           <!-- Full-Time -->
-          <div class="bg-base-100 rounded-2xl border border-base-content/10 p-8 shadow-sm hover:shadow-lg transition-all">
+          <div
+            class="bg-base-100 rounded-2xl border border-base-content/10 p-8 shadow-sm hover:shadow-lg transition-all">
             <div class="mb-6">
               <h3 class="text-2xl font-bold text-base-content mb-1">Full-Time</h3>
               <p class="text-sm text-base-content/60">8 hours per day, 5 days a week</p>
@@ -369,12 +364,10 @@
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          <div
-            v-for="(step, index) in processSteps"
-            :key="index"
-            class="text-center bg-base-200 rounded-2xl border border-base-content/10 p-8"
-          >
-            <div class="w-12 h-12 mx-auto mb-5 rounded-full bg-primary text-primary-content flex items-center justify-center font-black">
+          <div v-for="(step, index) in processSteps" :key="index"
+            class="text-center bg-base-200 rounded-2xl border border-base-content/10 p-8">
+            <div
+              class="w-12 h-12 mx-auto mb-5 rounded-full bg-primary text-primary-content flex items-center justify-center font-black">
               {{ index + 1 }}
             </div>
 
@@ -402,11 +395,8 @@
           </div>
 
           <div class="space-y-4">
-            <div
-              v-for="(faq, index) in faqs"
-              :key="index"
-              class="collapse collapse-plus bg-base-100 rounded-2xl border border-base-content/10 hover:border-primary/20 transition-all"
-            >
+            <div v-for="(faq, index) in faqs" :key="index"
+              class="collapse collapse-plus bg-base-100 rounded-2xl border border-base-content/10 hover:border-primary/20 transition-all">
               <input type="radio" name="faq-accordion" :checked="index === 0" />
               <div class="collapse-title text-lg font-bold pr-12">
                 {{ faq.question }}
@@ -425,7 +415,9 @@
     <!-- Final CTA -->
     <section id="contact" class="py-24 bg-base-100 relative overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-primary/80"></div>
-      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.3),transparent_60%)]"></div>
+      <div
+        class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.3),transparent_60%)]">
+      </div>
 
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <div class="max-w-3xl mx-auto text-primary-content">
@@ -434,25 +426,22 @@
             <span class="block mt-2">Today</span>
           </h2>
           <p class="text-xl opacity-90 mb-4">
-            Transform your ideas into powerful digital solutions with KM Software's.
+            Transform your ideas into powerful digital solutions with KM Software.
           </p>
           <p class="text-lg opacity-80 mb-10">
             Let's create software that boosts productivity, simplifies operations, and scales with your business.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              @click="showModal = true"
-              class="btn btn-lg bg-base-100 text-primary hover:bg-base-200 border-none shadow-2xl px-10 group"
-            >
+            <button @click="showModal = true"
+              class="btn btn-lg bg-base-100 text-primary hover:bg-base-200 border-none shadow-2xl px-10 group">
               <span class="font-bold">Start Your Project Today</span>
-              <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+              <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </button>
-            <NuxtLink
-              to="/contact"
-              class="btn btn-lg btn-ghost border-2 border-base-100/40 text-primary-content hover:bg-base-100/10 px-10"
-            >
+            <NuxtLink to="/contact"
+              class="btn btn-lg btn-ghost border-2 border-base-100/40 text-primary-content hover:bg-base-100/10 px-10">
               Or Contact Us
             </NuxtLink>
           </div>
@@ -470,28 +459,33 @@
       <div class="modal-box max-w-2xl w-full max-h-[90vh] overflow-y-auto">
         <button @click="showModal = false" class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4">✕</button>
         <h3 class="font-black text-2xl mb-2">Request a Proposal</h3>
-        <p class="text-sm text-base-content/60 mb-6">We'll respond within 24 hours with next steps and a calendar link.</p>
+        <p class="text-sm text-base-content/60 mb-6">We'll respond within 24 hours with next steps and a calendar link.
+        </p>
 
         <form @submit.prevent="submitForm" class="space-y-4">
           <div class="grid sm:grid-cols-2 gap-4">
             <div class="form-control">
               <label class="label"><span class="label-text text-xs font-semibold">Company Name *</span></label>
-              <input v-model="form.company" type="text" required class="input input-bordered input-sm" placeholder="Acme Corp"/>
+              <input v-model="form.company" type="text" required class="input input-bordered input-sm"
+                placeholder="Acme Corp" />
             </div>
             <div class="form-control">
               <label class="label"><span class="label-text text-xs font-semibold">Your Name *</span></label>
-              <input v-model="form.name" type="text" required class="input input-bordered input-sm" placeholder="Ravi Kumar"/>
+              <input v-model="form.name" type="text" required class="input input-bordered input-sm"
+                placeholder="Ravi Kumar" />
             </div>
           </div>
 
           <div class="grid sm:grid-cols-2 gap-4">
             <div class="form-control">
               <label class="label"><span class="label-text text-xs font-semibold">Work Email *</span></label>
-              <input v-model="form.email" type="email" required class="input input-bordered input-sm" placeholder="ravi@acme.com"/>
+              <input v-model="form.email" type="email" required class="input input-bordered input-sm"
+                placeholder="ravi@acme.com" />
             </div>
             <div class="form-control">
               <label class="label"><span class="label-text text-xs font-semibold">Phone</span></label>
-              <input v-model="form.phone" type="tel" class="input input-bordered input-sm" placeholder="+91 98765 43210"/>
+              <input v-model="form.phone" type="tel" class="input input-bordered input-sm"
+                placeholder="+91 98765 43210" />
             </div>
           </div>
 
@@ -514,32 +508,29 @@
 
           <div class="form-control">
             <label class="label"><span class="label-text text-xs font-semibold">Desired Start Date</span></label>
-            <input v-model="form.startDate" type="month" class="input input-bordered input-sm"/>
+            <input v-model="form.startDate" type="month" class="input input-bordered input-sm" />
           </div>
 
           <div class="form-control">
-            <label class="label"><span class="label-text text-xs font-semibold">Brief Description (200 chars) *</span></label>
-            <textarea
-              v-model="form.description"
-              required
-              maxlength="200"
-              rows="3"
+            <label class="label"><span class="label-text text-xs font-semibold">Brief Description (200 chars)
+                *</span></label>
+            <textarea v-model="form.description" required maxlength="200" rows="3"
               class="textarea textarea-bordered text-sm"
-              placeholder="What are you building? What problem does it solve?"
-            ></textarea>
-            <label class="label"><span class="label-alt text-xs text-base-content/40">{{ form.description.length }}/200</span></label>
+              placeholder="What are you building? What problem does it solve?"></textarea>
+            <label class="label"><span class="label-alt text-xs text-base-content/40">{{ form.description.length
+                }}/200</span></label>
           </div>
 
           <div class="form-control">
             <label class="label cursor-pointer justify-start gap-3">
-              <input v-model="form.wantsEstimate" type="checkbox" class="checkbox checkbox-sm checkbox-primary"/>
+              <input v-model="form.wantsEstimate" type="checkbox" class="checkbox checkbox-sm checkbox-primary" />
               <span class="label-text text-sm">I want a non-binding cost estimate</span>
             </label>
           </div>
 
           <div class="form-control">
             <label class="label cursor-pointer justify-start gap-3">
-              <input v-model="form.wantsNDA" type="checkbox" class="checkbox checkbox-sm checkbox-primary"/>
+              <input v-model="form.wantsNDA" type="checkbox" class="checkbox checkbox-sm checkbox-primary" />
               <span class="label-text text-sm">Please send an NDA before our first call</span>
             </label>
           </div>
@@ -548,20 +539,22 @@
             <button type="submit" class="btn btn-primary w-full">
               Submit Request
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </button>
           </div>
         </form>
 
-        <div v-if="formSucceeded" class="absolute inset-0 bg-base-100 rounded-2xl flex flex-col items-center justify-center text-center p-12">
+        <div v-if="formSucceeded"
+          class="absolute inset-0 bg-base-100 rounded-2xl flex flex-col items-center justify-center text-center p-12">
           <div class="w-16 h-16 rounded-full bg-success/10 flex items-center justify-center mb-6">
             <svg class="w-8 h-8 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
             </svg>
           </div>
           <h3 class="text-2xl font-black mb-2">Proposal Submitted!</h3>
-          <p class="text-base-content/60 text-sm mb-6">We'll review and respond within 24 hours with next steps and a calendar invite.</p>
+          <p class="text-base-content/60 text-sm mb-6">We'll review and respond within 24 hours with next steps and a
+            calendar invite.</p>
           <button @click="showModal = false; formSucceeded = false" class="btn btn-primary">Close</button>
         </div>
       </div>
@@ -586,7 +579,7 @@ import {
 } from '@heroicons/vue/24/outline'
 
 useHead({
-  title: "Dedicated Developers | Staff Augmentation Services - KM Software's",
+  title: "Dedicated Developers | Staff Augmentation Services - KM Software",
   meta: [
     {
       name: 'description',
@@ -594,7 +587,7 @@ useHead({
     },
     {
       property: 'og:title',
-      content: "Dedicated Developers | Staff Augmentation Services - KM Software's"
+      content: "Dedicated Developers | Staff Augmentation Services - KM Software"
     },
     {
       property: 'og:description',

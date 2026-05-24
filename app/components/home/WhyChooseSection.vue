@@ -7,7 +7,7 @@
           <span class="text-sm font-semibold text-primary">Why Us</span>
         </div>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black">
-          Why Choose <span class="text-primary">KM Software's</span>?
+          Why Choose <span class="text-primary">KM Software</span>?
         </h2>
         <p class="text-lg text-base-content/60 font-light">
           We deliver excellence through experience, innovation, and dedication
@@ -16,25 +16,21 @@
 
       <!-- Features Grid -->
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-        <div 
-          v-for="(feature, index) in features" 
-          :key="feature.title"
-          class="group card bg-base-200/50 hover:bg-base-200 border border-base-content/5 hover:border-primary/20 transition-all duration-500 hover:-translate-y-2 hover:shadow-md"
-        >
+        <div v-for="(feature, index) in features" :key="feature.title"
+          class="group card bg-base-200/50 hover:bg-base-200 border border-base-content/5 hover:border-primary/20 transition-all duration-500 hover:-translate-y-2 hover:shadow-md">
           <div class="card-body items-center text-center p-8">
             <!-- Icon -->
-            <div 
+            <div
               class="w-16 h-16 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500"
-              :class="iconBgColors[index % iconBgColors.length]"
-            >
+              :class="iconBgColors[index % iconBgColors.length]">
               <div v-html="feature.icon" class="w-8 h-8" :class="iconColors[index % iconColors.length]"></div>
             </div>
-            
+
             <!-- Title -->
             <h3 class="text-xl font-bold text-base-content group-hover:text-primary transition-colors">
               {{ feature.title }}
             </h3>
-            
+
             <!-- Description -->
             <p class="text-base-content/60 text-sm leading-relaxed">
               {{ feature.description }}

@@ -3,72 +3,98 @@
     <!-- Hero Section -->
     <section class="relative bg-gradient-to-br from-accent/5 via-base-100 to-primary/5 pt-32 pb-20 overflow-hidden">
       <div class="absolute inset-0 opacity-5">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_40%_30%,rgba(59,130,246,0.3),transparent_50%),radial-gradient(circle_at_60%_70%,rgba(236,72,153,0.3),transparent_50%)]"></div>
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_40%_30%,rgba(59,130,246,0.3),transparent_50%),radial-gradient(circle_at_60%_70%,rgba(236,72,153,0.3),transparent_50%)]">
+        </div>
       </div>
-      
+
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="breadcrumbs text-sm mb-8 opacity-70 hover:opacity-100 transition-opacity">
           <ul>
-            <li><NuxtLink to="/" class="hover:text-primary transition-colors">Home</NuxtLink></li>
-            <li><NuxtLink to="/#services" class="hover:text-primary transition-colors">Services</NuxtLink></li>
+            <li>
+              <NuxtLink to="/" class="hover:text-primary transition-colors">Home</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/#services" class="hover:text-primary transition-colors">Services</NuxtLink>
+            </li>
             <li>Website Development</li>
           </ul>
         </div>
-        
+
         <div class="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
           <div class="space-y-8">
             <div>
-              <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-accent/10 to-primary/10 border border-accent/20 mb-6 hover:scale-105 transition-transform">
+              <div
+                class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-accent/10 to-primary/10 border border-accent/20 mb-6 hover:scale-105 transition-transform">
                 <svg class="w-5 h-5 text-accent animate-pulse" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                  <path fill-rule="evenodd"
+                    d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
                 </svg>
                 <span class="text-sm font-bold text-accent">Website Development Services</span>
               </div>
-              
-              <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-black mb-5 leading-tight tracking-tight text-base-content">
+
+              <h1
+                class="text-3xl sm:text-4xl lg:text-[44px] font-black mb-5 leading-tight tracking-tight text-base-content">
                 Build High-Performance Websites
-                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-accent via-primary to-secondary mt-1">
+                <span
+                  class="block text-transparent bg-clip-text bg-gradient-to-r from-accent via-primary to-secondary mt-1">
                   That Drive Real Business Growth
                 </span>
               </h1>
-              
+
               <p class="text-base sm:text-lg text-base-content/70 leading-relaxed max-w-lg">
-                At KM Software's, we design and develop scalable, secure, and conversion-focused websites tailored to startups, growing businesses, and enterprises worldwide.
+                At KM Software, we design and develop scalable, secure, and conversion-focused websites tailored to
+                startups, growing businesses, and enterprises worldwide.
               </p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
                 <span class="text-base-content/80 font-medium">Custom-Built Solutions</span>
               </div>
               <div class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
                 <span class="text-base-content/80 font-medium">Modern Technology Stack</span>
               </div>
               <div class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
                 <span class="text-base-content/80 font-medium">SEO-Optimized Architecture</span>
               </div>
               <div class="flex items-center gap-2">
-                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <svg class="w-5 h-5 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
                 <span class="text-base-content/80 font-medium">24/7 Technical Support</span>
               </div>
             </div>
-            
+
             <div class="pt-4">
-              <NuxtLink to="/contact" class="btn btn-accent btn-lg px-10 shadow-lg hover:shadow-accent/50 hover:scale-105 transition-all group w-full sm:w-auto">
+              <NuxtLink to="/contact"
+                class="btn btn-accent btn-lg px-10 shadow-lg hover:shadow-accent/50 hover:scale-105 transition-all group w-full sm:w-auto">
                 <span class="text-lg font-bold">Get a Free Consultation</span>
-                <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6">
+                  </path>
+                </svg>
               </NuxtLink>
             </div>
           </div>
-          
+
           <!-- Mockup Visual -->
           <div class="relative hidden lg:block">
             <div class="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-3xl blur-3xl"></div>
             <div class="relative">
-              <div class="mockup-browser border border-base-content/10 bg-base-100 shadow-2xl hover:scale-[1.02] transition-transform duration-500">
+              <div
+                class="mockup-browser border border-base-content/10 bg-base-100 shadow-2xl hover:scale-[1.02] transition-transform duration-500">
                 <div class="mockup-browser-toolbar">
                   <div class="input border border-base-content/10">kmsoftware.com</div>
                 </div>
@@ -96,7 +122,8 @@
             Our Web Development Expertise
           </h2>
           <p class="text-xl text-base-content/70 max-w-3xl mx-auto font-light leading-relaxed">
-            We provide end-to-end website development solutions designed for performance, scalability, and long-term growth.
+            We provide end-to-end website development solutions designed for performance, scalability, and long-term
+            growth.
           </p>
         </div>
 
@@ -104,8 +131,10 @@
           <div v-for="service in servicesList" :key="service.title"
             class="group card bg-base-100 shadow-lg hover:shadow-2xl transition-all duration-300 border border-base-content/5 hover:border-accent/30 hover:-translate-y-2">
             <div class="card-body p-8">
-              <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
-                <svg class="w-7 h-7 text-accent group-hover:text-accent-content transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div
+                class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+                <svg class="w-7 h-7 text-accent group-hover:text-accent-content transition-colors" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="service.iconPath"></path>
                 </svg>
               </div>
@@ -118,186 +147,161 @@
     </section>
 
     <!-- Tech Stack -->
-   
+
     <!-- Modern Technology Stack -->
-<section class="py-28 bg-base-100">
-  <div class="container mx-auto px-6">
+    <section class="py-28 bg-base-100">
+      <div class="container mx-auto px-6">
 
-    <div class="text-center max-w-3xl mx-auto mb-20">
-      <h2 class="text-4xl lg:text-5xl font-black mb-6">
-        Modern Technology Stack
-      </h2>
-      <p class="text-lg text-base-content/70">
-        We use modern, scalable technologies to build high-performance and secure websites.
-      </p>
-    </div>
+        <div class="text-center max-w-3xl mx-auto mb-20">
+          <h2 class="text-4xl lg:text-5xl font-black mb-6">
+            Modern Technology Stack
+          </h2>
+          <p class="text-lg text-base-content/70">
+            We use modern, scalable technologies to build high-performance and secure websites.
+          </p>
+        </div>
 
-    <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
 
-      <div
-        v-for="category in techStack"
-        :key="category.name"
-        class="p-8 rounded-2xl bg-base-200 border border-base-content/5
+          <div v-for="category in techStack" :key="category.name" class="p-8 rounded-2xl bg-base-200 border border-base-content/5
                hover:shadow-xl transition duration-300">
 
-         <div class="flex items-center gap-4 mb-6">
-                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="category.iconPath"></path>
-                  </svg>
-                </div>
-                <h3 class="text-2xl font-bold">{{ category.name }}</h3>
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="category.iconPath"></path>
+                </svg>
               </div>
+              <h3 class="text-2xl font-bold">{{ category.name }}</h3>
+            </div>
 
-      <div class="flex flex-wrap gap-3">
+            <div class="flex flex-wrap gap-3">
 
-  <div
-    v-for="tech in category.technologies"
-    :key="tech.name"
-    class="flex items-center gap-2 px-4 py-2 rounded-full
+              <div v-for="tech in category.technologies" :key="tech.name" class="flex items-center gap-2 px-4 py-2 rounded-full
            bg-base-100 border border-base-content/10
            text-sm font-medium hover:bg-primary
            hover:text-primary-content transition">
 
-    <img
-      :src="tech.logo"
-      :alt="tech.name"
-      class="w-4 h-4 object-contain"
-    />
+                <img :src="tech.logo" :alt="tech.name" class="w-4 h-4 object-contain" />
 
-    <span>{{ tech.name }}</span>
+                <span>{{ tech.name }}</span>
 
-  </div>
+              </div>
 
-</div>
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
+    </section>
+    <!-- Development Process -->
+    <section class="py-28 bg-base-200">
+      <div class="container mx-auto px-6">
 
-    </div>
+        <div class="grid lg:grid-cols-2 gap-20 items-center max-w-7xl mx-auto">
 
-  </div>
-</section>
-<!-- Development Process -->
-<section class="py-28 bg-base-200">
-  <div class="container mx-auto px-6">
+          <!-- LEFT CONTENT -->
+          <div>
 
-    <div class="grid lg:grid-cols-2 gap-20 items-center max-w-7xl mx-auto">
+            <h2 class="text-4xl lg:text-5xl font-black mb-8">
+              Our Development Process
+            </h2>
 
-      <!-- LEFT CONTENT -->
-      <div>
+            <p class="text-lg text-base-content/70 mb-12">
+              Our structured development process ensures every project is delivered
+              with quality, efficiency, and long-term scalability.
+            </p>
 
-        <h2 class="text-4xl lg:text-5xl font-black mb-8">
-          Our Development Process
-        </h2>
+            <div class="space-y-6">
 
-        <p class="text-lg text-base-content/70 mb-12">
-          Our structured development process ensures every project is delivered
-          with quality, efficiency, and long-term scalability.
-        </p>
+              <div v-for="(step, index) in processSteps" :key="index" class="flex items-start gap-5 group">
 
-        <div class="space-y-6">
-
-          <div
-            v-for="(step,index) in processSteps"
-            :key="index"
-            class="flex items-start gap-5 group">
-
-            <div
-              class="w-10 h-10 rounded-full bg-primary text-primary-content
+                <div class="w-10 h-10 rounded-full bg-primary text-primary-content
                      flex items-center justify-center font-bold">
 
-              {{ index + 1 }}
+                  {{ index + 1 }}
+
+                </div>
+
+                <div>
+                  <h3 class="text-lg font-bold group-hover:text-primary transition">
+                    {{ step }}
+                  </h3>
+                </div>
+
+              </div>
 
             </div>
 
-            <div>
-              <h3 class="text-lg font-bold group-hover:text-primary transition">
-                {{ step }}
-              </h3>
-            </div>
+          </div>
+
+
+          <!-- RIGHT IMAGE -->
+          <div class="relative">
+
+            <div class="absolute inset-0 bg-primary/10 rounded-3xl blur-2xl"></div>
+
+            <img src="/images/portfolio-hero.png" alt="Website development process"
+              class="relative rounded-3xl shadow-xl border border-base-content/10" />
 
           </div>
 
         </div>
 
       </div>
+    </section>
+    <!-- Why Choose Us CTA -->
+    <section class="py-24 bg-base-100">
+      <div class="container mx-auto px-6">
 
-
-      <!-- RIGHT IMAGE -->
-      <div class="relative">
-
-        <div class="absolute inset-0 bg-primary/10 rounded-3xl blur-2xl"></div>
-
-        <img
-          src="/images/portfolio-hero.png"
-          alt="Website development process"
-          class="relative rounded-3xl shadow-xl border border-base-content/10"
-        />
-
-      </div>
-
-    </div>
-
-  </div>
-</section>
-<!-- Why Choose Us CTA -->
-<section class="py-24 bg-base-100">
-  <div class="container mx-auto px-6">
-
-    <div class="max-w-5xl mx-auto bg-base-200 rounded-3xl p-14
+        <div class="max-w-5xl mx-auto bg-base-200 rounded-3xl p-14
                 border border-base-content/10 shadow-xl">
 
-      <div class="text-center mb-12">
+          <div class="text-center mb-12">
 
-        <h2 class="text-4xl font-black mb-6">
-          Why Choose <span class="mt-2 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">KM Software's?</span> 
-        </h2>
+            <h2 class="text-4xl font-black mb-6">
+              Why Choose <span
+                class="mt-2 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">KM
+                Software?</span>
+            </h2>
 
-        <p class="text-lg text-base-content/70">
-          We help businesses build powerful, scalable websites that drive
-          real business growth and long-term success.
-        </p>
-
-      </div>
-
-
-      <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-
-        <div
-          v-for="reason in whyChooseUs"
-          :key="reason"
-          class="flex items-center gap-4">
-
-          <div
-            class="w-9 h-9 rounded-lg bg-primary/10
-                   flex items-center justify-center">
-
-            <svg class="w-5 h-5 text-primary"
-                 fill="none"
-                 stroke="currentColor"
-                 viewBox="0 0 24 24">
-
-              <path stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M5 13l4 4L19 7" />
-
-            </svg>
+            <p class="text-lg text-base-content/70">
+              We help businesses build powerful, scalable websites that drive
+              real business growth and long-term success.
+            </p>
 
           </div>
 
-          <span class="font-semibold text-base-content/90">
-            {{ reason }}
-          </span>
+
+          <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+
+            <div v-for="reason in whyChooseUs" :key="reason" class="flex items-center gap-4">
+
+              <div class="w-9 h-9 rounded-lg bg-primary/10
+                   flex items-center justify-center">
+
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+
+                </svg>
+
+              </div>
+
+              <span class="font-semibold text-base-content/90">
+                {{ reason }}
+              </span>
+
+            </div>
+
+          </div>
 
         </div>
 
       </div>
-
-    </div>
-
-  </div>
-</section>
+    </section>
 
 
     <!-- FAQ -->
@@ -329,18 +333,19 @@
     <!-- Final CTA -->
     <section class="py-24 sm:py-32 relative overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-br from-accent via-primary to-secondary"></div>
-      
+
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="max-w-4xl mx-auto text-center text-primary-content">
           <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight">
             Ready to Build a Powerful Website for Your Business?
           </h2>
-          
+
           <p class="text-xl sm:text-2xl mb-10 max-w-2xl mx-auto font-light leading-relaxed">
-            Partner with KM Software's and transform your ideas into high-performing digital solutions.
+            Partner with KM Software and transform your ideas into high-performing digital solutions.
           </p>
-          
-          <NuxtLink to="/contact" class="btn btn-lg bg-base-100 text-primary hover:bg-base-200 hover:scale-105 border-none shadow-xl px-12 transition-all">
+
+          <NuxtLink to="/contact"
+            class="btn btn-lg bg-base-100 text-primary hover:bg-base-200 hover:scale-105 border-none shadow-xl px-12 transition-all">
             <span class="text-lg font-bold">Get a Free Consultation Today</span>
           </NuxtLink>
         </div>
@@ -351,7 +356,7 @@
 
 <script setup lang="ts">
 useHead({
-  title: "Website Development Services | KM Software's",
+  title: "Website Development Services | KM Software",
   meta: [
     {
       name: 'description',
