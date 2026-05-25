@@ -4,17 +4,24 @@
     <!-- ═══════════════════════════════════
          1. HERO
     ════════════════════════════════════ -->
-    <section id="hero" class="relative bg-gradient-to-br from-base-100 via-base-200 to-base-100 pt-28 pb-24 overflow-hidden">
+    <section id="hero"
+      class="relative bg-gradient-to-br from-base-100 via-base-200 to-base-100 pt-28 pb-24 overflow-hidden">
       <div class="absolute inset-0 opacity-[0.04]">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,rgba(59,130,246,0.6),transparent_50%),radial-gradient(circle_at_75%_75%,rgba(99,102,241,0.4),transparent_50%)]"></div>
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,rgba(59,130,246,0.6),transparent_50%),radial-gradient(circle_at_75%_75%,rgba(99,102,241,0.4),transparent_50%)]">
+        </div>
       </div>
 
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <!-- Breadcrumbs -->
         <div class="breadcrumbs text-sm mb-10 opacity-60">
           <ul>
-            <li><NuxtLink to="/">Home</NuxtLink></li>
-            <li><NuxtLink to="/#services">Services</NuxtLink></li>
+            <li>
+              <NuxtLink to="/">Home</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/#services">Services</NuxtLink>
+            </li>
             <li>Custom Software</li>
           </ul>
         </div>
@@ -24,23 +31,29 @@
           <div class="space-y-8">
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
               <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                <path fill-rule="evenodd"
+                  d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
               </svg>
               <span class="text-sm font-semibold text-primary">Custom Software Development</span>
             </div>
 
-            <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-black mb-5 leading-tight tracking-tight text-base-content">
+            <h1
+              class="text-3xl sm:text-4xl lg:text-[44px] font-black mb-5 leading-tight tracking-tight text-base-content">
               Software Built
-              <span class="block text-transparent bg-clip-text bg-gradient-to-r from-accent via-primary to-secondary mt-1">
+              <span
+                class="block text-transparent bg-clip-text bg-gradient-to-r from-accent via-primary to-secondary mt-1">
                 Around Your Business
               </span>
             </h1>
 
             <p class="text-base sm:text-lg text-base-content/80 leading-relaxed max-w-lg mb-4">
-              Every business has unique challenges — your software should reflect that. At KM Software's, we design and develop custom software solutions tailored to your workflows, goals, and long-term scalability.
+              Every business has unique challenges — your software should reflect that. At KM Software, we design and
+              develop custom software solutions tailored to your workflows, goals, and long-term scalability.
             </p>
             <p class="text-base sm:text-lg text-base-content/70 leading-relaxed max-w-lg">
-              From internal automation tools to large-scale enterprise platforms, we build secure, high-performance software that evolves with your business.
+              From internal automation tools to large-scale enterprise platforms, we build secure, high-performance
+              software that evolves with your business.
             </p>
 
             <!-- Metrics row -->
@@ -53,19 +66,15 @@
 
             <!-- CTAs -->
             <div class="flex flex-col sm:flex-row gap-4">
-              <button
-                @click="showModal = true"
-                class="btn btn-primary btn-lg px-8 shadow-lg hover:shadow-xl hover:scale-105 transition-all group"
-              >
+              <button @click="showModal = true"
+                class="btn btn-primary btn-lg px-8 shadow-lg hover:shadow-xl hover:scale-105 transition-all group">
                 <span>Start Your Custom Project</span>
-                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </button>
-              <button
-                @click="scrollTo('#pricing')"
-                class="btn btn-outline btn-lg px-8"
-              >
+              <button @click="scrollTo('#pricing')" class="btn btn-outline btn-lg px-8">
                 Get Cost Range
               </button>
             </div>
@@ -73,9 +82,14 @@
             <!-- Trust strip -->
             <div class="flex flex-wrap items-center gap-4 pt-4">
               <span class="text-xs font-semibold text-base-content/40 uppercase tracking-widest">Trusted by</span>
-              <div v-for="c in clientLogos" :key="c" class="px-3 py-1.5 rounded-lg bg-base-200 border border-base-content/10 text-xs font-bold text-base-content/50">{{ c }}</div>
+              <div v-for="c in clientLogos" :key="c"
+                class="px-3 py-1.5 rounded-lg bg-base-200 border border-base-content/10 text-xs font-bold text-base-content/50">
+                {{ c }}</div>
               <div class="flex items-center gap-1 ml-auto">
-                <svg v-for="i in 5" :key="i" class="w-4 h-4 text-warning fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg v-for="i in 5" :key="i" class="w-4 h-4 text-warning fill-current" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
                 <span class="text-xs font-semibold ml-1">4.9 / 5 client rating</span>
               </div>
             </div>
@@ -109,21 +123,28 @@
         <div class="text-center mb-16 max-w-3xl mx-auto">
           <div class="badge badge-outline badge-lg mb-4">What We Build</div>
           <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">What We Build</h2>
-          <p class="text-base-content/60 text-lg">We develop powerful, business-focused software solutions — built for performance, flexibility, and growth.</p>
+          <p class="text-base-content/60 text-lg">We develop powerful, business-focused software solutions — built for
+            performance, flexibility, and growth.</p>
         </div>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           <div v-for="svc in serviceBuckets" :key="svc.title"
             class="group bg-base-200 rounded-2xl p-8 border border-base-content/5 hover:border-primary/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-            <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+            <div
+              class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
               <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" :d="svc.icon"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" :d="svc.icon" />
               </svg>
             </div>
             <h3 class="text-lg font-bold mb-2">{{ svc.title }}</h3>
             <p class="text-base-content/60 text-sm leading-relaxed mb-4">{{ svc.desc }}</p>
-            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-success/10 border border-success/20 text-success text-xs font-semibold">
-              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <div
+              class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-success/10 border border-success/20 text-success text-xs font-semibold">
+              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd" />
+              </svg>
               {{ svc.kpi }}
             </div>
           </div>
@@ -145,9 +166,10 @@
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           <div v-for="benefit in customBenefits" :key="benefit.title"
             class="flex items-start gap-4 p-6 bg-base-100 rounded-2xl border border-base-content/5 hover:border-primary/20 hover:shadow-lg transition-all group">
-            <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+            <div
+              class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
               <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="benefit.icon"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="benefit.icon" />
               </svg>
             </div>
             <div>
@@ -159,121 +181,118 @@
       </div>
     </section>
 
-<!-- ═══════════════════════════════════
+    <!-- ═══════════════════════════════════
      INDUSTRIES WE SERVE
 ════════════════════════════════════ -->
-<section id="industries" class="py-24 bg-base-100">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="industries" class="py-24 bg-base-100">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
 
-    <!-- Heading -->
-    <div class="text-center mb-16 max-w-3xl mx-auto">
-      <div class="badge badge-outline badge-lg mb-4">Industries We Serve</div>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">
-        Built for Real Businesses
-      </h2>
-      <p class="text-base-content/60 text-lg">
-        We create tailored software solutions across industries — solving real operational challenges.
-      </p>
-    </div>
-
-    <!-- Grid -->
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-
-      <div
-        v-for="industry in industries"
-        :key="industry.name"
-        class="group p-6 bg-base-200 rounded-2xl border border-base-content/5 hover:border-primary/20 hover:shadow-xl transition-all hover:-translate-y-1"
-      >
-        <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-xl mb-4 group-hover:bg-primary/20 transition">
-          {{ industry.icon }}
+        <!-- Heading -->
+        <div class="text-center mb-16 max-w-3xl mx-auto">
+          <div class="badge badge-outline badge-lg mb-4">Industries We Serve</div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">
+            Built for Real Businesses
+          </h2>
+          <p class="text-base-content/60 text-lg">
+            We create tailored software solutions across industries — solving real operational challenges.
+          </p>
         </div>
 
-        <h3 class="font-bold text-base mb-2">{{ industry.name }}</h3>
+        <!-- Grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
 
-        <p class="text-sm text-base-content/60 leading-relaxed">
-          {{ industry.desc }}
-        </p>
+          <div v-for="industry in industries" :key="industry.name"
+            class="group p-6 bg-base-200 rounded-2xl border border-base-content/5 hover:border-primary/20 hover:shadow-xl transition-all hover:-translate-y-1">
+            <div
+              class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-xl mb-4 group-hover:bg-primary/20 transition">
+              {{ industry.icon }}
+            </div>
+
+            <h3 class="font-bold text-base mb-2">{{ industry.name }}</h3>
+
+            <p class="text-sm text-base-content/60 leading-relaxed">
+              {{ industry.desc }}
+            </p>
+          </div>
+
+        </div>
       </div>
-
-    </div>
-  </div>
-</section>
-<!-- ═══════════════════════════════════
-     WHY CHOOSE KM SOFTWARE'S
+    </section>
+    <!-- ═══════════════════════════════════
+     WHY CHOOSE KM Software
 ════════════════════════════════════ -->
-<section id="why-km" class="py-24 bg-base-200">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="why-km" class="py-24 bg-base-200">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
 
-    <!-- Heading -->
-    <div class="text-center mb-16 max-w-3xl mx-auto">
-      <div class="badge badge-outline badge-lg mb-4">Why KM Software's</div>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">
-        Why Choose <span class="text-primary">KM Software's</span>?
-      </h2>
-      <p class="text-base-content/60 text-lg">
-        We build scalable, secure, and business-driven software — not just code.
-      </p>
-    </div>
+        <!-- Heading -->
+        <div class="text-center mb-16 max-w-3xl mx-auto">
+          <div class="badge badge-outline badge-lg mb-4">Why KM Software</div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">
+            Why Choose <span class="text-primary">KM Software</span>?
+          </h2>
+          <p class="text-base-content/60 text-lg">
+            We build scalable, secure, and business-driven software — not just code.
+          </p>
+        </div>
 
-    <!-- Content -->
-    <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
+        <!-- Content -->
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
 
-      <!-- LEFT: POINTS -->
-      <div class="space-y-4">
-        <div
-          v-for="pt in positioningPoints"
-          :key="pt.title"
-          class="flex items-start gap-4 p-6 bg-base-100 rounded-2xl border border-base-content/5 hover:border-primary/20 hover:shadow-md transition-all"
-        >
-          <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="pt.icon"/>
-            </svg>
+          <!-- LEFT: POINTS -->
+          <div class="space-y-4">
+            <div v-for="pt in positioningPoints" :key="pt.title"
+              class="flex items-start gap-4 p-6 bg-base-100 rounded-2xl border border-base-content/5 hover:border-primary/20 hover:shadow-md transition-all">
+              <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="pt.icon" />
+                </svg>
+              </div>
+
+              <div>
+                <p class="font-bold text-sm mb-1">{{ pt.title }}</p>
+                <p class="text-sm text-base-content/60 leading-relaxed">{{ pt.desc }}</p>
+              </div>
+            </div>
           </div>
 
-          <div>
-            <p class="font-bold text-sm mb-1">{{ pt.title }}</p>
-            <p class="text-sm text-base-content/60 leading-relaxed">{{ pt.desc }}</p>
+          <!-- RIGHT: TESTIMONIAL CARD -->
+          <div
+            class="bg-gradient-to-br from-primary/5 via-base-100 to-secondary/5 p-8 rounded-3xl border border-primary/10 shadow-lg">
+
+            <h3 class="text-xl font-black mb-4">Client Impact</h3>
+
+            <p class="text-base-content/80 leading-relaxed italic mb-6">
+              "KM's paid discovery phase alone saved us 6 months of wrong decisions — and delivered a system processing
+              ₹200Cr+ monthly."
+            </p>
+
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">
+                RK
+              </div>
+              <div>
+                <p class="font-semibold">Ravi Kumar</p>
+                <p class="text-xs text-base-content/50">CTO, FinPay Technologies</p>
+              </div>
+            </div>
+
+            <!-- Highlight Stats -->
+            <div class="grid grid-cols-2 gap-4 mt-6">
+              <div class="p-4 bg-base-100 rounded-xl border border-base-content/10 text-center">
+                <p class="text-xl font-black text-primary">6 months</p>
+                <p class="text-xs text-base-content/50">Time saved</p>
+              </div>
+              <div class="p-4 bg-base-100 rounded-xl border border-base-content/10 text-center">
+                <p class="text-xl font-black text-primary">₹200Cr+</p>
+                <p class="text-xs text-base-content/50">Processed monthly</p>
+              </div>
+            </div>
+
           </div>
+
         </div>
       </div>
-
-      <!-- RIGHT: TESTIMONIAL CARD -->
-      <div class="bg-gradient-to-br from-primary/5 via-base-100 to-secondary/5 p-8 rounded-3xl border border-primary/10 shadow-lg">
-
-        <h3 class="text-xl font-black mb-4">Client Impact</h3>
-
-        <p class="text-base-content/80 leading-relaxed italic mb-6">
-          "KM's paid discovery phase alone saved us 6 months of wrong decisions — and delivered a system processing ₹200Cr+ monthly."
-        </p>
-
-        <div class="flex items-center gap-3 mb-6">
-          <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">
-            RK
-          </div>
-          <div>
-            <p class="font-semibold">Ravi Kumar</p>
-            <p class="text-xs text-base-content/50">CTO, FinPay Technologies</p>
-          </div>
-        </div>
-
-        <!-- Highlight Stats -->
-        <div class="grid grid-cols-2 gap-4 mt-6">
-          <div class="p-4 bg-base-100 rounded-xl border border-base-content/10 text-center">
-            <p class="text-xl font-black text-primary">6 months</p>
-            <p class="text-xs text-base-content/50">Time saved</p>
-          </div>
-          <div class="p-4 bg-base-100 rounded-xl border border-base-content/10 text-center">
-            <p class="text-xl font-black text-primary">₹200Cr+</p>
-            <p class="text-xs text-base-content/50">Processed monthly</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-</section>
+    </section>
     <!-- ═══════════════════════════════════
          4. ENGAGEMENT MODELS & PRICING
     ════════════════════════════════════ -->
@@ -282,16 +301,16 @@
         <div class="text-center mb-16 max-w-3xl mx-auto">
           <div class="badge badge-outline badge-lg mb-4">Engagement Models</div>
           <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">Transparent Pricing Ranges</h2>
-          <p class="text-base-content/60">We share ranges — not vague "contact us". Serious projects deserve honest numbers.</p>
+          <p class="text-base-content/60">We share ranges — not vague "contact us". Serious projects deserve honest
+            numbers.</p>
         </div>
 
         <!-- Engagement option cards -->
         <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
-          <div v-for="(model, i) in engagementModels" :key="model.name"
-            :class="[
-              'card border rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1',
-              i === 1 ? 'border-primary bg-primary/5 ring-1 ring-primary/20' : 'border-base-content/10 bg-base-200'
-            ]">
+          <div v-for="(model, i) in engagementModels" :key="model.name" :class="[
+            'card border rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1',
+            i === 1 ? 'border-primary bg-primary/5 ring-1 ring-primary/20' : 'border-base-content/10 bg-base-200'
+          ]">
             <div class="card-body p-8">
               <div v-if="i === 1" class="badge badge-primary badge-sm mb-2">Most Common</div>
               <h3 class="text-xl font-black mb-1">{{ model.name }}</h3>
@@ -299,13 +318,15 @@
               <div class="text-3xl font-black text-primary mb-4">{{ model.range }}</div>
               <ul class="space-y-2 text-sm text-base-content/70">
                 <li v-for="f in model.features" :key="f" class="flex items-start gap-2">
-                  <svg class="w-4 h-4 text-success shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  <svg class="w-4 h-4 text-success shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
                   </svg>
                   {{ f }}
                 </li>
               </ul>
-              <button @click="showModal = true" :class="['btn btn-sm mt-6 w-full', i === 1 ? 'btn-primary' : 'btn-outline']">
+              <button @click="showModal = true"
+                :class="['btn btn-sm mt-6 w-full', i === 1 ? 'btn-primary' : 'btn-outline']">
                 Get Estimate
               </button>
             </div>
@@ -324,7 +345,8 @@
               <p class="text-xs text-base-content/60 leading-relaxed">{{ tier.desc }}</p>
             </div>
           </div>
-          <div class="mt-6 p-5 bg-warning/10 border border-warning/20 rounded-2xl text-sm text-base-content/70 leading-relaxed">
+          <div
+            class="mt-6 p-5 bg-warning/10 border border-warning/20 rounded-2xl text-sm text-base-content/70 leading-relaxed">
             <strong class="text-warning">Assumption note:</strong>
             Ranges above assume 3–6 month timeline, standard integrations (OAuth, PostgreSQL), and non-regulated data.
             For HIPAA/FHIR/SOC2 compliance, add 20–40%. Features &amp; third-party integrations add cost.
@@ -341,13 +363,15 @@
         <div class="text-center mb-16 max-w-3xl mx-auto">
           <div class="badge badge-outline badge-lg mb-4">How We Work</div>
           <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">Our Development Approach</h2>
-          <p class="text-base-content/60">We follow a structured, transparent process to ensure quality and scalability.</p>
+          <p class="text-base-content/60">We follow a structured, transparent process to ensure quality and scalability.
+          </p>
         </div>
 
         <div class="max-w-5xl mx-auto space-y-4">
           <div v-for="(step, i) in processSteps" :key="step.title"
             class="flex gap-6 items-start p-6 bg-base-100 rounded-2xl border border-base-content/5 hover:border-primary/20 hover:shadow-md transition-all group">
-            <div class="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center font-black text-primary shrink-0 group-hover:bg-primary group-hover:text-primary-content transition-all text-lg">
+            <div
+              class="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center font-black text-primary shrink-0 group-hover:bg-primary group-hover:text-primary-content transition-all text-lg">
               {{ i + 1 }}
             </div>
             <div class="flex-1">
@@ -371,7 +395,8 @@
           <div class="text-center mb-16">
             <div class="badge badge-outline badge-lg mb-4">Legal &amp; Trust</div>
             <h2 class="text-3xl sm:text-4xl font-black mb-4">Security, IP &amp; Terms — Upfront</h2>
-            <p class="text-base-content/60">No surprises in the contract. Everything important is disclosed before you sign.</p>
+            <p class="text-base-content/60">No surprises in the contract. Everything important is disclosed before you
+              sign.</p>
           </div>
 
           <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -379,7 +404,7 @@
               class="p-6 bg-base-200 rounded-2xl border border-base-content/5 hover:border-primary/20 hover:shadow-md transition-all">
               <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                 <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" :d="trust.icon"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" :d="trust.icon" />
                 </svg>
               </div>
               <h3 class="font-bold text-sm mb-2">{{ trust.title }}</h3>
@@ -420,14 +445,16 @@
               </div>
               <div class="flex items-center gap-2 p-3 bg-success/10 border border-success/20 rounded-xl mb-4">
                 <svg class="w-5 h-5 text-success shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
                 <span class="text-success font-bold text-sm">{{ cs.outcome }}</span>
               </div>
               <div class="flex flex-wrap gap-1.5 mb-5">
                 <span v-for="t in cs.stack" :key="t" class="badge badge-ghost badge-sm">{{ t }}</span>
               </div>
-              <button @click="showModal = true" class="btn btn-outline btn-sm w-full group-hover:btn-primary transition-all">
+              <button @click="showModal = true"
+                class="btn btn-outline btn-sm w-full group-hover:btn-primary transition-all">
                 Read Case Study →
               </button>
             </div>
@@ -448,7 +475,8 @@
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           <div v-for="member in teamMembers" :key="member.name"
             class="flex gap-4 p-6 bg-base-200 rounded-2xl border border-base-content/5 hover:border-primary/20 hover:shadow-md transition-all">
-            <div class="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center font-black text-primary text-lg shrink-0">
+            <div
+              class="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center font-black text-primary text-lg shrink-0">
               {{ member.initials }}
             </div>
             <div>
@@ -463,7 +491,8 @@
 
         <!-- Certifications -->
         <div class="mt-12 flex flex-wrap justify-center gap-4">
-          <div v-for="cert in certifications" :key="cert" class="px-5 py-2.5 bg-base-200 border border-base-content/10 rounded-xl text-sm font-semibold text-base-content/60">
+          <div v-for="cert in certifications" :key="cert"
+            class="px-5 py-2.5 bg-base-200 border border-base-content/10 rounded-xl text-sm font-semibold text-base-content/60">
             {{ cert }}
           </div>
         </div>
@@ -485,9 +514,11 @@
           <div class="space-y-3">
             <div v-for="(faq, i) in faqs" :key="i"
               class="collapse collapse-plus bg-base-100 rounded-2xl border border-base-content/5 hover:border-primary/20 hover:shadow-md transition-all">
-              <input type="radio" name="faq-custom" :checked="i === 0"/>
+              <input type="radio" name="faq-custom" :checked="i === 0" />
               <div class="collapse-title font-semibold pr-12 flex items-center gap-3">
-                <span class="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs shrink-0">{{ i + 1 }}</span>
+                <span
+                  class="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs shrink-0">{{
+                  i + 1 }}</span>
                 {{ faq.q }}
               </div>
               <div class="collapse-content text-sm text-base-content/70 leading-relaxed pl-11">
@@ -509,7 +540,9 @@
     ════════════════════════════════════ -->
     <section id="contact" class="py-24 bg-base-100 relative overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-primary/80"></div>
-      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.3),transparent_60%)]"></div>
+      <div
+        class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.3),transparent_60%)]">
+      </div>
 
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <div class="max-w-3xl mx-auto text-primary-content">
@@ -518,22 +551,22 @@
             <span class="block mt-2">Works for You</span>
           </h2>
           <p class="text-xl opacity-90 mb-4">
-            Transform your ideas into powerful digital solutions with KM Software's.
+            Transform your ideas into powerful digital solutions with KM Software.
           </p>
           <p class="text-lg opacity-80 mb-10">
             Let's create custom software that simplifies operations, boosts productivity, and scales with your business.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              @click="showModal = true"
-              class="btn btn-lg bg-base-100 text-primary hover:bg-base-200 border-none shadow-2xl px-10 group"
-            >
+            <button @click="showModal = true"
+              class="btn btn-lg bg-base-100 text-primary hover:bg-base-200 border-none shadow-2xl px-10 group">
               <span class="font-bold">Start Your Custom Project Today</span>
-              <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+              <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </button>
-            <NuxtLink to="/contact" class="btn btn-lg btn-ghost border-2 border-base-100/40 text-primary-content hover:bg-base-100/10 px-10">
+            <NuxtLink to="/contact"
+              class="btn btn-lg btn-ghost border-2 border-base-100/40 text-primary-content hover:bg-base-100/10 px-10">
               Or Contact Us
             </NuxtLink>
           </div>
@@ -553,28 +586,33 @@
       <div class="modal-box max-w-2xl w-full max-h-[90vh] overflow-y-auto">
         <button @click="showModal = false" class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4">✕</button>
         <h3 class="font-black text-2xl mb-2">Request a Proposal</h3>
-        <p class="text-sm text-base-content/60 mb-6">We'll respond within 24 hours with next steps and a calendar link.</p>
+        <p class="text-sm text-base-content/60 mb-6">We'll respond within 24 hours with next steps and a calendar link.
+        </p>
 
         <form @submit.prevent="submitForm" class="space-y-4">
           <div class="grid sm:grid-cols-2 gap-4">
             <div class="form-control">
               <label class="label"><span class="label-text text-xs font-semibold">Company Name *</span></label>
-              <input v-model="form.company" type="text" required class="input input-bordered input-sm" placeholder="Acme Corp"/>
+              <input v-model="form.company" type="text" required class="input input-bordered input-sm"
+                placeholder="Acme Corp" />
             </div>
             <div class="form-control">
               <label class="label"><span class="label-text text-xs font-semibold">Your Name *</span></label>
-              <input v-model="form.name" type="text" required class="input input-bordered input-sm" placeholder="Ravi Kumar"/>
+              <input v-model="form.name" type="text" required class="input input-bordered input-sm"
+                placeholder="Ravi Kumar" />
             </div>
           </div>
 
           <div class="grid sm:grid-cols-2 gap-4">
             <div class="form-control">
               <label class="label"><span class="label-text text-xs font-semibold">Work Email *</span></label>
-              <input v-model="form.email" type="email" required class="input input-bordered input-sm" placeholder="ravi@acme.com"/>
+              <input v-model="form.email" type="email" required class="input input-bordered input-sm"
+                placeholder="ravi@acme.com" />
             </div>
             <div class="form-control">
               <label class="label"><span class="label-text text-xs font-semibold">Phone</span></label>
-              <input v-model="form.phone" type="tel" class="input input-bordered input-sm" placeholder="+91 98765 43210"/>
+              <input v-model="form.phone" type="tel" class="input input-bordered input-sm"
+                placeholder="+91 98765 43210" />
             </div>
           </div>
 
@@ -597,25 +635,29 @@
 
           <div class="form-control">
             <label class="label"><span class="label-text text-xs font-semibold">Desired Start Date</span></label>
-            <input v-model="form.startDate" type="month" class="input input-bordered input-sm"/>
+            <input v-model="form.startDate" type="month" class="input input-bordered input-sm" />
           </div>
 
           <div class="form-control">
-            <label class="label"><span class="label-text text-xs font-semibold">Brief Description (200 chars) *</span></label>
-            <textarea v-model="form.description" required maxlength="200" rows="3" class="textarea textarea-bordered text-sm" placeholder="What are you building? What problem does it solve?"></textarea>
-            <label class="label"><span class="label-alt text-xs text-base-content/40">{{ form.description.length }}/200</span></label>
+            <label class="label"><span class="label-text text-xs font-semibold">Brief Description (200 chars)
+                *</span></label>
+            <textarea v-model="form.description" required maxlength="200" rows="3"
+              class="textarea textarea-bordered text-sm"
+              placeholder="What are you building? What problem does it solve?"></textarea>
+            <label class="label"><span class="label-alt text-xs text-base-content/40">{{ form.description.length
+                }}/200</span></label>
           </div>
 
           <div class="form-control">
             <label class="label cursor-pointer justify-start gap-3">
-              <input v-model="form.wantsEstimate" type="checkbox" class="checkbox checkbox-sm checkbox-primary"/>
+              <input v-model="form.wantsEstimate" type="checkbox" class="checkbox checkbox-sm checkbox-primary" />
               <span class="label-text text-sm">I want a non-binding cost estimate</span>
             </label>
           </div>
 
           <div class="form-control">
             <label class="label cursor-pointer justify-start gap-3">
-              <input v-model="form.wantsNDA" type="checkbox" class="checkbox checkbox-sm checkbox-primary"/>
+              <input v-model="form.wantsNDA" type="checkbox" class="checkbox checkbox-sm checkbox-primary" />
               <span class="label-text text-sm">Please send an NDA before our first call</span>
             </label>
           </div>
@@ -624,20 +666,22 @@
             <button type="submit" class="btn btn-primary w-full">
               Submit Request
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </button>
           </div>
         </form>
 
-        <div v-if="formSucceeded" class="absolute inset-0 bg-base-100 rounded-2xl flex flex-col items-center justify-center text-center p-12">
+        <div v-if="formSucceeded"
+          class="absolute inset-0 bg-base-100 rounded-2xl flex flex-col items-center justify-center text-center p-12">
           <div class="w-16 h-16 rounded-full bg-success/10 flex items-center justify-center mb-6">
             <svg class="w-8 h-8 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
             </svg>
           </div>
           <h3 class="text-2xl font-black mb-2">Proposal Submitted!</h3>
-          <p class="text-base-content/60 text-sm mb-6">We'll review and respond within 24 hours with next steps and a calendar invite.</p>
+          <p class="text-base-content/60 text-sm mb-6">We'll review and respond within 24 hours with next steps and a
+            calendar invite.</p>
           <button @click="showModal = false; formSucceeded = false" class="btn btn-primary">Close</button>
         </div>
       </div>
@@ -649,10 +693,10 @@
 
 <script setup lang="ts">
 useHead({
-  title: "Custom Software Development | KM Software's",
+  title: "Custom Software Development | KM Software",
   meta: [
     { name: 'description', content: 'Custom software development tailored to your business. KM Software\'s builds secure, scalable software solutions — from internal tools to enterprise platforms.' },
-    { property: 'og:title', content: "Custom Software Development | KM Software's" },
+    { property: 'og:title', content: "Custom Software Development | KM Software" },
     { property: 'og:description', content: 'Software built around your business. Custom CRM, ERP, SaaS platforms & automation tools.' }
   ]
 })
