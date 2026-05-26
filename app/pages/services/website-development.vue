@@ -44,7 +44,7 @@
               </h1>
 
               <p class="text-base sm:text-lg text-base-content/70 leading-relaxed max-w-lg">
-                At KM Software, we design and develop scalable, secure, and conversion-focused websites tailored to
+                At KM Softwares, we design and develop scalable, secure, and conversion-focused websites tailored to
                 startups, growing businesses, and enterprises worldwide.
               </p>
             </div>
@@ -263,8 +263,7 @@
 
             <h2 class="text-4xl font-black mb-6">
               Why Choose <span
-                class="mt-2 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">KM
-                Software?</span>
+                class="mt-2 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">KM Softwares?</span>
             </h2>
 
             <p class="text-lg text-base-content/70">
@@ -341,7 +340,7 @@
           </h2>
 
           <p class="text-xl sm:text-2xl mb-10 max-w-2xl mx-auto font-light leading-relaxed">
-            Partner with KM Software and transform your ideas into high-performing digital solutions.
+            Partner with KM Softwares and transform your ideas into high-performing digital solutions.
           </p>
 
           <NuxtLink to="/contact"
@@ -356,7 +355,7 @@
 
 <script setup lang="ts">
 useHead({
-  title: "Website Development Services | KM Software",
+  title: "Website Development Services | KM Softwares",
   meta: [
     {
       name: 'description',

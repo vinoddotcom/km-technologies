@@ -426,7 +426,7 @@
             <span class="block mt-2">Today</span>
           </h2>
           <p class="text-xl opacity-90 mb-4">
-            Transform your ideas into powerful digital solutions with KM Software.
+            Transform your ideas into powerful digital solutions with KM Softwares.
           </p>
           <p class="text-lg opacity-80 mb-10">
             Let's create software that boosts productivity, simplifies operations, and scales with your business.
@@ -579,7 +579,7 @@ import {
 } from '@heroicons/vue/24/outline'
 
 useHead({
-  title: "Dedicated Developers | Staff Augmentation Services - KM Software",
+  title: "Dedicated Developers | Staff Augmentation Services - KM Softwares",
   meta: [
     {
       name: 'description',
@@ -587,7 +587,7 @@ useHead({
     },
     {
       property: 'og:title',
-      content: "Dedicated Developers | Staff Augmentation Services - KM Software"
+      content: "Dedicated Developers | Staff Augmentation Services - KM Softwares"
     },
     {
       property: 'og:description',

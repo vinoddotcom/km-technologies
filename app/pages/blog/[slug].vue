@@ -138,7 +138,7 @@ watchEffect(() => {
   if (post.value) {
     const p = post.value as any;
     useSeoMeta({
-      title: `${p.title} | KM Software Blog`,
+      title: `${p.title} | KM Softwares Blog`,
       description: p.excerpt,
       ogTitle: p.title,
       ogDescription: p.excerpt,

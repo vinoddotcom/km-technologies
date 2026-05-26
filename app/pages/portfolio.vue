@@ -89,7 +89,7 @@ useHead({
               Delivering Smart, Scalable & Secure Digital Solutions Worldwide
             </h2>
             <p class="text-lg text-base-content/70 mb-10 leading-relaxed max-w-xl">
-              KM Software’s delivers world-class IT services and software development for clients across the USA, UK, Europe, and beyond.
+              KM Softwares delivers world-class IT services and software development for clients across the USA, UK, Europe, and beyond.
               <span class="block mt-4">Secure, scalable solutions built by expert developers — delivered on time and at the right cost.</span>
             </p>
             <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">

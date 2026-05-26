@@ -11,7 +11,7 @@
     ]">
       <!-- Logo -->
       <NuxtLink to="/" class="flex items-center gap-2 group relative z-10 transition-transform hover:scale-105">
-        <img src="/logo1.png" alt="KM Software" class="h-12 sm:h-16 w-auto object-contain" />
+        <img src="/logo1.png" alt="KM Softwares" class="h-12 sm:h-16 w-auto object-contain" />
       </NuxtLink>
 
       <!-- Desktop Navigation -->

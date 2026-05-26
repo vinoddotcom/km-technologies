@@ -48,7 +48,7 @@
             </h1>
 
             <p class="text-base sm:text-lg text-base-content/80 leading-relaxed max-w-lg mb-4">
-              Every business has unique challenges — your software should reflect that. At KM Software, we design and
+              Every business has unique challenges — your software should reflect that. At KM Softwares, we design and
               develop custom software solutions tailored to your workflows, goals, and long-term scalability.
             </p>
             <p class="text-base sm:text-lg text-base-content/70 leading-relaxed max-w-lg">
@@ -219,16 +219,16 @@
       </div>
     </section>
     <!-- ═══════════════════════════════════
-     WHY CHOOSE KM Software
+     WHY CHOOSE KM Softwares
 ════════════════════════════════════ -->
     <section id="why-km" class="py-24 bg-base-200">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
 
         <!-- Heading -->
         <div class="text-center mb-16 max-w-3xl mx-auto">
-          <div class="badge badge-outline badge-lg mb-4">Why KM Software</div>
+          <div class="badge badge-outline badge-lg mb-4">Why KM Softwares</div>
           <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">
-            Why Choose <span class="text-primary">KM Software</span>?
+            Why Choose <span class="text-primary">KM Softwares</span>?
           </h2>
           <p class="text-base-content/60 text-lg">
             We build scalable, secure, and business-driven software — not just code.
@@ -551,7 +551,7 @@
             <span class="block mt-2">Works for You</span>
           </h2>
           <p class="text-xl opacity-90 mb-4">
-            Transform your ideas into powerful digital solutions with KM Software.
+            Transform your ideas into powerful digital solutions with KM Softwares.
           </p>
           <p class="text-lg opacity-80 mb-10">
             Let's create custom software that simplifies operations, boosts productivity, and scales with your business.
@@ -693,10 +693,10 @@
 
 <script setup lang="ts">
 useHead({
-  title: "Custom Software Development | KM Software",
+  title: "Custom Software Development | KM Softwares",
   meta: [
-    { name: 'description', content: 'Custom software development tailored to your business. KM Software\'s builds secure, scalable software solutions — from internal tools to enterprise platforms.' },
-    { property: 'og:title', content: "Custom Software Development | KM Software" },
+    { name: 'description', content: 'Custom software development tailored to your business. KM Softwares\'s builds secure, scalable software solutions — from internal tools to enterprise platforms.' },
+    { property: 'og:title', content: "Custom Software Development | KM Softwares" },
     { property: 'og:description', content: 'Software built around your business. Custom CRM, ERP, SaaS platforms & automation tools.' }
   ]
 })

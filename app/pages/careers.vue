@@ -17,7 +17,7 @@
               <path
                 d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
             </svg>
-            <span class="text-sm font-bold text-primary">Careers at KM Software</span>
+            <span class="text-sm font-bold text-primary">Careers at KM Softwares</span>
           </div>
 
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-base-content leading-tight">
@@ -29,7 +29,7 @@
           </h1>
 
           <p class="text-lg sm:text-xl text-base-content/70 leading-relaxed max-w-3xl mx-auto">
-            At KM Software, we're building a team of passionate innovators who love solving real-world problems through
+            At KM Softwares, we're building a team of passionate innovators who love solving real-world problems through
             technology. We believe great products come from great people — and we're always looking for talent that
             wants to grow, learn, and make an impact.
           </p>
@@ -96,12 +96,12 @@
       </div>
     </section>
 
-    <!-- Life at KM Software -->
+    <!-- Life at KM Softwares -->
     <section class="py-24 bg-base-200">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 space-y-4">
           <div class="badge badge-secondary badge-lg">Culture</div>
-          <h2 class="text-4xl sm:text-5xl font-black">Life at KM Software</h2>
+          <h2 class="text-4xl sm:text-5xl font-black">Life at KM Softwares</h2>
           <p class="text-xl text-base-content/60 max-w-2xl mx-auto font-light">
             We value people, creativity, and innovation
           </p>
@@ -162,12 +162,12 @@
       </div>
     </section>
 
-    <!-- Opportunities at KM Software -->
+    <!-- Opportunities at KM Softwares -->
     <section class="py-24 bg-base-100">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 space-y-4">
           <div class="badge badge-primary badge-lg">Opportunities</div>
-          <h2 class="text-4xl sm:text-5xl font-black">Opportunities at KM Software</h2>
+          <h2 class="text-4xl sm:text-5xl font-black">Opportunities at KM Softwares</h2>
           <p class="text-xl text-base-content/60 max-w-3xl mx-auto font-light">
             While we may not always have multiple open positions, we frequently offer various ways to collaborate
           </p>
@@ -301,7 +301,7 @@
               </h2>
 
               <p class="text-lg sm:text-xl opacity-90 mb-4 max-w-2xl mx-auto leading-relaxed">
-                Your next big opportunity might start here. Join KM Software and be part of a journey where learning
+                Your next big opportunity might start here. Join KM Softwares and be part of a journey where learning
                 never stops and innovation never slows down.
               </p>
 
@@ -365,8 +365,8 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: "Careers at KM Software | Join Our Team",
-  description: 'Join KM Software\'s team of passionate innovators. We offer real-world projects, continuous learning, and a culture of growth. Explore our career opportunities.',
+  title: "Careers at KM Softwares | Join Our Team",
+  description: 'Join KM Softwares\'s team of passionate innovators. We offer real-world projects, continuous learning, and a culture of growth. Explore our career opportunities.',
 });
 
 const whyWorkWithUs = ref([

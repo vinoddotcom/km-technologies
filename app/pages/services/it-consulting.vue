@@ -45,7 +45,7 @@
               </h1>
 
               <p class="text-base sm:text-lg text-base-content/80 leading-relaxed max-w-lg mb-4">
-                Technology decisions can define the future of your business. At KM Software, we provide expert IT
+                Technology decisions can define the future of your business. At KM Softwares, we provide expert IT
                 consulting and managed services that help organizations plan, build, and scale with confidence.
               </p>
               <p class="text-base sm:text-lg text-base-content/70 leading-relaxed max-w-lg">
@@ -289,7 +289,7 @@
       </div>
     </section>
 
-    <!-- Why KM Software -->
+    <!-- Why KM Softwares -->
     <section class="py-24 bg-base-100">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
@@ -301,10 +301,10 @@
                   d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                   clip-rule="evenodd" />
               </svg>
-              <span class="text-sm font-bold text-primary">Why KM Software</span>
+              <span class="text-sm font-bold text-primary">Why KM Softwares</span>
             </div>
             <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
-              Why Choose KM Software?
+              Why Choose KM Softwares?
             </h2>
             <p class="text-xl text-base-content/60 max-w-3xl mx-auto font-light">
               We don't just advise — we help you execute and grow
@@ -430,7 +430,7 @@
             <span class="block mt-2">Move</span>
           </h2>
           <p class="text-xl opacity-90 mb-4">
-            Transform your ideas into powerful digital solutions with KM Software.
+            Transform your ideas into powerful digital solutions with KM Softwares.
           </p>
           <p class="text-lg opacity-80 mb-10">
             Let's create custom software that simplifies operations, boosts productivity, and scales with your business.
@@ -571,10 +571,10 @@
 
 <script setup lang="ts">
 useHead({
-  title: "IT Services & Consulting | KM Software",
+  title: "IT Services & Consulting | KM Softwares",
   meta: [
-    { name: 'description', content: 'Strategic IT consulting and managed services. Technology roadmap planning, system architecture, digital transformation, and 24/7 IT support by KM Software\'s.' },
-    { property: 'og:title', content: "IT Services & Consulting | KM Software" },
+    { name: 'description', content: 'Strategic IT consulting and managed services. Technology roadmap planning, system architecture, digital transformation, and 24/7 IT support by KM Softwares\'s.' },
+    { property: 'og:title', content: "IT Services & Consulting | KM Softwares" },
     { property: 'og:description', content: 'Strategic technology guidance for smarter growth.' }
   ]
 });

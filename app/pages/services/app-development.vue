@@ -46,7 +46,7 @@
               </h1>
 
               <p class="text-base sm:text-lg text-base-content/70 leading-relaxed max-w-lg mb-6">
-                At KM Software, we design and develop scalable, secure, and feature-rich mobile applications tailored
+                At KM Softwares, we design and develop scalable, secure, and feature-rich mobile applications tailored
                 for startups, growing businesses, and enterprises worldwide.
               </p>
               <ul class="space-y-2 mb-2">
@@ -363,7 +363,7 @@
           <!-- Full-width Heading Section -->
           <div class="mb-12 text-center">
             <div class="inline-block">
-              <div class="badge badge-secondary badge-lg mb-4">🎯 Why Choose KM Software?</div>
+              <div class="badge badge-secondary badge-lg mb-4">🎯 Why Choose KM Softwares?</div>
             </div>
             <h2 class="text-4xl sm:text-5xl font-black leading-tight mb-4">
               We Don't Just Build Apps.
@@ -725,7 +725,7 @@
             <span class="block mt-2">Works for You</span>
           </h2>
           <p class="text-xl opacity-90 mb-4">
-            Transform your ideas into powerful digital solutions with KM Software.
+            Transform your ideas into powerful digital solutions with KM Softwares.
           </p>
           <p class="text-lg opacity-80 mb-10">
             Let's create custom software that simplifies operations, boosts productivity, and scales with your business.
@@ -880,15 +880,15 @@ import {
   StarIcon
 } from '@heroicons/vue/24/outline'
 useHead({
-  title: "Mobile App Development Services | iOS & Android - KM Software",
+  title: "Mobile App Development Services | iOS & Android - KM Softwares",
   meta: [
     {
       name: 'description',
-      content: "KM Software designs and develops scalable, secure, and feature-rich mobile applications for iOS, Android & Cross-Platform tailored for startups, growing businesses, and enterprises worldwide."
+      content: "KM Softwares designs and develops scalable, secure, and feature-rich mobile applications for iOS, Android & Cross-Platform tailored for startups, growing businesses, and enterprises worldwide."
     },
     {
       property: 'og:title',
-      content: "Mobile App Development Services | iOS & Android - KM Software"
+      content: "Mobile App Development Services | iOS & Android - KM Softwares"
     },
     {
       property: 'og:description',

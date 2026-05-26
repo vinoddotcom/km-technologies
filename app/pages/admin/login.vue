@@ -75,7 +75,7 @@ definePageMeta({
   layout: false, // No layout for login page
 });
 
-useSeoMeta({ title: 'Admin Login | KM Software' });
+useSeoMeta({ title: 'Admin Login | KM Softwares' });
 
 const { login, user } = useAuth();
 const email = ref('');

@@ -8,10 +8,10 @@
 </template>
 
 <script setup lang="ts">
-// Set default theme on mount
-onMounted(() => {
-  if (import.meta.client) {
-    document.documentElement.setAttribute("data-theme", "business");
+// Set light theme as the default for SSR and client to prevent any black-to-light flash
+useHead({
+  htmlAttrs: {
+    'data-theme': 'km-theme'
   }
 });
 </script>

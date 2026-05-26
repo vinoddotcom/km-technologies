@@ -46,8 +46,7 @@
               </h1>
 
               <p class="text-base sm:text-lg text-base-content/80 leading-relaxed max-w-lg mb-4">
-                Modern businesses need flexible, secure, and high-performing infrastructure to stay competitive. At KM
-                Software, we help organizations adopt cloud and DevOps practices that improve scalability, accelerate
+                Modern businesses need flexible, secure, and high-performing infrastructure to stay competitive. At KM Softwares, we help organizations adopt cloud and DevOps practices that improve scalability, accelerate
                 releases, and optimize performance.
               </p>
               <p class="text-base sm:text-lg text-base-content/70 leading-relaxed max-w-lg">
@@ -261,7 +260,7 @@
       </div>
     </section>
 
-    <!-- Why Choose KM Software -->
+    <!-- Why Choose KM Softwares -->
     <section class="py-24 bg-base-100">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
@@ -273,10 +272,10 @@
                   d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                   clip-rule="evenodd" />
               </svg>
-              <span class="text-sm font-bold text-primary">Why KM Software</span>
+              <span class="text-sm font-bold text-primary">Why KM Softwares</span>
             </div>
             <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
-              Why Choose KM Software?
+              Why Choose KM Softwares?
             </h2>
             <p class="text-xl text-base-content/60 max-w-3xl mx-auto font-light">
               We don't just move you to the cloud — we help you optimize and scale it effectively
@@ -402,7 +401,7 @@
             <span class="block mt-2">Infrastructure</span>
           </h2>
           <p class="text-xl opacity-90 mb-4">
-            Transform your ideas into powerful digital solutions with KM Software.
+            Transform your ideas into powerful digital solutions with KM Softwares.
           </p>
           <p class="text-lg opacity-80 mb-10">
             Let's create custom software that simplifies operations, boosts productivity, and scales with your business.
@@ -543,10 +542,10 @@
 
 <script setup lang="ts">
 useHead({
-  title: "Cloud & DevOps Solutions | KM Software",
+  title: "Cloud & DevOps Solutions | KM Softwares",
   meta: [
-    { name: 'description', content: 'Scalable cloud infrastructure and DevOps solutions. AWS, Azure, GCP migration, CI/CD pipelines, and 24/7 monitoring by KM Software\'s.' },
-    { property: 'og:title', content: "Cloud & DevOps Solutions | KM Software" },
+    { name: 'description', content: 'Scalable cloud infrastructure and DevOps solutions. AWS, Azure, GCP migration, CI/CD pipelines, and 24/7 monitoring by KM Softwares\'s.' },
+    { property: 'og:title', content: "Cloud & DevOps Solutions | KM Softwares" },
     { property: 'og:description', content: 'Scalable infrastructure. Faster deployments. Smarter operations.' }
   ]
 });

@@ -17,7 +17,7 @@
         class="prose prose-base-content prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-4 prose-p:text-base-content/80 prose-li:text-base-content/80 max-w-none">
 
         <p class="lead text-lg">
-          At KM Software ("we," "our," or "us"), your privacy is deeply important to us. This Privacy Policy outlines
+          At KM Softwares ("we," "our," or "us"), your privacy is deeply important to us. This Privacy Policy outlines
           the types of personal information that is received and collected by our services, and how it is used.
         </p>
 
@@ -78,7 +78,7 @@
           our Compliance Officer at:
         </p>
         <div class="bg-base-200/50 p-6 rounded-xl border border-base-content/5 mt-6">
-          <p class="font-bold text-primary mb-1">KM Software Privacy Team</p>
+          <p class="font-bold text-primary mb-1">KM Softwares Privacy Team</p>
           <p>Email: <a href="mailto:privacy@kmsoftware.com"
               class="text-secondary hover:underline">privacy@kmsoftware.com</a></p>
           <p>Address: 123 Tech Street, Silicon Valley, CA 94000</p>
@@ -91,7 +91,7 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Privacy Policy | KM Software\'s',
-  description: 'Understand how KM Software\'s collects, uses, and protects your personal data.',
+  title: 'Privacy Policy | KM Softwares\'s',
+  description: 'Understand how KM Softwares\'s collects, uses, and protects your personal data.',
 })
 </script>

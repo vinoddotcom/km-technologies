@@ -17,7 +17,7 @@
 
         <div
           class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm mb-6">
-          <span class="text-lg font-bold tracking-wider uppercase text-primary">About KM Software</span>
+          <span class="text-lg font-bold tracking-wider uppercase text-primary">About KM Softwares</span>
         </div>
 
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
@@ -27,7 +27,7 @@
         </h1>
 
         <p class="text-xl sm:text-2xl text-base-content/70 leading-relaxed max-w-3xl mx-auto mb-8">
-          KM Software is a technology-driven IT company specializing in building modern, intelligent,
+          KM Softwares is a technology-driven IT company specializing in building modern, intelligent,
           and secure digital solutions that empower businesses to grow and innovate.
         </p>
 
@@ -62,7 +62,7 @@
 
                 <div class="space-y-4">
                   <p class="text-lg text-base-content/70 leading-relaxed">
-                    KM Software was founded with a revolutionary vision — to bridge the gap between
+                    KM Softwares was founded with a revolutionary vision — to bridge the gap between
                     innovative technology and real-world business needs. What began as a small team of
                     passionate engineers has evolved into a global technology partner trusted by enterprises
                     across multiple industries.
@@ -134,7 +134,7 @@
 
             <p class="text-xl text-base-content/70 max-w-3xl mx-auto">
               We are a team of passionate developers, designers, and technology experts with a strong
-              focus on quality and innovation. At KM Software, we believe technology should not only
+              focus on quality and innovation. At KM Softwares, we believe technology should not only
               solve problems but also create new opportunities for businesses to scale and succeed.
             </p>
           </div>
@@ -679,7 +679,7 @@
               </h3>
 
               <p class="text-xl text-base-content/70 mb-8 leading-relaxed">
-                At <span class="font-bold text-accent">KM Software</span>, we go beyond development.
+                At <span class="font-bold text-accent">KM Softwares</span>, we go beyond development.
                 We collaborate with our clients to build future-ready digital solutions that deliver
                 real business value and sustainable growth.
               </p>
@@ -729,7 +729,7 @@
             </h3>
 
             <p class="text-xl text-base-content/70 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Partner with KM Software to transform your ideas into powerful digital solutions
+              Partner with KM Softwares to transform your ideas into powerful digital solutions
               that drive business growth and innovation.
             </p>
 
@@ -757,7 +757,7 @@
             </div>
 
             <p class="mt-10 text-base-content/60 text-sm">
-              KM Software — Building Smart, Secure & Scalable Digital Solutions
+              KM Softwares — Building Smart, Secure & Scalable Digital Solutions
             </p>
           </div>
         </div>
@@ -830,11 +830,11 @@ onMounted(() => {
 })
 
 useHead({
-  title: "About Us | KM Software - Engineering the Future with Smart & Secure Technology",
+  title: "About Us | KM Softwares - Engineering the Future with Smart & Secure Technology",
   meta: [
     {
       name: 'description',
-      content: "KM Software is a technology-driven IT company specializing in building modern, intelligent, and secure digital solutions that empower businesses to grow and innovate."
+      content: "KM Softwares is a technology-driven IT company specializing in building modern, intelligent, and secure digital solutions that empower businesses to grow and innovate."
     }
   ]
 })

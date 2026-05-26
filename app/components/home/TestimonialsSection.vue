@@ -106,7 +106,7 @@ interface Testimonial {
 
 const testimonials = ref<Testimonial[]>([
   {
-    quote: "KM Software transformed our outdated systems into a modern, scalable platform. Their team's expertise and dedication exceeded our expectations.",
+    quote: "KM Softwares transformed our outdated systems into a modern, scalable platform. Their team's expertise and dedication exceeded our expectations.",
     name: "Sarah Johnson",
     role: "CTO",
     company: "TechCorp Inc",

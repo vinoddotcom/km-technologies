@@ -17,20 +17,20 @@
         class="prose prose-base-content prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-4 prose-p:text-base-content/80 prose-li:text-base-content/80 max-w-none">
 
         <p class="lead text-lg">
-          Welcome to KM Software! By accessing or using our website, services, properties, and applications, you agree
+          Welcome to KM Softwares! By accessing or using our website, services, properties, and applications, you agree
           to be bound by these Terms of Service.
         </p>
 
         <h2>1. Agreement to Terms</h2>
         <p>
-          By engaging KM Software for consulting, software engineering, mobile development, or related digital services,
+          By engaging KM Softwares for consulting, software engineering, mobile development, or related digital services,
           you confirm that you have read, understood, and agreed to these Terms. If you do not agree, you are advised
           not to use our services.
         </p>
 
         <h2>2. Services Provided</h2>
         <p>
-          KM Software provides professional software design, development, artificial intelligence implementation, and
+          KM Softwares provides professional software design, development, artificial intelligence implementation, and
           cyber-security consulting. All projects are subject to an independent Statement of Work (SOW) or Master
           Service Agreement (MSA) signed prior to commencement.
         </p>
@@ -38,7 +38,7 @@
         <h2>3. Intellectual Property Rights</h2>
         <p>
           Unless otherwise explicitly stated in the SOW, the intellectual property (IP), source code, and assets
-          developed by KM Software for custom client projects are transferred to the client upon final payment in full.
+          developed by KM Softwares for custom client projects are transferred to the client upon final payment in full.
           Any preliminary templates, open-source libraries, or pre-existing proprietary architectures used remain the
           property of their respective owners.
         </p>
@@ -46,13 +46,13 @@
         <h2>4. Client Responsibilities</h2>
         <p>
           To deliver successful outcomes, clients must provide necessary assets, API keys, credentials, and feedback in
-          a timely manner. Delays on your side may affect development timelines, and KM Software holds no liability for
+          a timely manner. Delays on your side may affect development timelines, and KM Softwares holds no liability for
           milestone infractions caused by incomplete client provisions.
         </p>
 
         <h2>5. Limitation of Liability</h2>
         <p>
-          In no event shall KM Software, its directors, employees, or partners be liable for any indirect, incidental,
+          In no event shall KM Softwares, its directors, employees, or partners be liable for any indirect, incidental,
           special, consequential, or punitive damages arising from the use or inability to use our software products
           post-deployment, barring instances of gross negligence.
         </p>
@@ -70,7 +70,7 @@
           our administrative team:
         </p>
         <div class="bg-base-200/50 p-6 rounded-xl border border-base-content/5 mt-6">
-          <p class="font-bold text-primary mb-1">KM Software Legal Department</p>
+          <p class="font-bold text-primary mb-1">KM Softwares Legal Department</p>
           <p>Email: <a href="mailto:legal@kmsoftware.com"
               class="text-secondary hover:underline">legal@kmsoftware.com</a></p>
           <p>Address: 123 Tech Street, Silicon Valley, CA 94000</p>
@@ -83,7 +83,7 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Terms of Service | KM Software\'s',
-  description: 'Understand the terms and conditions under which KM Software\'s provides digital solutions and services.',
+  title: 'Terms of Service | KM Softwares\'s',
+  description: 'Understand the terms and conditions under which KM Softwares\'s provides digital solutions and services.',
 })
 </script>

@@ -49,7 +49,7 @@
                 gaining a competitive edge through automation, smarter insights, and faster decision-making.
               </p>
               <p class="text-base sm:text-lg text-base-content/70 leading-relaxed max-w-lg">
-                At KM Software, we build practical AI and Machine Learning solutions that help you automate processes,
+                At KM Softwares, we build practical AI and Machine Learning solutions that help you automate processes,
                 uncover insights, and create intelligent digital experiences. From chatbots to predictive analytics, we
                 turn data into real business value.
               </p>
@@ -280,7 +280,7 @@
       </div>
     </section>
 
-    <!-- Why Choose KM Software -->
+    <!-- Why Choose KM Softwares -->
     <section class="py-24 bg-base-200">
       <div class="container mx-auto px-6">
 
@@ -292,7 +292,7 @@
             <h2 class="text-4xl lg:text-5xl font-black leading-tight mb-6">
               Why Choose
               <span class="block text-primary">
-                KM Software
+                KM Softwares
               </span>
             </h2>
 
@@ -405,7 +405,7 @@
             <span class="block mt-2">power of AI?</span>
           </h2>
           <p class="text-xl opacity-90 mb-4">
-            Transform your ideas into powerful digital solutions with KM Software.
+            Transform your ideas into powerful digital solutions with KM Softwares.
           </p>
           <p class="text-lg opacity-80 mb-10">
             Let's create custom software that simplifies operations, boosts productivity, and scales with your business.
@@ -555,9 +555,9 @@ import {
 } from '@heroicons/vue/24/outline'
 // SEO
 useHead({
-  title: "AI & Machine Learning Solutions | KM Software",
+  title: "AI & Machine Learning Solutions | KM Softwares",
   meta: [
-    { name: 'description', content: 'Transform your business with intelligent automation. KM Software\'s builds practical AI and Machine Learning solutions — from chatbots to predictive analytics.' }
+    { name: 'description', content: 'Transform your business with intelligent automation. KM Softwares\'s builds practical AI and Machine Learning solutions — from chatbots to predictive analytics.' }
   ]
 });
 const showModal = ref(false)

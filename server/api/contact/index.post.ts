@@ -47,7 +47,7 @@ export default defineEventHandler(async (event) => {
           'Content-Type': 'application/json',
         },
         body: {
-          from: 'KM Software <noreply@kmsoftware.com>',
+          from: 'KM Softwares <noreply@kmsoftware.com>',
           to: [adminEmail],
           subject: `New Contact Form Submission from ${body.firstName} ${body.lastName}`,
           html: `
@@ -66,7 +66,7 @@ export default defineEventHandler(async (event) => {
                 ${body.message}
               </div>
               <hr style="border: 1px solid #e5e7eb; margin-top: 24px;" />
-              <p style="color: #6b7280; font-size: 12px;">This email was sent from the KM Software contact form. <a href="${process.env.SITE_URL || 'https://kmsoftware.com'}/admin/contacts">View in Dashboard</a></p>
+              <p style="color: #6b7280; font-size: 12px;">This email was sent from the KM Softwares contact form. <a href="${process.env.SITE_URL || 'https://kmsoftware.com'}/admin/contacts">View in Dashboard</a></p>
             </div>
           `,
         },

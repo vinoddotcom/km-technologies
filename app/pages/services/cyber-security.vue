@@ -45,7 +45,7 @@
               </h1>
 
               <p class="text-base sm:text-lg text-base-content/80 leading-relaxed max-w-lg mb-4">
-                In today's digital world, security is not optional — it's essential. At KM Software, we provide advanced
+                In today's digital world, security is not optional — it's essential. At KM Softwares, we provide advanced
                 cyber security solutions that protect your data, systems, and users from evolving cyber threats.
               </p>
               <p class="text-base sm:text-lg text-base-content/70 leading-relaxed max-w-lg">
@@ -300,15 +300,15 @@
 
       </div>
     </section>
-    <!-- Why KM Software -->
+    <!-- Why KM Softwares -->
     <section class="py-24 bg-base-200">
       <div class="container mx-auto px-6">
 
         <!-- Heading -->
         <div class="text-center mb-16">
-          <div class="badge badge-outline mb-4">Why KM Software</div>
+          <div class="badge badge-outline mb-4">Why KM Softwares</div>
           <h2 class="text-4xl font-black mb-4">
-            Why Choose KM Software?
+            Why Choose KM Softwares?
           </h2>
           <p class="text-base-content/60 max-w-2xl mx-auto">
             A trusted partner for enterprise-grade cybersecurity solutions.
@@ -409,7 +409,7 @@
             <span class="block mt-2">business?</span>
           </h2>
           <p class="text-xl opacity-90 mb-4">
-            Transform your ideas into powerful digital solutions with KM Software.
+            Transform your ideas into powerful digital solutions with KM Softwares.
           </p>
           <p class="text-lg opacity-80 mb-10">
             Let's create custom software that simplifies operations, boosts productivity, and scales with your business.
@@ -557,9 +557,9 @@ import {
   EyeIcon
 } from '@heroicons/vue/24/outline'
 useHead({
-  title: "Cyber Security Services | KM Software",
+  title: "Cyber Security Services | KM Softwares",
   meta: [
-    { name: 'description', content: 'Protect your business from modern digital threats. KM Software\'s provides advanced cyber security solutions — from vulnerability testing to enterprise-grade security architecture.' }
+    { name: 'description', content: 'Protect your business from modern digital threats. KM Softwares\'s provides advanced cyber security solutions — from vulnerability testing to enterprise-grade security architecture.' }
   ]
 });
 

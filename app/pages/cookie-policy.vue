@@ -17,7 +17,7 @@
         class="prose prose-base-content prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-4 prose-p:text-base-content/80 prose-li:text-base-content/80 max-w-none">
 
         <p class="lead text-lg">
-          This Cookie Policy explains how KM Software ("we," "our," or "us") uses cookies, tracking technologies, and
+          This Cookie Policy explains how KM Softwares ("we," "our," or "us") uses cookies, tracking technologies, and
           metadata logs when you interact with our website. It outlines your rights to decline tracking and clarifies
           what these minimal technologies do.
         </p>
@@ -64,7 +64,7 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Cookie Policy | KM Software\'s',
-  description: 'A transparent definition of how KM Software\'s utilizes minimalistic cookies to cache performance and interface settings.',
+  title: 'Cookie Policy | KM Softwares\'s',
+  description: 'A transparent definition of how KM Softwares\'s utilizes minimalistic cookies to cache performance and interface settings.',
 })
 </script>

@@ -69,7 +69,7 @@
 const { data: projects } = await useFetch('/api/projects')
 
 useSeoMeta({
-  title: 'Case Studies | KM Software\'s',
+  title: 'Case Studies | KM Softwares\'s',
   description: 'Read our success stories and discover how our solutions have reshaped modern businesses.',
 })
 </script>

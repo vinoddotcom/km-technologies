@@ -180,7 +180,7 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Our Services & Capabilities | KM Software\'s',
+  title: 'Our Services & Capabilities | KM Softwares\'s',
   description: 'Explore our full spectrum of IT solutions, covering web, mobile, custom software, cybersecurity, and artificial intelligence.',
 })
 </script>

@@ -16,7 +16,7 @@
               <path
                 d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
             </svg>
-            <span class="text-sm font-bold text-primary">KM Software Blog</span>
+            <span class="text-sm font-bold text-primary">KM Softwares Blog</span>
           </div>
 
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-base-content leading-tight">
@@ -28,7 +28,7 @@
           </h1>
 
           <p class="text-lg sm:text-xl text-base-content/70 leading-relaxed max-w-3xl mx-auto">
-            Welcome to the official blog of KM Software — where we share insights, ideas, and real-world learnings from
+            Welcome to the official blog of KM Softwares — where we share insights, ideas, and real-world learnings from
             the world of technology.
           </p>
         </div>
@@ -145,7 +145,7 @@
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="max-w-3xl mx-auto text-center text-white">
           <h2 class="text-3xl sm:text-4xl md:text-5xl font-black mb-4">Stay Connected</h2>
-          <p class="text-lg sm:text-xl opacity-90 mb-8 max-w-2xl mx-auto">Follow KM Software for upcoming articles, tech
+          <p class="text-lg sm:text-xl opacity-90 mb-8 max-w-2xl mx-auto">Follow KM Softwares for upcoming articles, tech
             insights, and industry updates.</p>
           <NuxtLink to="/contact"
             class="btn btn-lg bg-white text-primary hover:bg-base-200 border-none shadow-2xl px-12 transition-all">
@@ -159,7 +159,7 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: "Blog & Tech Insights | KM Software",
+  title: "Blog & Tech Insights | KM Softwares",
   description: 'Insights, ideas, and real-world learnings from the world of technology.',
 });
 

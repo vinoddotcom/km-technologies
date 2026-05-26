@@ -8,7 +8,7 @@
         <!-- Company Info -->
         <div class="space-y-6">
           <div class="flex items-center">
-            <img src="/logo1.png" alt="KM Software" class="h-16 w-auto object-contain" />
+            <img src="/logo1.png" alt="KM Softwares" class="h-16 w-auto object-contain" />
           </div>
           <p class="text-base-content/90 font-medium text-sm leading-relaxed">
             Delivering cutting-edge IT solutions that transform businesses and drive innovation forward.
@@ -273,7 +273,7 @@
       <!-- Bottom Bar -->
       <div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-base-content/10">
         <p class="text-base-content/60 text-sm text-center md:text-left">
-          © {{ currentYear }} KM Software. All rights reserved.
+          © {{ currentYear }} KM Softwares. All rights reserved.
         </p>
         <div class="flex items-center gap-6">
           <NuxtLink to="/privacy-policy"
