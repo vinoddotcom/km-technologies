@@ -8,7 +8,7 @@
         <!-- Company Info -->
         <div class="space-y-6">
           <div class="flex items-center">
-            <img src="/logo1.png" alt="KM Softwares" class="h-16 w-auto object-contain" />
+            <img src="/km-software-logo.png" alt="KM Softwares" class="h-16 w-auto object-contain" />
           </div>
           <p class="text-base-content/90 font-medium text-sm leading-relaxed">
             Delivering cutting-edge IT solutions that transform businesses and drive innovation forward.
