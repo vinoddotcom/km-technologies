@@ -1,0 +1,29 @@
+{
+  "mcpServers": {
+    "nuxt": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-nuxt@latest"
+      ]
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-chrome-devtools@latest"
+      ]
+    },
+    "daisyui": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-daisyui@latest"
+      ]
+    },
+    "context7": {
+      "baseUrl": "https://mcp.context7.com/mcp"
+    }
+  },
+  "imports": []
+}
